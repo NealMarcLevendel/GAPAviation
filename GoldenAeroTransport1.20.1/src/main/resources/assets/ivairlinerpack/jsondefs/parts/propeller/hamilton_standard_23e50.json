@@ -1,0 +1,158 @@
+{
+  "generic": {
+    "type": "propeller",
+    "customType": "hamilton_standard_23e50",
+    "useVehicleTexture": true,
+    "forwardsDamageMultiplier": 0.0,
+    "movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "propeller_rotation",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,0.0,1.0]
+      }
+    ]
+  },
+  "propeller": {
+    "isDynamicPitch": true,
+    "pitch": 380,
+    "diameter": 150
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Hamilton Standard Blades Propeller",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "blade1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "propeller_pitch_deg",
+            "centerPoint": [0.0,0.0,0.1218],
+            "axis": [0.0,1.0,0.0],
+            "offset": 20.0
+          }
+        ]
+      },
+      {
+        "objectName": "blade2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "propeller_pitch_deg",
+            "centerPoint": [0.0,0.0,0.1218],
+            "axis": [0.8661,-0.49987,0.0],
+            "offset": 20.0
+          }
+        ]
+      },
+      {
+        "objectName": "blade3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "propeller_pitch_deg",
+            "centerPoint": [0.0,0.0,0.1218],
+            "axis": [-0.70041,-0.39807,0.0],
+            "offset": 20.0
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "ivairlinerpack:r1830_prop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_rpm",
+            "clampMin": 500.0,
+            "clampMax": 10000.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_running",
+            "axis": [0.0,1.2,0.0],
+            "duration": 20
+          },
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-2.5,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.8,0.0],
+            "offset": 0.45
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:r1830_prophigh",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_rpm",
+            "clampMin": 500.0,
+            "clampMax": 10000.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5,0.0],
+            "offset": -0.3
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0]
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 190.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Hamilton Standard Blades Propeller",
+    "health": 100,
+    "materialLists": [
+      [
+        "minecraft:iron_ingot:0:3"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

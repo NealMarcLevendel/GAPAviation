@@ -1,0 +1,1085 @@
+{
+  "motorized": {
+    "hasAutopilot": true,
+    "hasHeadlights": true,
+    "hasTurnSignals": true,
+    "emptyMass": 50000,
+    "fuelCapacity": 15000,
+    "downForce": 0.52,
+    "overSteer": 1.5,
+    "underSteer": 1.0,
+    "axleRatio": 3.3,
+    "brakingFactor": 7.0,
+    "dragCoefficient": 0.3,
+    "litVariable": "headlight",
+    "panel": "mts:default_car"
+  },
+  "parts": [
+    {
+      "pos": [0.825046,-0.491432,-1.88954],
+      "minValue": 0.4,
+      "maxValue": 2.25,
+      "defaultPart": "ivairlinerpack:truckwheel",
+      "types": [
+        "ground_wheel"
+      ]
+    },
+    {
+      "pos": [-0.825046,-0.491432,-1.88954],
+      "rot": [0.0,180.0,0.0],
+      "isMirrored": true,
+      "minValue": 0.4,
+      "maxValue": 2.25,
+      "defaultPart": "ivairlinerpack:truckwheel",
+      "types": [
+        "ground_wheel"
+      ]
+    },
+    {
+      "pos": [1.0902,-0.491432,-1.88954],
+      "minValue": 0.4,
+      "maxValue": 2.25,
+      "defaultPart": "ivairlinerpack:truckwheel",
+      "types": [
+        "ground_wheel"
+      ]
+    },
+    {
+      "pos": [-1.0902,-0.491432,-1.88954],
+      "rot": [0.0,180.0,0.0],
+      "isMirrored": true,
+      "minValue": 0.4,
+      "maxValue": 2.25,
+      "defaultPart": "ivairlinerpack:truckwheel",
+      "types": [
+        "ground_wheel"
+      ]
+    },
+    {
+      "pos": [1.11758,-0.491432,3.18402],
+      "turnsWithSteer": true,
+      "minValue": 0.4,
+      "maxValue": 2.25,
+      "defaultPart": "ivairlinerpack:truckwheel",
+      "types": [
+        "ground_wheel"
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [1.11758,-0.491432,3.18402],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [-1.11758,-0.491432,3.18402],
+      "rot": [0.0,180.0,0.0],
+      "turnsWithSteer": true,
+      "isMirrored": true,
+      "minValue": 0.4,
+      "maxValue": 2.25,
+      "defaultPart": "ivairlinerpack:truckwheel",
+      "types": [
+        "ground_wheel"
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [-1.11758,-0.491432,3.18402],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [0.645315,0.557291,3.43648],
+      "isController": true,
+      "playerScale": [0.9,0.9,0.9],
+      "defaultPart": "ivairlinerpack:a220seat",
+      "types": [
+        "seat"
+      ],
+      "interactableVariables": [
+        [
+          "door_fl"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.645315,0.557291,3.43648],
+      "playerScale": [0.9,0.9,0.9],
+      "defaultPart": "ivairlinerpack:a220seat",
+      "types": [
+        "seat"
+      ],
+      "interactableVariables": [
+        [
+          "door_fr"
+        ]
+      ]
+    },
+    {
+      "pos": [0.0,0.5,3.9],
+      "minValue": 10.0,
+      "maxValue": 15.0,
+      "intakeOffset": 2.0,
+      "defaultPart": "ivairlinerpack:i6",
+      "types": [
+        "engine_car"
+      ],
+      "linkedParts": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "pos": [0.892278,0.455523,1.80624],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [0.892278,0.455523,1.01592],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [0.892278,0.455523,0.225615],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [0.892278,0.455523,-0.564695],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [0.892278,0.455523,-1.35501],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [0.892278,0.455523,-2.14532],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [0.892278,0.455523,-2.93563],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [0.892278,0.455523,-3.72594],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [0.892278,0.455523,-4.51625],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [-0.892278,0.455523,1.80624],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [-0.892278,0.455523,1.01592],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [-0.892278,0.455523,0.225615],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [-0.892278,0.455523,-0.564695],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [-0.892278,0.455523,-1.35501],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [-0.892278,0.455523,-2.14532],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [-0.892278,0.455523,-2.93563],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [-0.892278,0.455523,-3.72594],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    },
+    {
+      "pos": [-0.892278,0.455523,-4.51625],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "applyAfter": "box"
+    }
+  ],
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "applyAfter": "doorrr.001",
+      "collisions": [
+        {
+          "pos": [-1.19308,0.876112,3.82867],
+          "width": 0.361,
+          "height": 1.583,
+          "variableName": "doorr",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-1.19308,0.969349,3.29449],
+          "width": 0.361,
+          "height": 1.4,
+          "variableName": "doorr",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "doorrl.001",
+      "collisions": [
+        {
+          "pos": [1.19308,0.876112,3.82867],
+          "width": 0.361,
+          "height": 1.583,
+          "variableName": "doorl",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [1.19308,0.969349,3.29449],
+          "width": 0.361,
+          "height": 1.4,
+          "variableName": "doorl",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "collisions": [
+        {
+          "pos": [0.19881,1.08898,3.97167],
+          "width": 0.103,
+          "height": 0.103,
+          "variableName": "up",
+          "variableType": "increment",
+          "variableValue": 0.5,
+          "clampMax": 10.0
+        }
+      ],
+      "animations": []
+    },
+    {
+      "collisions": [
+        {
+          "pos": [0.19881,0.973642,3.97167],
+          "width": 0.103,
+          "height": 0.103,
+          "variableName": "up",
+          "variableType": "increment",
+          "variableValue": -0.5,
+          "clampMax": 10.0
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "base",
+      "collisions": [
+        {
+          "pos": [0.0,0.451587,3.74665],
+          "width": 2.67668,
+          "height": 0.1281
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "doorrr",
+      "collisions": [
+        {
+          "pos": [-0.179688,1.40005,-5.06947],
+          "width": 0.33,
+          "height": 1.05,
+          "variableName": "doorrr",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "doorrl",
+      "collisions": [
+        {
+          "pos": [0.179688,1.40005,-5.06947],
+          "width": 0.33,
+          "height": 1.05,
+          "variableName": "doorrl",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "thingl",
+      "collisions": [
+        {
+          "pos": [1.31411,1.07122,3.87155],
+          "width": 0.290567,
+          "height": 1.24052,
+          "variableName": "thingl",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "thingr",
+      "collisions": [
+        {
+          "pos": [-1.31411,1.07122,3.87155],
+          "width": 0.290567,
+          "height": 1.24052,
+          "variableName": "thingr",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "doorfl",
+      "collisions": [
+        {
+          "pos": [0.208597,1.40005,2.39041],
+          "width": 0.33,
+          "height": 1.05,
+          "variableName": "doorfl",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "doorfr",
+      "collisions": [
+        {
+          "pos": [-0.208597,1.40005,2.39041],
+          "width": 0.33,
+          "height": 1.05,
+          "variableName": "doorfr",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "box",
+      "collisions": [
+        {
+          "pos": [0.0,0.38793,1.3464],
+          "width": 2.67668,
+          "height": 0.1281
+        },
+        {
+          "pos": [0.0,0.38793,-1.34217],
+          "width": 2.67668,
+          "height": 0.1281
+        },
+        {
+          "pos": [0.0,0.38793,-3.88183],
+          "width": 2.67668,
+          "height": 0.1281
+        },
+        {
+          "pos": [0.0,2.73646,1.3464],
+          "width": 2.67668,
+          "height": 0.1281
+        },
+        {
+          "pos": [0.0,2.73646,-1.34217],
+          "width": 2.67668,
+          "height": 0.1281
+        },
+        {
+          "pos": [0.0,2.73646,-3.88183],
+          "width": 2.67668,
+          "height": 0.1281
+        }
+      ],
+      "animations": []
+    }
+  ],
+  "connectionGroups": [
+    {
+      "groupName": "Trailer",
+      "canInitiateConnections": true,
+      "isHitch": true,
+      "connections": [
+        {
+          "type": "trailer_ring",
+          "pos": [0.0,0.36014,-2.87465],
+          "distance": 3.0
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "pos": [0.879121,0.996988,4.12873],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.01325,
+      "hudX": 219,
+      "hudY": 41,
+      "hudScale": 0.45
+    },
+    {
+      "pos": [0.426044,0.996988,4.12873],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.01325,
+      "hudX": 160,
+      "hudY": 41,
+      "hudScale": 0.45
+    },
+    {
+      "pos": [0.735133,1.02373,4.12873],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.020375,
+      "hudX": 102,
+      "hudY": 41,
+      "hudScale": 0.45
+    },
+    {
+      "pos": [0.56711,1.02373,4.12873],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.020375,
+      "hudX": 44,
+      "hudY": 41,
+      "hudScale": 0.45
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Catering Truck",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_gategourmet",
+      "name": "Catering Truck (GateGourmet)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_lsgskychefs",
+      "name": "Catering Truck (LSG SkyChefs)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_abm",
+      "name": "Catering Truck (ABM)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_american",
+      "name": "Catering Truck (American Airlines)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_ana",
+      "name": "Catering Truck (ANA)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_delta",
+      "name": "Catering Truck (Delta)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_dnata",
+      "name": "Catering Truck (Dnata)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_emirates",
+      "name": "Catering Truck (Emirates)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_flyingfoodgroup",
+      "name": "Catering Truck (Flying Food Group)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_jal",
+      "name": "Catering Truck (Japan Airlines)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_servisair",
+      "name": "Catering Truck (Servisair)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_tfk",
+      "name": "Catering Truck (TFK Catering)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_thai",
+      "name": "Catering Truck (Thai)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_united",
+      "name": "Catering Truck (United Airlines)",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "initialVariables": [
+    "door_fr",
+    "door_fl"
+  ],
+  "variableModifiers": [
+    {
+      "variable": "dragCoefficient",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "inliquid",
+          "axis": [0.0,50.0,0.0]
+        }
+      ]
+    },
+    {
+      "variable": "throttle",
+      "maxValue": 1.0,
+      "animations": [
+        {
+          "animationType": "inhibitor",
+          "variable": "engine_isautomatic_1",
+          "clampMin": 1.0,
+          "clampMax": 1.0
+        },
+        {
+          "animationType": "inhibitor",
+          "variable": "speed",
+          "clampMax": 2.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "engine_clutch_upshift_1",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-2.8,0.0],
+          "duration": 5
+        },
+        {
+          "animationType": "translation",
+          "variable": "engine_clutch_downshift_1",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.5,0.0],
+          "duration": 2
+        }
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "doorrr.001",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "doorr",
+            "centerPoint": [-1.19762,1.27945,4.37252],
+            "axis": [0.0,64.0,0.0],
+            "duration": 30,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart"
+          }
+        ]
+      },
+      {
+        "objectName": "wheel",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.664409,0.903856,3.96811],
+            "axis": [0.0,-1.98376,4.58963]
+          }
+        ]
+      },
+      {
+        "objectName": "doorrl.001",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "doorl",
+            "centerPoint": [1.19762,1.27945,4.37252],
+            "axis": [0.0,-64.0,0.0],
+            "duration": 30,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart"
+          }
+        ]
+      },
+      {
+        "objectName": "translucentr",
+        "applyAfter": "doorrr.001",
+        "animations": []
+      },
+      {
+        "objectName": "translucentl",
+        "applyAfter": "doorrl.001",
+        "animations": []
+      },
+      {
+        "objectName": "doorrr",
+        "applyAfter": "box",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "doorrr",
+            "centerPoint": [-0.908442,1.27945,-5.09095],
+            "axis": [0.0,99.2677,0.0],
+            "duration": 13
+          }
+        ]
+      },
+      {
+        "objectName": "doorrl",
+        "applyAfter": "box",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "doorrl",
+            "centerPoint": [0.908442,1.27945,-5.09095],
+            "axis": [0.0,-99.2677,0.0],
+            "duration": 13
+          }
+        ]
+      },
+      {
+        "objectName": "aceel",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "throttle",
+            "centerPoint": [-0.875,0.619086,4.28321],
+            "axis": [-18.0,0.0,0.0],
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "objectName": "brake",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [-0.875,0.619086,4.28321],
+            "axis": [-18.0,0.0,0.0],
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.091",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "right_turn_signal",
+            "centerPoint": [0.840236,1.49322,8.08439],
+            "axis": [-6.34868,-34.718,21.13],
+            "duration": 1
+          },
+          {
+            "animationType": "rotation",
+            "variable": "left_turn_signal",
+            "centerPoint": [0.840236,1.49322,8.08439],
+            "axis": [6.34868,34.718,-21.13],
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.026",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_fl",
+            "centerPoint": [1.40363,1.56712,8.37367],
+            "axis": [0.0,-74.35,0.0],
+            "duration": 20,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeincubic"
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.031",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_fb",
+            "centerPoint": [1.40363,1.10162,-3.3319],
+            "axis": [-146.153,0.0,0.0],
+            "duration": 20,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeincubic"
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.088",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.95084,1.5816,8.03383],
+            "axis": [0.00386,-5.91207,4.01585]
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.086",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_gearshift_1",
+            "centerPoint": [-0.194567,1.23141,7.80036],
+            "axis": [10.2,0.0,0.0],
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "objectName": "box",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "up",
+            "axis": [0.0,0.5,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "legs",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "up",
+            "axis": [0.0,-0.198241,0.0],
+            "clampMax": 0.2
+          }
+        ]
+      },
+      {
+        "objectName": "base",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "up",
+            "axis": [0.0,0.5,0.0],
+            "clampMin": 1.5,
+            "clampMax": 10.0
+          }
+        ]
+      },
+      {
+        "objectName": "scissora",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "up",
+            "centerPoint": [-0.9148,0.095348,1.76615],
+            "axis": [4.8,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "scissorb",
+        "applyAfter": "scissora",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "up",
+            "centerPoint": [-0.9148,0.16144,-1.55528],
+            "axis": [-9.6,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "thingl",
+        "applyAfter": "base",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "thingl",
+            "axis": [0.0,0.0,1.04069],
+            "duration": 13
+          }
+        ]
+      },
+      {
+        "objectName": "thingr",
+        "applyAfter": "base",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "thingr",
+            "axis": [0.0,0.0,1.04069],
+            "duration": 13
+          }
+        ]
+      },
+      {
+        "objectName": "doorfr",
+        "applyAfter": "box",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "doorfr",
+            "centerPoint": [-0.913886,1.27945,2.37327],
+            "axis": [0.0,-99.2677,0.0],
+            "duration": 13
+          }
+        ]
+      },
+      {
+        "objectName": "doorfl",
+        "applyAfter": "box",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "doorfl",
+            "centerPoint": [0.913886,1.27945,2.37327],
+            "axis": [0.0,99.2677,0.0],
+            "duration": 13
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "indl",
+        "emissive": true,
+        "color": "FF7C1E",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "left_turn_signal",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "8_8_0_cycle",
+            "axis": [0.0,1.5,0.0],
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "objectName": "indr",
+        "emissive": true,
+        "color": "FF7C1E",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "right_turn_signal",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "8_8_0_cycle",
+            "axis": [0.0,1.5,0.0],
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "objectName": "warn",
+        "emissive": true,
+        "color": "FF7C1E",
+        "brightnessAnimations": []
+      },
+      {
+        "objectName": "head",
+        "emissive": true,
+        "color": "FFEFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "headlight",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "objectName": "brake.001",
+        "emissive": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "brake",
+            "axis": [0.0,1.1,0.0],
+            "duration": 2
+          }
+        ]
+      }
+    ],
+    "sounds": [
+      {
+        "name": "mts:air_brake_activating",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "p_brake",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "description": "Height-Adjustable Catering truck. Click the buttons in the cab to lower and raise incrementally, and click the rails on either side of the platform to extend them.",
+    "health": 100,
+    "materialLists": [
+      []
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

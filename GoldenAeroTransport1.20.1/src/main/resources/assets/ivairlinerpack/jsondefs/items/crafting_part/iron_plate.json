@@ -1,0 +1,18 @@
+{
+  "item": {
+    "type": "none"
+  },
+  "general": {
+    "name": "Metal Plating",
+    "description": "Standard metal plate used to craft various aircraft parts.",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "minecraft:heavy_weighted_pressure_plate:0:1",
+        "minecraft:iron_nugget:0:9"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

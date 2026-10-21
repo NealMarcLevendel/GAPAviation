@@ -1,0 +1,426 @@
+{
+  "generic": {
+    "type": "engine_car",
+    "forwardsDamageMultiplier": 1.0
+  },
+  "engine": {
+    "type": "normal",
+    "starterPower": 15,
+    "shiftSpeed": 2,
+    "clutchTime": 16,
+    "revResistance": 25,
+    "maxRPM": 4200,
+    "maxSafeRPM": 2100,
+    "idleRPM": 600,
+    "startRPM": 500,
+    "revlimitRPM": 2100,
+    "revlimitBounce": 18,
+    "stallRPM": 325,
+    "engineWinddownRate": 10,
+    "heatingCoefficient": 0.6,
+    "coolingCoefficient": 1.3,
+    "engineWearFactor": 0.5,
+    "fuelConsumption": 15.0,
+    "gearRatios": [-4.0,0.0,4.5,2.11,1.43,0.9,0.67],
+    "fuelType": "diesel",
+    "superchargerFuelConsumption": -12.0,
+    "superchargerEfficiency": 0.95,
+    "isCrankingNotPitched": true
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "I6 Engine",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "$fan",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rotation",
+            "centerPoint": [0.0,0.16531,0.9259],
+            "axis": [0.0,0.0,1.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$engine",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rotation",
+            "centerPoint": [0.0,0.001,0.0],
+            "axis": [0.0,0.0,1.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "engine_rotation",
+            "centerPoint": [0.0,-0.001,0.0],
+            "axis": [0.0,0.0,-1.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "ivairlinerpack:c15_start",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:c15_crank",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,0.0,0.0],
+            "offset": 0.8
+          },
+          {
+            "animationType": "translation",
+            "variable": "engine_running",
+            "axis": [0.0,-0.8,0.0],
+            "duration": 5,
+            "skipReverseMovement": true
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:c15_hight",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-20.0,0.9,1.0],
+            "offset": 0.9
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,2.0,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.2,0.0]
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:c15_high",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-20.0,0.7,0.6],
+            "offset": 0.8
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-1.0,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,0.9,0.0]
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:c15_mid",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-20.0,0.98,0.7],
+            "offset": 0.8
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,1.3,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.4,0.0]
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:diesel_turbo",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,0.5,0.0]
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,0.5,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5,0.0],
+            "clampMin": 0.5
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:c15_idle",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-20.0,0.72,0.32],
+            "offset": 0.2
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,1.5,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5,0.0],
+            "clampMin": 0.5
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:c15_idle2",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-2.2,0.0],
+            "offset": 2.2
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.6,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.0,0.0],
+            "offset": 0.3
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "hitboxSize": 0.2,
+        "color": "000000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 115.556,
+            "clampMax": 999.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "scale": 0.5,
+        "hitboxSize": 0.2,
+        "color": "000000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 121.111,
+            "clampMax": 999.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Heavy I6 diesel engine",
+    "health": 100,
+    "materialLists": [
+      [
+        "mts:iav.iav_z_piston:0:6",
+        "immersiveengineering:storage:8:1",
+        "mts:iav.iav_z_crankshaft:0:2",
+        "mts:iav.iav_z_generator:0:1",
+        "immersiveengineering:metal:31:2"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "generic": {
+    "type": "seat",
+    "forwardsDamageMultiplier": 0.0
+  },
+  "seat": {
+    "playerScale": [0.8700000047683716,0.8700000047683716,0.8700000047683716]
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "modelName": "a220seat",
+      "name": "Seat for a220",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Seat for a220",
+    "materialLists": [
+      [
+        "minecraft:wool:1:16"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "generic": {
+    "type": "interactable_crate",
+    "canBeRemovedByHand": true,
+    "forwardsDamageMultiplier": 0.0,
+    "width": 0.75,
+    "height": 0.75,
+    "movementAnimations": []
+  },
+  "interactable": {
+    "interactionType": "crate",
+    "inventoryUnits": 3.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Generic Storage Container",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "variableModifiers": [],
+  "rendering": {
+    "animatedObjects": [],
+    "lightObjects": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Generic Storage Container",
+    "stackSize": 4,
+    "materialLists": [
+      [
+        "oredict:ingotIron:8"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

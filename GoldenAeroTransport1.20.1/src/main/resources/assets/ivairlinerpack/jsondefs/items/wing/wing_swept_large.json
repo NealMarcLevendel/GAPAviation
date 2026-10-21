@@ -1,0 +1,18 @@
+{
+  "item": {
+    "type": "none"
+  },
+  "general": {
+    "name": "Wing ?7(Swept Large)",
+    "description": "Wing type commonly seen on quadjets.",
+    "materialLists": [
+      [
+        "mts:ivairlinerpack.iron_plate:0:40",
+        "minecraft:piston:0:5",
+        "minecraft:redstone:0:25"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

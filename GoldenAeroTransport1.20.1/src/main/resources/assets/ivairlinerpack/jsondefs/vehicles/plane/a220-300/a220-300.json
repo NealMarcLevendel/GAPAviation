@@ -1,0 +1,7469 @@
+{
+  "motorized": {
+    "isAircraft": true,
+    "hasAutopilot": true,
+    "hasRadioNav": true,
+    "hasNavLights": true,
+    "hasStrobeLights": true,
+    "hasTaxiLights": true,
+    "hasLandingLights": true,
+    "emptyMass": 28000,
+    "fuelCapacity": 7000,
+    "gearSequenceDuration": 100,
+    "downForce": 0.5,
+    "axleRatio": 3.55,
+    "brakingFactor": 10.0,
+    "flapSpeed": 0.2,
+    "dragCoefficient": 0.015,
+    "tailDistance": 10.0,
+    "wingSpan": 35.8,
+    "wingArea": 150.0,
+    "aileronArea": 0.8,
+    "elevatorArea": 1.0,
+    "rudderArea": 1.5,
+    "litVariable": "navigation_light",
+    "panel": "mts:default_plane",
+    "flapNotches": [0.0,5.0,10.0,15.0,20.0,25.0,30.0,35.0]
+  },
+  "parts": [
+    {
+      "pos": [-0.525628,2.82721,10.8255],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin1r"
+        ]
+      ],
+      "applyAfter": "bin_5r"
+    },
+    {
+      "pos": [-0.525628,2.82721,10.143],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin1r"
+        ]
+      ],
+      "applyAfter": "bin_5r"
+    },
+    {
+      "pos": [-0.525628,2.82721,9.0303],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin2r"
+        ]
+      ],
+      "applyAfter": "bin_5r.001"
+    },
+    {
+      "pos": [-0.525628,2.82721,8.3478],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin2r"
+        ]
+      ],
+      "applyAfter": "bin_5r.001"
+    },
+    {
+      "pos": [-0.525628,2.82721,7.27128],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin3r"
+        ]
+      ],
+      "applyAfter": "bin_5r.003"
+    },
+    {
+      "pos": [-0.525628,2.82721,6.58878],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin3r"
+        ]
+      ],
+      "applyAfter": "bin_5r.003"
+    },
+    {
+      "pos": [-0.525628,2.82721,5.48295],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin4r"
+        ]
+      ],
+      "applyAfter": "bin_5r.004"
+    },
+    {
+      "pos": [-0.525628,2.82721,4.80045],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin4r"
+        ]
+      ],
+      "applyAfter": "bin_5r.004"
+    },
+    {
+      "pos": [-0.525628,2.82721,3.75257],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin5r"
+        ]
+      ],
+      "applyAfter": "bin_5r.005"
+    },
+    {
+      "pos": [-0.525628,2.82721,3.07007],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin5r"
+        ]
+      ],
+      "applyAfter": "bin_5r.005"
+    },
+    {
+      "pos": [-0.525628,2.82721,1.94832],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin6r"
+        ]
+      ],
+      "applyAfter": "bin_5r.006"
+    },
+    {
+      "pos": [-0.525628,2.82721,1.26582],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin6r"
+        ]
+      ],
+      "applyAfter": "bin_5r.006"
+    },
+    {
+      "pos": [-0.525628,2.82721,0.144943],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin7r"
+        ]
+      ],
+      "applyAfter": "bin_5r.007"
+    },
+    {
+      "pos": [-0.525628,2.82721,-0.537557],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin7r"
+        ]
+      ],
+      "applyAfter": "bin_5r.007"
+    },
+    {
+      "pos": [-0.525628,2.82721,-1.567],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin8r"
+        ]
+      ],
+      "applyAfter": "bin_5r.008"
+    },
+    {
+      "pos": [-0.525628,2.82721,-2.2495],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin8r"
+        ]
+      ],
+      "applyAfter": "bin_5r.008"
+    },
+    {
+      "pos": [-0.525628,2.82721,-3.36201],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin9r"
+        ]
+      ],
+      "applyAfter": "bin_5r.009"
+    },
+    {
+      "pos": [-0.525628,2.82721,-4.0445],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin9r"
+        ]
+      ],
+      "applyAfter": "bin_5r.009"
+    },
+    {
+      "pos": [-0.525628,2.82721,-5.12796],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin10r"
+        ]
+      ],
+      "applyAfter": "bin_5r.010"
+    },
+    {
+      "pos": [-0.525628,2.82721,-5.81046],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin10r"
+        ]
+      ],
+      "applyAfter": "bin_5r.010"
+    },
+    {
+      "pos": [-0.525628,2.82721,-6.8896],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin11r"
+        ]
+      ],
+      "applyAfter": "bin_5r.011"
+    },
+    {
+      "pos": [-0.525628,2.82721,-7.57209],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin11r"
+        ]
+      ],
+      "applyAfter": "bin_5r.011"
+    },
+    {
+      "pos": [-0.525628,2.82721,-8.58394],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin12r"
+        ]
+      ],
+      "applyAfter": "bin_5r.012"
+    },
+    {
+      "pos": [-0.525628,2.82721,-9.26643],
+      "rot": [0.0,0.0,36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin12r"
+        ]
+      ],
+      "applyAfter": "bin_5r.012"
+    },
+    {
+      "pos": [0.55,2.82721,10.8255],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin1l"
+        ]
+      ],
+      "applyAfter": "bin_5l"
+    },
+    {
+      "pos": [0.55,2.82721,10.143],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin1l"
+        ]
+      ],
+      "applyAfter": "bin_5l"
+    },
+    {
+      "pos": [0.55,2.82721,9.0303],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin2l"
+        ]
+      ],
+      "applyAfter": "bin_5l.013"
+    },
+    {
+      "pos": [0.55,2.82721,8.3478],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin2l"
+        ]
+      ],
+      "applyAfter": "bin_5l.013"
+    },
+    {
+      "pos": [0.55,2.82721,7.27128],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin3l"
+        ]
+      ],
+      "applyAfter": "bin_5l.014"
+    },
+    {
+      "pos": [0.55,2.82721,6.58878],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin3l"
+        ]
+      ],
+      "applyAfter": "bin_5l.014"
+    },
+    {
+      "pos": [0.55,2.82721,5.48295],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin4l"
+        ]
+      ],
+      "applyAfter": "bin_5l.015"
+    },
+    {
+      "pos": [0.55,2.82721,4.80045],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin4l"
+        ]
+      ],
+      "applyAfter": "bin_5l.015"
+    },
+    {
+      "pos": [0.55,2.82721,3.75257],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin5l"
+        ]
+      ],
+      "applyAfter": "bin_5l.016"
+    },
+    {
+      "pos": [0.55,2.82721,3.07007],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin5l"
+        ]
+      ],
+      "applyAfter": "bin_5l.016"
+    },
+    {
+      "pos": [0.55,2.82721,1.94832],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin6l"
+        ]
+      ],
+      "applyAfter": "bin_5l.017"
+    },
+    {
+      "pos": [0.55,2.82721,1.26582],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin6l"
+        ]
+      ],
+      "applyAfter": "bin_5l.017"
+    },
+    {
+      "pos": [0.55,2.82721,0.144943],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin7l"
+        ]
+      ],
+      "applyAfter": "bin_5l.018"
+    },
+    {
+      "pos": [0.55,2.82721,-0.557557],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin7l"
+        ]
+      ],
+      "applyAfter": "bin_5l.018"
+    },
+    {
+      "pos": [0.55,2.82721,-1.567],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin8l"
+        ]
+      ],
+      "applyAfter": "bin_5l.019"
+    },
+    {
+      "pos": [0.55,2.82721,-2.2495],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin8l"
+        ]
+      ],
+      "applyAfter": "bin_5l.019"
+    },
+    {
+      "pos": [0.55,2.82721,-3.36201],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin9l"
+        ]
+      ],
+      "applyAfter": "bin_5l.020"
+    },
+    {
+      "pos": [0.55,2.82721,-4.0445],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin9l"
+        ]
+      ],
+      "applyAfter": "bin_5l.020"
+    },
+    {
+      "pos": [0.55,2.82721,-5.12796],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin10l"
+        ]
+      ],
+      "applyAfter": "bin_5l.021"
+    },
+    {
+      "pos": [0.55,2.82721,-5.81046],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin10l"
+        ]
+      ],
+      "applyAfter": "bin_5l.021"
+    },
+    {
+      "pos": [0.55,2.82721,-6.8896],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin11l"
+        ]
+      ],
+      "applyAfter": "bin_5l.022"
+    },
+    {
+      "pos": [0.55,2.82721,-7.57209],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin11l"
+        ]
+      ],
+      "applyAfter": "bin_5l.022"
+    },
+    {
+      "pos": [0.55,2.82721,-8.58394],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin12l"
+        ]
+      ],
+      "applyAfter": "bin_5l.023"
+    },
+    {
+      "pos": [0.55,2.82721,-9.26643],
+      "rot": [0.0,0.0,-36.7626],
+      "maxValue": 3.0,
+      "partScale": [0.72,0.72,0.72],
+      "types": [
+        "interactable_luggage"
+      ],
+      "customTypes": [
+        "",
+        "luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin12l"
+        ]
+      ],
+      "applyAfter": "bin_5l.023"
+    },
+    {
+      "pos": [0.3,-0.11,-7.729],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door2a"
+        ]
+      ]
+    },
+    {
+      "pos": [0.3,-0.11,-6.927],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door2a"
+        ]
+      ]
+    },
+    {
+      "pos": [0.3,-0.11,-6.126],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door2a"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.3,-0.11,-7.729],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door2a"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.3,-0.11,-6.927],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door2a"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.3,-0.11,-6.126],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door2a"
+        ]
+      ]
+    },
+    {
+      "pos": [0.38,-0.21,8.276],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door1a"
+        ]
+      ]
+    },
+    {
+      "pos": [0.38,-0.21,9.078],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door1a"
+        ]
+      ]
+    },
+    {
+      "pos": [0.38,-0.21,9.879],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door1a"
+        ]
+      ]
+    },
+    {
+      "pos": [0.38,-0.21,10.67],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door1a"
+        ]
+      ]
+    },
+    {
+      "pos": [0.38,-0.21,11.46],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door1a"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.38,-0.21,8.276],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door1a"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.38,-0.21,9.078],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door1a"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.38,-0.21,9.879],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door1a"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.38,-0.21,10.67],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door1a"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.38,-0.21,11.46],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "partScale": [0.75,0.75,0.75],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "door1a"
+        ]
+      ]
+    },
+    {
+      "pos": [1.093,1.408,10.55],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,10.55],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,9.461],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,9.461],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,8.372],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,8.372],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,7.283],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,7.283],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,6.194],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,6.194],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,5.105],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,5.105],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,4.016],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,4.016],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,2.927],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,2.927],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,1.838],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,1.838],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,0.748999999999998],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,0.748999999999998],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,-0.340000000000002],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-0.340000000000002],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,-1.429],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-1.429],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,-2.518],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-2.518],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,-3.607],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-3.607],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,-4.696],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-4.696],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,-5.785],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-5.785],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,-6.874],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-6.874],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,-7.963],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-7.963],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [1.093,1.408,-9.052],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-9.052],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,10.55],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,10.55],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,9.461],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,9.461],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,8.372],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,8.372],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,7.283],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,7.283],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,6.194],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,6.194],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,5.105],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,5.105],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,4.016],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,4.016],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,2.927],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,2.927],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,1.838],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,1.838],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,0.748999999999998],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,0.748999999999998],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,-0.340000000000002],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-0.340000000000002],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,-1.429],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-1.429],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,-2.518],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-2.518],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,-3.607],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-3.607],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,-4.696],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-4.696],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,-5.785],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-5.785],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,-6.874],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-6.874],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,-7.963],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-7.963],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-0.3575,1.408,-9.052],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-9.052],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,10.55],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,10.55],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,9.461],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,9.461],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,8.372],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,8.372],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,7.283],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,7.283],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,6.194],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,6.194],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,5.105],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,5.105],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,4.016],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,4.016],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,2.927],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,2.927],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,1.838],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,1.838],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,0.748999999999998],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,0.748999999999998],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,-0.340000000000002],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-0.340000000000002],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,-1.429],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-1.429],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,-2.518],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-2.518],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,-3.607],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-3.607],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,-4.696],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-4.696],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,-5.785],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-5.785],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,-6.874],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-6.874],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,-7.963],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-7.963],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [-1.125,1.408,-9.052],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.0,1.408,-9.052],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_invisible"
+      ],
+      "customTypes": [
+        "",
+        "invisible"
+      ]
+    },
+    {
+      "pos": [0.256751,-1.78119,13.3824],
+      "rot": [0.0,0.0,0.0],
+      "turnsWithSteer": true,
+      "maxValue": 1.0,
+      "defaultPart": "ivairlinerpack:a220nosewheel",
+      "types": [
+        "ground_wheel"
+      ],
+      "applyAfter": "nosegearb"
+    },
+    {
+      "pos": [-0.256751,-1.78119,13.3824],
+      "rot": [0.0,180.0,0.0],
+      "turnsWithSteer": true,
+      "isMirrored": true,
+      "maxValue": 1.0,
+      "defaultPart": "ivairlinerpack:a220nosewheel",
+      "types": [
+        "ground_wheel"
+      ],
+      "applyAfter": "nosegearb"
+    },
+    {
+      "pos": [3.53204,-1.76303,-0.499498],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 1.0,
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel"
+      ],
+      "applyAfter": "lglb"
+    },
+    {
+      "pos": [2.79299,-1.76303,-0.499498],
+      "rot": [0.0,180.0,0.0],
+      "isMirrored": true,
+      "maxValue": 1.0,
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel"
+      ],
+      "applyAfter": "lglb"
+    },
+    {
+      "pos": [-3.53204,-1.76303,-0.499498],
+      "rot": [0.0,180.0,0.0],
+      "isMirrored": true,
+      "maxValue": 1.0,
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel"
+      ],
+      "applyAfter": "lgrb"
+    },
+    {
+      "pos": [-2.79299,-1.76303,-0.499498],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 1.0,
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel"
+      ],
+      "applyAfter": "lgrb"
+    },
+    {
+      "pos": [5.854,-0.404367,2.61038],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 1.8,
+      "defaultPart": "ivairlinerpack:pw1000g",
+      "types": [
+        "engine_jet"
+      ],
+      "customTypes": [
+        "pw1000g"
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [-5.854,-0.404367,2.61038],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 1.8,
+      "defaultPart": "ivairlinerpack:pw1000g",
+      "types": [
+        "engine_jet"
+      ],
+      "customTypes": [
+        "pw1000g"
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [0.597656,1.38659,14.1499],
+      "rot": [0.0,0.0,0.0],
+      "isController": true,
+      "defaultPart": "ivairlinerpack:a220seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.597656,1.38659,14.1499],
+      "rot": [0.0,0.0,0.0],
+      "isController": true,
+      "defaultPart": "ivairlinerpack:a220seat",
+      "types": [
+        "seat"
+      ]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [1.55427,2.01427,11.9595],
+          "width": 0.811,
+          "height": 0.283,
+          "variableName": "door1l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "door1l",
+          "axis": [0.0,0.0,0.8600000000000012]
+        },
+        {
+          "animationType": "translation",
+          "variable": "door1l",
+          "axis": [0.220314,0.0,0.0]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-1.59227,1.88299,12.3208],
+          "width": 0.811,
+          "height": 0.283,
+          "variableName": "door1r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "door1r",
+          "axis": [0.0,0.0,0.8600000000000012]
+        },
+        {
+          "animationType": "translation",
+          "variable": "door1r",
+          "axis": [-0.220314,0.0,0.0]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [1.46277,2.13735,-11.366],
+          "width": 0.811,
+          "height": 0.283,
+          "variableName": "door2l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "door2l",
+          "axis": [0.0,0.0,0.8800000000000012]
+        },
+        {
+          "animationType": "translation",
+          "variable": "door2l",
+          "axis": [0.320314,0.0,0.0]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-1.2373,0.06197,10.5402],
+          "width": 0.51,
+          "height": 0.51,
+          "variableName": "door1a",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "door1a",
+          "centerPoint": [-1.73671,0.946865,12.0171],
+          "axis": [0.0,0.0,-142.0],
+          "forwardsDelay": 15
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-1.14993,0.133504,-6.4839],
+          "width": 0.51,
+          "height": 0.51,
+          "variableName": "door2a",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "door2a",
+          "centerPoint": [-1.65463,0.924178,12.0171],
+          "axis": [0.0,0.0,-142.0],
+          "forwardsDelay": 15
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "Cube.132",
+      "collisions": [
+        {
+          "pos": [-0.304954,1.93018,13.4177],
+          "width": 0.0893,
+          "height": 1.9,
+          "variableName": "cockdoor",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.200638,1.93018,13.4177],
+          "width": 0.0893,
+          "height": 1.9,
+          "variableName": "cockdoor",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.096323,1.93018,13.4177],
+          "width": 0.0893,
+          "height": 1.9,
+          "variableName": "cockdoor",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.007993,1.93018,13.4177],
+          "width": 0.0893,
+          "height": 1.9,
+          "variableName": "cockdoor",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.112308,1.93018,13.4177],
+          "width": 0.0893,
+          "height": 1.9,
+          "variableName": "cockdoor",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.216624,1.93018,13.4177],
+          "width": 0.0893,
+          "height": 1.9,
+          "variableName": "cockdoor",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.32094,1.93018,13.4177],
+          "width": 0.0893,
+          "height": 1.9,
+          "variableName": "cockdoor",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-1.46277,2.13735,-11.366],
+          "width": 0.811,
+          "height": 0.283,
+          "variableName": "door2r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "door2r",
+          "axis": [0.0,0.0,0.8800000000000012]
+        },
+        {
+          "animationType": "translation",
+          "variable": "door2r",
+          "axis": [-0.320314,0.0,0.0]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.327235,3.06697,10.4658],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin1r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin1r",
+          "centerPoint": [-0.785487,2.74885,9.884],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.327235,3.06697,8.69453],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin2r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin2r",
+          "centerPoint": [-0.785487,2.74885,9.884],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.327235,3.06697,6.93435],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin3r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin3r",
+          "centerPoint": [-0.785487,2.74885,6.93435],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.307093,3.06697,5.1648],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin4r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin4r",
+          "centerPoint": [-0.785487,2.74885,5.1648],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.307093,3.06697,3.38883],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin5r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin5r",
+          "centerPoint": [-0.785487,2.74885,3.38883],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.307093,3.06697,1.61986],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin6r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin6r",
+          "centerPoint": [-0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.307093,3.06697,-0.14675],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin7r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin7r",
+          "centerPoint": [-0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.307093,3.06697,-1.9182],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin8r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin8r",
+          "centerPoint": [-0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.307093,3.06697,-3.68811],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin9r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin9r",
+          "centerPoint": [-0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.307093,3.06697,-5.45953],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin10r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin10r",
+          "centerPoint": [-0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.307093,3.06697,-7.23094],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin11r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin11r",
+          "centerPoint": [-0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.307093,3.06697,-8.89576],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin12r",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin12r",
+          "centerPoint": [-0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,-49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.327235,3.06697,10.4658],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin1l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin1l",
+          "centerPoint": [0.785487,2.74885,9.884],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.327235,3.06697,8.69453],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin2l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin2l",
+          "centerPoint": [0.785487,2.74885,9.884],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.327235,3.06697,6.93435],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin3l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin3l",
+          "centerPoint": [0.785487,2.74885,6.93435],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.307093,3.06697,5.1648],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin4l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin4l",
+          "centerPoint": [0.785487,2.74885,5.1648],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.307093,3.06697,3.38883],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin5l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin5l",
+          "centerPoint": [0.785487,2.74885,3.38883],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.307093,3.06697,1.61986],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin6l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin6l",
+          "centerPoint": [0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.307093,3.06697,-0.14675],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin7l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin7l",
+          "centerPoint": [0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.307093,3.06697,-1.9182],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin8l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin8l",
+          "centerPoint": [0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.307093,3.06697,-3.68811],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin9l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin9l",
+          "centerPoint": [0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.307093,3.06697,-5.45953],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin10l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin10l",
+          "centerPoint": [0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.307093,3.06697,-7.23094],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin11l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin11l",
+          "centerPoint": [0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.307093,3.06697,-8.89576],
+          "width": 0.1,
+          "height": 0.1,
+          "variableName": "bin12l",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "bin12l",
+          "centerPoint": [0.785487,2.74885,1.61986],
+          "axis": [0.0,0.0,49.1]
+        }
+      ]
+    },
+    {
+      "collisions": [
+        {
+          "pos": [0.0,3.22773,11.9943],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.22773,9.83629],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.22773,7.67829],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.22773,5.52028],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.22773,3.36228],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.22773,1.20428],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.22773,-0.95372],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.24396,-3.11173],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.24914,-5.26973],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.26224,-7.42774],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.26913,-9.58574],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.22773,-11.88288],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,3.22773,-14.21276],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,4.62218,-14.32761],
+          "width": 0.41869,
+          "height": 2.69416
+        },
+        {
+          "pos": [0.0,4.20773,-13.53599],
+          "width": 0.41869,
+          "height": 1.86103
+        },
+        {
+          "pos": [0.0,3.72786,-12.81048],
+          "width": 0.41869,
+          "height": 1.25691
+        },
+        {
+          "pos": [0.0,3.48354,-11.95912],
+          "width": 0.41869,
+          "height": 0.42975
+        },
+        {
+          "pos": [0.0,5.22649,-15.20607],
+          "width": 0.41869,
+          "height": 3.90277
+        },
+        {
+          "pos": [0.0,5.82378,-16.13845],
+          "width": 0.41869,
+          "height": 5.09735
+        },
+        {
+          "pos": [0.0,6.21676,-17.1382],
+          "width": 0.41869,
+          "height": 5.88331
+        },
+        {
+          "pos": [0.0,7.03313,-17.95143],
+          "width": 0.41869,
+          "height": 3.31437
+        },
+        {
+          "pos": [0.0,8.80297,-18.73269],
+          "width": 0.41869,
+          "height": 0.65756
+        },
+        {
+          "pos": [0.0,3.01635,13.76052],
+          "width": 1.58088,
+          "height": 0.20865
+        },
+        {
+          "pos": [0.0,0.92111,15.72616],
+          "width": 1.28695,
+          "height": 1.64916
+        },
+        {
+          "pos": [0.0,0.94351,13.76052],
+          "width": 2.99159,
+          "height": 0.07482
+        },
+        {
+          "pos": [0.0,0.94145,10.97249],
+          "width": 3.53687,
+          "height": 0.08846
+        },
+        {
+          "pos": [0.0,0.94145,7.42651],
+          "width": 3.53687,
+          "height": 0.08846
+        },
+        {
+          "pos": [0.0,0.94145,3.9422],
+          "width": 3.53687,
+          "height": 0.08846
+        },
+        {
+          "pos": [0.0,0.94145,0.43632],
+          "width": 3.53687,
+          "height": 0.08846
+        },
+        {
+          "pos": [0.0,0.9395,-3.09167],
+          "width": 3.53687,
+          "height": 0.08846
+        },
+        {
+          "pos": [0.0,0.93739,-6.62373],
+          "width": 3.53687,
+          "height": 0.08846
+        },
+        {
+          "pos": [0.0,0.94145,-10.21567],
+          "width": 3.40897,
+          "height": 0.08526
+        },
+        {
+          "pos": [-0.0,2.06813,-13.11607],
+          "width": 2.20873,
+          "height": 2.34292
+        },
+        {
+          "pos": [0.0,2.30176,-15.26545],
+          "width": 1.71613,
+          "height": 1.82038
+        },
+        {
+          "pos": [0.0,2.50034,-16.88917],
+          "width": 1.08296,
+          "height": 1.14875
+        },
+        {
+          "pos": [0.0,2.55875,-18.33767],
+          "width": 0.69231,
+          "height": 0.73437
+        },
+        {
+          "pos": [2.11667,2.55875,-16.68358],
+          "width": 2.73204,
+          "height": 0.36875
+        },
+        {
+          "pos": [4.92995,3.026,-18.01245],
+          "width": 3.03935,
+          "height": 0.26843
+        },
+        {
+          "pos": [-2.11667,2.55875,-16.68358],
+          "width": 2.73204,
+          "height": 0.36875
+        },
+        {
+          "pos": [-4.92995,3.026,-18.01245],
+          "width": 3.03935,
+          "height": 0.26843
+        },
+        {
+          "pos": [4.6116,0.84298,0.4854],
+          "width": 5.92912,
+          "height": 0.22505
+        },
+        {
+          "pos": [8.93466,1.29203,-1.29765],
+          "width": 2.9593,
+          "height": 0.3433
+        },
+        {
+          "pos": [11.8952,1.64571,-2.89567],
+          "width": 2.9593,
+          "height": 0.35392
+        },
+        {
+          "pos": [14.68753,2.014,-4.07316],
+          "width": 2.24575,
+          "height": 0.24444
+        },
+        {
+          "pos": [16.64113,2.18922,-4.82544],
+          "width": 1.36241,
+          "height": 0.25103
+        },
+        {
+          "pos": [-4.6116,0.84298,0.4854],
+          "width": 5.92912,
+          "height": 0.22505
+        },
+        {
+          "pos": [-8.93466,1.29203,-1.29765],
+          "width": 2.9593,
+          "height": 0.3433
+        },
+        {
+          "pos": [-11.8952,1.64571,-2.89567],
+          "width": 2.9593,
+          "height": 0.35392
+        },
+        {
+          "pos": [-14.6875,2.014,-4.07316],
+          "width": 2.24575,
+          "height": 0.24444
+        },
+        {
+          "pos": [-16.6411,2.18922,-4.82544],
+          "width": 1.36241,
+          "height": 0.25103
+        },
+        {
+          "pos": [18.10581,2.96663,-5.88918],
+          "width": 1.0411,
+          "height": 0.19183
+        },
+        {
+          "pos": [-18.1058,2.96663,-5.88918],
+          "width": 1.0411,
+          "height": 0.19183
+        },
+        {
+          "pos": [0.0,-0.26868,10.90482],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,-0.26868,8.81099],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,0.23429,6.69096],
+          "width": 2.05635,
+          "height": 1.15143
+        },
+        {
+          "pos": [0.0,0.35668,12.9119],
+          "width": 1.80736,
+          "height": 1.15834
+        },
+        {
+          "pos": [0.0,-0.26868,-6.28947],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,-0.26868,-8.3833],
+          "width": 2.05635,
+          "height": 0.11321
+        },
+        {
+          "pos": [0.0,0.30082,-4.972],
+          "width": 0.92366,
+          "height": 1.24206
+        },
+        {
+          "pos": [0.0,0.30082,-8.76421],
+          "width": 0.92366,
+          "height": 1.24206
+        },
+        {
+          "pos": [5.84292,0.67477,4.28027],
+          "width": 2.45161,
+          "height": 0.26543
+        },
+        {
+          "pos": [5.84292,-1.57928,4.28027],
+          "width": 2.45161,
+          "height": 0.26543
+        },
+        {
+          "pos": [-5.80148,0.67477,4.28027],
+          "width": 2.45161,
+          "height": 0.26543
+        },
+        {
+          "pos": [-5.80148,-1.57928,4.28027],
+          "width": 2.45161,
+          "height": 0.26543
+        },
+        {
+          "pos": [0.74857,1.99825,12.52077],
+          "width": 0.10293,
+          "height": 2.04623
+        },
+        {
+          "pos": [0.98474,1.92391,12.52077],
+          "width": 0.10293,
+          "height": 1.90591
+        },
+        {
+          "pos": [1.23139,1.79313,12.52077],
+          "width": 0.10293,
+          "height": 1.6559
+        },
+        {
+          "pos": [0.5008,1.99825,12.64188],
+          "width": 0.27508,
+          "height": 2.13879
+        },
+        {
+          "pos": [-0.40199,1.99825,13.04465],
+          "width": 0.43994,
+          "height": 2.16147
+        },
+        {
+          "pos": [-0.89008,1.8629,13.04465],
+          "width": 0.43994,
+          "height": 1.86738
+        },
+        {
+          "pos": [-1.31762,1.66694,12.99801],
+          "width": 0.32371,
+          "height": 1.57515
+        },
+        {
+          "pos": [-0.77419,2.01333,11.57335],
+          "width": 0.43994,
+          "height": 2.20459
+        },
+        {
+          "pos": [-1.27488,1.7363,11.57335],
+          "width": 0.43994,
+          "height": 1.65929
+        },
+        {
+          "pos": [0.92465,1.84149,11.36238],
+          "width": 0.10293,
+          "height": 1.73271
+        },
+        {
+          "pos": [0.71596,1.95999,11.36238],
+          "width": 0.10293,
+          "height": 1.96972
+        },
+        {
+          "pos": [1.25847,1.84149,11.36238],
+          "width": 0.10293,
+          "height": 1.73271
+        },
+        {
+          "pos": [1.59714,1.5776,11.36238],
+          "width": 0.10293,
+          "height": 1.26657
+        },
+        {
+          "pos": [-0.0,0.78313,16.70061],
+          "width": 0.73519,
+          "height": 0.94211
+        }
+      ]
+    }
+  ],
+  "connectionGroups": [
+    {
+      "groupName": "HOOKUP",
+      "isHookup": true,
+      "connections": [
+        {
+          "type": "pushback",
+          "pos": [0.0,-1.79425,12.5673],
+          "distance": 2.0
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "pos": [0.5735,1.651,15.335],
+      "rot": [14.6,0.0,0.0],
+      "scale": 0.03,
+      "hudX": 72,
+      "hudY": 69,
+      "hudScale": 0.7
+    },
+    {
+      "pos": [-0.5735,1.651,15.335],
+      "rot": [14.6,0.0,0.0],
+      "scale": 0.03,
+      "hudX": 331,
+      "hudY": 69,
+      "hudScale": 0.7
+    },
+    {
+      "pos": [0.3024,1.708,15.35],
+      "rot": [14.6,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 138,
+      "hudY": 46,
+      "hudScale": 0.35
+    },
+    {
+      "pos": [0.3024,1.597,15.32],
+      "rot": [14.6,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 138,
+      "hudY": 92,
+      "hudScale": 0.35
+    },
+    {
+      "pos": [0.1785,1.708,15.35],
+      "rot": [14.6,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 183,
+      "hudY": 46,
+      "hudScale": 0.32
+    },
+    {
+      "pos": [0.1785,1.597,15.32],
+      "rot": [14.6,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 183,
+      "hudY": 92,
+      "hudScale": 0.32
+    },
+    {
+      "pos": [-0.3024,1.708,15.35],
+      "rot": [14.6,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 266,
+      "hudY": 46,
+      "hudScale": 0.35
+    },
+    {
+      "pos": [-0.3024,1.597,15.32],
+      "rot": [14.6,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 266,
+      "hudY": 92,
+      "hudScale": 0.35
+    },
+    {
+      "pos": [-0.1785,1.708,15.35],
+      "rot": [14.6,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 223,
+      "hudY": 46,
+      "hudScale": 0.32
+    },
+    {
+      "pos": [-0.1785,1.597,15.32],
+      "rot": [14.6,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 223,
+      "hudY": 92,
+      "hudScale": 0.32
+    },
+    {
+      "pos": [0.08263,1.448,15.18],
+      "rot": [65.6,0.0,0.0],
+      "scale": 0.018,
+      "hudX": 270,
+      "hudY": 42,
+      "hudScale": 0.45,
+      "optionalPartNumber": 1,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [0.08263,1.389,15.05],
+      "rot": [65.0,0.0,0.0],
+      "scale": 0.018,
+      "hudX": 270,
+      "hudY": 97,
+      "hudScale": 0.45,
+      "optionalPartNumber": 1,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [-0.08263,1.448,15.18],
+      "rot": [65.6,0.0,0.0],
+      "scale": 0.018,
+      "hudX": 331,
+      "hudY": 42,
+      "hudScale": 0.45,
+      "optionalPartNumber": 2,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [-0.08263,1.389,15.05],
+      "rot": [65.6,0.0,0.0],
+      "scale": 0.018,
+      "hudX": 331,
+      "hudY": 97,
+      "hudScale": 0.45,
+      "optionalPartNumber": 2,
+      "placeOnPanel": true
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Airbus A-220-300",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_airbus",
+      "name": "Airbus A-220-300 (House Livery)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_airaustral",
+      "name": "Airbus A-220-300 (Air Austral)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_swiss",
+      "name": "Airbus A-220-300 (Swiss)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_airbaltic",
+      "name": "Airbus A-220-300 (AirBaltic)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_jetblue",
+      "name": "Airbus A-220-300 (JetBlue)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_breeze",
+      "name": "Airbus A-220-300 (Breeze)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_airfrance",
+      "name": "Airbus A-220-300 (Air France)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_aircanada",
+      "name": "Airbus A-220-300 (Air Canada)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_aircanada_tca",
+      "name": "Airbus A-220-300 (Air Canada special)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_korean",
+      "name": "Airbus A-220-300 (Korean)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_mai",
+      "name": "Airbus A-220-300 (MAI)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    },
+    {
+      "subName": "_delta",
+      "name": "Airbus A-220-300 (Delta)",
+      "extraMaterialLists": [
+        [
+          "minecraft:air:0:0"
+        ]
+      ]
+    }
+  ],
+  "variableModifiers": [
+    {
+      "variable": "dragCoefficient",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "brake",
+          "axis": [0.0,0.2,0.0],
+          "duration": 40
+        }
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "Cube.132",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "cockdoor",
+            "centerPoint": [-0.343417,1.97785,13.4177],
+            "axis": [0.0,88.0,0.0],
+            "duration": 35,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic"
+          }
+        ]
+      },
+      {
+        "objectName": "&lights2",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "!navigation_light"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin1r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.001",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin2r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.003",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin3r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.004",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin4r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.005",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin5r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.006",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin6r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.007",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin7r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.008",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin8r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.009",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin9r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.010",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin10r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.011",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin11r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5r.012",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin12r",
+            "centerPoint": [-0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,-49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin1l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.013",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin2l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.014",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin3l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.015",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin4l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.016",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin5l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.017",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin6l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.018",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin7l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.019",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin8l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.020",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin9l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.021",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin10l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.022",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin11l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin_5l.023",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin12l",
+            "centerPoint": [0.785487,2.74885,9.884],
+            "axis": [0.0,0.0,49.1],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseStartSound": "ivairlinerpack:bin_closing",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "nosegearb",
+        "applyAfter": "nosegear",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,-1.88175,13.3764],
+            "axis": [0.0,-1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "arm1r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1r",
+            "centerPoint": [-1.63232,1.58057,12.8483],
+            "axis": [0.0,142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "arm1l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1l",
+            "centerPoint": [1.68747,1.58057,12.4585],
+            "axis": [0.0,-142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "arm2l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2l",
+            "centerPoint": [1.57335,1.70171,-10.8395],
+            "axis": [0.0,-142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "arm2r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2r",
+            "centerPoint": [-1.57335,1.70171,-10.8395],
+            "axis": [0.0,142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "door1l",
+        "applyAfter": "arm1l",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "door1l",
+            "axis": [0.0,0.03,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door1l",
+            "centerPoint": [1.66307,1.97785,11.877],
+            "axis": [0.0,142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "door1r",
+        "applyAfter": "arm1r",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "door1r",
+            "axis": [0.0,0.03,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door1r",
+            "centerPoint": [-1.61476,1.97785,12.2929],
+            "axis": [0.0,-142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "door2l",
+        "applyAfter": "arm2l",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "door2l",
+            "axis": [0.0,0.03,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door2l",
+            "centerPoint": [1.48484,2.23466,-11.4138],
+            "axis": [0.0,142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "door2r",
+        "applyAfter": "arm2r",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "door2r",
+            "axis": [0.0,0.03,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door2r",
+            "centerPoint": [-1.48484,2.23466,-11.4138],
+            "axis": [0.0,-142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "translucent_2r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2r",
+            "centerPoint": [-1.57335,1.70171,-10.8395],
+            "axis": [0.0,142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          },
+          {
+            "animationType": "translation",
+            "variable": "door2r",
+            "axis": [0.0,0.03,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door2r",
+            "centerPoint": [-1.48484,2.23466,-11.4138],
+            "axis": [0.0,-142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "translucent_2l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2l",
+            "centerPoint": [1.57335,1.70171,-10.8395],
+            "axis": [0.0,-142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          },
+          {
+            "animationType": "translation",
+            "variable": "door2l",
+            "axis": [0.0,0.03,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door2l",
+            "centerPoint": [1.48484,2.23466,-11.4138],
+            "axis": [0.0,142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "translucent_1r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1r",
+            "centerPoint": [-1.63232,1.58057,12.8483],
+            "axis": [0.0,142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          },
+          {
+            "animationType": "translation",
+            "variable": "door1r",
+            "axis": [0.0,0.03,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door1r",
+            "centerPoint": [-1.61476,1.97785,12.2929],
+            "axis": [0.0,-142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "translucent_1l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1l",
+            "centerPoint": [1.68747,1.58057,12.4585],
+            "axis": [0.0,-142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          },
+          {
+            "animationType": "translation",
+            "variable": "door1l",
+            "axis": [0.0,0.03,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door1l",
+            "centerPoint": [1.66307,1.97785,11.877],
+            "axis": [0.0,142.0,0.0],
+            "duration": 60,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeinoutcubic",
+            "forwardsDelay": 21
+          }
+        ]
+      },
+      {
+        "objectName": "handle1l",
+        "applyAfter": "door1l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1l",
+            "centerPoint": [1.44875,2.35606,11.877],
+            "axis": [0.0,0.0,121.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door1l",
+            "centerPoint": [1.44875,2.35606,11.877],
+            "axis": [0.0,0.0,-121.0],
+            "duration": 16,
+            "forwardsDelay": 80
+          }
+        ]
+      },
+      {
+        "objectName": "handle1r",
+        "applyAfter": "door1r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1r",
+            "centerPoint": [-1.47436,2.25211,11.877],
+            "axis": [0.0,0.0,-121.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door1r",
+            "centerPoint": [-1.47436,2.25211,11.877],
+            "axis": [0.0,0.0,121.0],
+            "duration": 16,
+            "forwardsDelay": 80
+          }
+        ]
+      },
+      {
+        "objectName": "handle2l",
+        "applyAfter": "door2l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2l",
+            "centerPoint": [1.37307,2.43745,-16.7935],
+            "axis": [0.0,0.0,121.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door2l",
+            "centerPoint": [1.37307,2.43745,-16.7935],
+            "axis": [0.0,0.0,-121.0],
+            "duration": 16,
+            "forwardsDelay": 80
+          }
+        ]
+      },
+      {
+        "objectName": "handle2r",
+        "applyAfter": "door2r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2r",
+            "centerPoint": [-1.3987,2.38801,-16.7935],
+            "axis": [0.0,0.0,-121.0],
+            "duration": 20,
+            "reverseDelay": 51
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door2r",
+            "centerPoint": [-1.3987,2.38801,-16.7935],
+            "axis": [0.0,0.0,121.0],
+            "duration": 16,
+            "forwardsDelay": 80
+          }
+        ]
+      },
+      {
+        "objectName": "handlei1l",
+        "applyAfter": "door1l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1l",
+            "centerPoint": [1.48825,2.02697,12.057],
+            "axis": [-94.93782,-44.85321,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          }
+        ]
+      },
+      {
+        "objectName": "handleir",
+        "applyAfter": "door1r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1r",
+            "centerPoint": [-1.48628,1.98973,12.4536],
+            "axis": [-94.95722,44.81212,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          }
+        ]
+      },
+      {
+        "objectName": "handlei2l",
+        "applyAfter": "door2l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2l",
+            "centerPoint": [1.36129,2.1168,-11.2411],
+            "axis": [-94.95478,-44.81729,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          }
+        ]
+      },
+      {
+        "objectName": "handlei2r",
+        "applyAfter": "door2r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2r",
+            "centerPoint": [-1.35067,2.1168,-11.2411],
+            "axis": [-94.95363,44.81973,0.0],
+            "duration": 20,
+            "reverseDelay": 51
+          }
+        ]
+      },
+      {
+        "objectName": "Cylinder.002",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1a",
+            "centerPoint": [-1.73671,0.946865,12.0171],
+            "axis": [0.0,0.0,-12.6],
+            "duration": 20,
+            "forwardsEasing": "easeoutelastic",
+            "forwardsStartSound": "ivairlinerpack:aircraftdoor_open"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door1a",
+            "centerPoint": [-1.73671,0.946865,12.0171],
+            "axis": [0.0,0.0,-142.0],
+            "duration": 80,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeincubic",
+            "forwardsDelay": 15,
+            "reverseEndSound": "ivairlinerpack:aircraftdoor_close"
+          }
+        ]
+      },
+      {
+        "objectName": "Cylinder.007",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2a",
+            "centerPoint": [-1.65463,0.924178,12.0171],
+            "axis": [0.0,0.0,-12.6],
+            "duration": 20,
+            "forwardsEasing": "easeoutelastic",
+            "forwardsStartSound": "ivairlinerpack:aircraftdoor_open"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door2a",
+            "centerPoint": [-1.65463,0.924178,12.0171],
+            "axis": [0.0,0.0,-142.0],
+            "duration": 80,
+            "forwardsEasing": "easeinoutcubic",
+            "reverseEasing": "easeincubic",
+            "forwardsDelay": 15,
+            "reverseEndSound": "ivairlinerpack:aircraftdoor_close"
+          }
+        ]
+      },
+      {
+        "objectName": "rudder",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,6.64264,-16.9081],
+            "axis": [0.0,0.89613,-0.44378]
+          }
+        ]
+      },
+      {
+        "objectName": "elevatorr",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [-2.9522,2.63999,-17.5452],
+            "axis": [1.36589,-0.23784,0.57252]
+          }
+        ]
+      },
+      {
+        "objectName": "elevatorl",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [2.9522,2.63999,-17.5452],
+            "axis": [1.36589,0.23784,-0.57252]
+          }
+        ]
+      },
+      {
+        "objectName": "aileronr",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [-15.9074,2.07108,-4.87439],
+            "axis": [1.36588,-0.15418,0.60051]
+          }
+        ]
+      },
+      {
+        "objectName": "aileronl",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [15.9074,2.07108,-4.87439],
+            "axis": [-1.36588,-0.15418,0.60051]
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.051",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [0.819796,1.4517,14.9215],
+            "axis": [0.0,0.0,0.8]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [0.819796,1.4517,14.9215],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.049",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [-0.819815,1.45154,14.9215],
+            "axis": [0.0,0.0,0.8]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [-0.819815,1.45154,14.9215],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.066",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "rudder",
+            "axis": [0.0,0.0,-0.002]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [-0.320153,1.04964,15.5065],
+            "axis": [30.0,0.0,0.0],
+            "duration": 5
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.071",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "rudder",
+            "axis": [0.0,0.0,0.002]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [-0.320153,1.04964,15.5065],
+            "axis": [30.0,0.0,0.0],
+            "duration": 5
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.067",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.555981,1.62872,15.3401],
+            "axis": [58.0,0.0,0.0],
+            "duration": 5
+          }
+        ]
+      },
+      {
+        "objectName": "&lights",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "!engine_magneto_1"
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.043",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "reverser",
+            "axis": [0.0,0.0,-0.074],
+            "duration": 5
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.057",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_setpoint",
+            "centerPoint": [-0.035906,1.32424,14.4927],
+            "axis": [-2.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.060",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "throttle",
+            "centerPoint": [-0.035906,1.28853,14.8252],
+            "axis": [42.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.061",
+        "applyAfter": "Cube.060",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [0.0,1.4334,14.7792],
+            "axis": [-40.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "ngd2r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.555981,-0.225716,13.5024],
+            "axis": [5.61917,1.64966,88.30602],
+            "duration": 50,
+            "forwardsDelay": 100
+          }
+        ]
+      },
+      {
+        "objectName": "ngd2l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.555981,-0.225716,13.5024],
+            "axis": [5.61917,-1.64966,-88.30602],
+            "duration": 50,
+            "forwardsDelay": 100
+          }
+        ]
+      },
+      {
+        "objectName": "ngd1l.002",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.458096,-0.082248,14.7936],
+            "axis": [-9.45679,-11.0126,-87.30144],
+            "duration": 50,
+            "reverseDelay": 120
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.458096,-0.082248,14.7936],
+            "axis": [9.45679,11.0126,87.30144],
+            "duration": 50,
+            "forwardsDelay": 120
+          }
+        ]
+      },
+      {
+        "objectName": "ngd1l.001",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.458096,-0.082248,14.7936],
+            "axis": [-9.45679,11.0126,87.30144],
+            "duration": 50,
+            "reverseDelay": 120
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.458096,-0.082248,14.7936],
+            "axis": [9.45679,-11.0126,-87.30144],
+            "duration": 50,
+            "forwardsDelay": 120
+          }
+        ]
+      },
+      {
+        "objectName": "lgdoor1l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [3.6679,0.403641,-0.6171],
+            "axis": [0.0,9.59347,-90.4929],
+            "duration": 50,
+            "forwardsDelay": 100
+          }
+        ]
+      },
+      {
+        "objectName": "lgdoor1r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-3.6679,0.403641,-0.6171],
+            "axis": [-0.0,-9.59347,90.4929],
+            "duration": 50,
+            "forwardsDelay": 100
+          }
+        ]
+      },
+      {
+        "objectName": "lgl",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [3.27706,0.437694,3.06171],
+            "axis": [0.0,0.0,-81.5],
+            "duration": 80,
+            "forwardsDelay": 50,
+            "reverseDelay": 50,
+            "forwardsEndSound": "ivairlinerpack:landinggear_start",
+            "reverseEndSound": "ivairlinerpack:landinggear_start"
+          }
+        ]
+      },
+      {
+        "objectName": "lgr",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-3.27706,0.437694,3.06171],
+            "axis": [0.0,0.0,81.5],
+            "duration": 80,
+            "forwardsDelay": 50,
+            "reverseDelay": 50,
+            "forwardsEndSound": "ivairlinerpack:landinggear_start",
+            "reverseEndSound": "ivairlinerpack:landinggear_start"
+          }
+        ]
+      },
+      {
+        "objectName": "lgdoor3l",
+        "applyAfter": "lgl",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [3.36658,-0.803005,-0.551569],
+            "axis": [-10.7957,1.60718,-91.35026],
+            "duration": 80,
+            "forwardsDelay": 50,
+            "reverseDelay": 50
+          }
+        ]
+      },
+      {
+        "objectName": "lgdoor3r",
+        "applyAfter": "lgr",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-3.36658,-0.803005,-0.551569],
+            "axis": [-10.7957,-1.60718,91.35026],
+            "duration": 80,
+            "forwardsDelay": 50,
+            "reverseDelay": 50
+          }
+        ]
+      },
+      {
+        "objectName": "strut2l",
+        "applyAfter": "lgl",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [3.07308,-1.03974,-0.633296],
+            "axis": [0.0,0.0,-33.5],
+            "duration": 70,
+            "forwardsDelay": 50,
+            "reverseDelay": 50
+          }
+        ]
+      },
+      {
+        "objectName": "strut2r",
+        "applyAfter": "lgr",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-3.07308,-1.03974,-0.633296],
+            "axis": [0.0,0.0,33.5],
+            "duration": 70,
+            "forwardsDelay": 50,
+            "reverseDelay": 50
+          }
+        ]
+      },
+      {
+        "objectName": "lglb",
+        "applyAfter": "lgl",
+        "animations": []
+      },
+      {
+        "objectName": "lgrb",
+        "applyAfter": "lgr",
+        "animations": []
+      },
+      {
+        "objectName": "strut1l",
+        "applyAfter": "strut2l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [2.46038,-0.250129,-0.595905],
+            "axis": [0.0,0.0,180.0],
+            "duration": 75,
+            "forwardsDelay": 48,
+            "reverseDelay": 57
+          }
+        ]
+      },
+      {
+        "objectName": "strut1r",
+        "applyAfter": "strut2r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-2.46038,-0.250129,-0.595905],
+            "axis": [0.0,0.0,-180.0],
+            "duration": 75,
+            "forwardsDelay": 48,
+            "reverseDelay": 57
+          }
+        ]
+      },
+      {
+        "objectName": "fairing2l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [11.242,1.27721,-2.64728],
+            "axis": [-0.46358,-0.06457,0.17586]
+          }
+        ]
+      },
+      {
+        "objectName": "fairing2r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-11.242,1.27721,-2.64728],
+            "axis": [-0.46358,0.06457,-0.17586]
+          }
+        ]
+      },
+      {
+        "objectName": "fairing1l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [4.92221,0.450686,-0.756439],
+            "axis": [-0.49535,-0.06773,0.00633]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [4.92221,0.450686,-0.756439],
+            "axis": [0.0,0.0,0.03]
+          }
+        ]
+      },
+      {
+        "objectName": "fairing1r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-4.92221,0.450686,-0.756439],
+            "axis": [-0.49535,0.06773,-0.00633]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-4.92221,0.450686,-0.756439],
+            "axis": [0.0,0.0,-0.03]
+          }
+        ]
+      },
+      {
+        "objectName": "flap2l",
+        "applyAfter": "fairing2l",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,0.0,-0.006]
+          },
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.004,0.0,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [13.0139,1.40145,-4.59255],
+            "axis": [-0.28451,-0.03937,0.08661]
+          }
+        ]
+      },
+      {
+        "objectName": "flap2r",
+        "applyAfter": "fairing2r",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,0.0,-0.006]
+          },
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [-0.004,0.0,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-13.0139,1.40145,-4.59255],
+            "axis": [-0.28451,0.03937,-0.08661]
+          }
+        ]
+      },
+      {
+        "objectName": "flap1l",
+        "applyAfter": "fairing1l",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,0.0,-0.006]
+          },
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.001,0.0,0.0]
+          },
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,0.001,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [4.92,0.748755,-2.41891],
+            "axis": [-0.29721,-0.04064,0.0038]
+          }
+        ]
+      },
+      {
+        "objectName": "flap1r",
+        "applyAfter": "fairing1r",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,0.0,-0.006]
+          },
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [-0.001,0.0,0.0]
+          },
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,0.001,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-4.92,0.748755,-2.41891],
+            "axis": [-0.29721,0.04064,-0.0038]
+          }
+        ]
+      },
+      {
+        "objectName": "Cylinder.018",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0016932,0.0,0.0028575]
+          }
+        ]
+      },
+      {
+        "objectName": "Cylinder.005",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [-0.0016932,0.0,0.0028575]
+          }
+        ]
+      },
+      {
+        "objectName": "spoiler2l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [13.7719,1.92511,-3.64756],
+            "axis": [65.74296,7.15491,-22.9493],
+            "duration": 15,
+            "forwardsDelay": 20
+          }
+        ]
+      },
+      {
+        "objectName": "spoiler2r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [-13.7719,1.92511,-3.64756],
+            "axis": [65.74296,-7.15491,22.9493],
+            "duration": 15,
+            "forwardsDelay": 20
+          }
+        ]
+      },
+      {
+        "objectName": "rev",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "reverser",
+            "axis": [0.0,0.0,-0.6333],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "spoiler1l",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [4.85678,0.904645,-1.23146],
+            "axis": [69.31684,9.46856,-2.34979],
+            "duration": 15
+          }
+        ]
+      },
+      {
+        "objectName": "spoiler1r",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [-4.85678,0.904645,-1.23146],
+            "axis": [69.31684,-9.46856,2.34979],
+            "duration": 15
+          }
+        ]
+      },
+      {
+        "objectName": "nosegear",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.0,-0.022288,13.3756],
+            "axis": [-106.0,0.0,0.0],
+            "duration": 80,
+            "forwardsDelay": 50,
+            "reverseDelay": 50,
+            "forwardsEndSound": "ivairlinerpack:landinggear_start",
+            "reverseEndSound": "ivairlinerpack:landinggear_start"
+          }
+        ]
+      },
+      {
+        "objectName": "&taxilight",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.0,-0.022288,13.3756],
+            "axis": [-106.0,0.0,0.0],
+            "duration": 80,
+            "forwardsDelay": 50,
+            "reverseDelay": 50,
+            "forwardsEndSound": "ivairlinerpack:landinggear_start",
+            "reverseEndSound": "ivairlinerpack:landinggear_start"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R1U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R1",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R1D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R1",
+            "centerPoint": [-1.712,1.909,11.09],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R2U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R2",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R2D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R2",
+            "centerPoint": [-1.712,1.909,10.57],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R3U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R3",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R3D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R3",
+            "centerPoint": [-1.712,1.909,10.05],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R4U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R4",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R4D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R4",
+            "centerPoint": [-1.712,1.909,9.53],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R5U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R5",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R5D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R5",
+            "centerPoint": [-1.712,1.909,9.01],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R6U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R6",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R6D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R6",
+            "centerPoint": [-1.712,1.909,8.49],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R7U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R7",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R7D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R7",
+            "centerPoint": [-1.712,1.909,7.97],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R8U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R8",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R8D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R8",
+            "centerPoint": [-1.712,1.909,7.45],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R9U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R9",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R9D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R9",
+            "centerPoint": [-1.712,1.909,6.93],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R10U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R10",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R10D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R10",
+            "centerPoint": [-1.712,1.909,6.41],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R11U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R11",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R11D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R11",
+            "centerPoint": [-1.712,1.909,5.89],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R12U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R12",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R12D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R12",
+            "centerPoint": [-1.712,1.909,5.37],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R13U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R13",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R13D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R13",
+            "centerPoint": [-1.712,1.909,4.85000000000001],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R14U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R14",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R14D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R14",
+            "centerPoint": [-1.712,1.909,4.33000000000001],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R15U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R15",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R15D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R15",
+            "centerPoint": [-1.712,1.909,3.81000000000001],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R16U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R16",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R16D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R16",
+            "centerPoint": [-1.712,1.909,3.29000000000001],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L1U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L1",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L1D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L1",
+            "centerPoint": [1.712,1.909,11.09],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L2U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L2",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L2D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L2",
+            "centerPoint": [1.712,1.909,10.57],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L3U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L3",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L3D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L3",
+            "centerPoint": [1.712,1.909,10.05],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L4U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L4",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L4D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L4",
+            "centerPoint": [1.712,1.909,9.53],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L5U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L5",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L5D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L5",
+            "centerPoint": [1.712,1.909,9.01],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L6U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L6",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L6D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L6",
+            "centerPoint": [1.712,1.909,8.49],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L7U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L7",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L7D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L7",
+            "centerPoint": [1.712,1.909,7.97],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L8U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L8",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L8D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L8",
+            "centerPoint": [1.712,1.909,7.45],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L9U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L9",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L9D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L9",
+            "centerPoint": [1.712,1.909,6.93],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L10U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L10",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L10D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L10",
+            "centerPoint": [1.712,1.909,6.41],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L11U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L11",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L11D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L11",
+            "centerPoint": [1.712,1.909,5.89],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L12U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L12",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L12D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L12",
+            "centerPoint": [1.712,1.909,5.37],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L13U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L13",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L13D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L13",
+            "centerPoint": [1.712,1.909,4.85000000000001],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L14U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L14",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L14D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L14",
+            "centerPoint": [1.712,1.909,4.33000000000001],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L15U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L15",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L15D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L15",
+            "centerPoint": [1.712,1.909,3.81000000000001],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L16U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L16",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L16D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L16",
+            "centerPoint": [1.712,1.909,3.29000000000001],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L17U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L17",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L17D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L17",
+            "centerPoint": [-1.543,2.311,2.77000000000001],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R17U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R17",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R17D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R17",
+            "centerPoint": [-1.543,2.311,2.77000000000001],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L18U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L18",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L18D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L18",
+            "centerPoint": [1.543,2.311,0.6063],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L19U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L19",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L19D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L19",
+            "centerPoint": [1.543,2.311,0.0862999999999999],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L20U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L20",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L20D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L20",
+            "centerPoint": [1.543,2.311,-0.4337],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L21U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L21",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L21D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L21",
+            "centerPoint": [1.543,2.311,-0.9537],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L22U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L22",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L22D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L22",
+            "centerPoint": [1.543,2.311,-1.4737],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L23U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L23",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L23D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L23",
+            "centerPoint": [1.543,2.311,-1.9937],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L24U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L24",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L24D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L24",
+            "centerPoint": [1.543,2.311,-2.5137],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L25U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L25",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L25D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L25",
+            "centerPoint": [1.543,2.311,-3.0337],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L26U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L26",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L26D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L26",
+            "centerPoint": [1.543,2.311,-3.5537],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L27U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L27",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L27D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L27",
+            "centerPoint": [1.543,2.311,-4.0737],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L28U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L28",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L28D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L28",
+            "centerPoint": [1.543,2.311,-4.5937],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L29U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L29",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L29D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L29",
+            "centerPoint": [1.543,2.311,-5.1137],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L30U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L30",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L30D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L30",
+            "centerPoint": [1.543,2.311,-5.6337],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L31U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L31",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L31D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L31",
+            "centerPoint": [1.543,2.311,-6.1537],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L32U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L32",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L32D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L32",
+            "centerPoint": [1.543,2.311,-6.6737],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L33U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L33",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L33D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L33",
+            "centerPoint": [1.543,2.311,-7.1937],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L34U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L34",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L34D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L34",
+            "centerPoint": [1.543,2.311,-7.7137],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L35U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L35",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L35D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L35",
+            "centerPoint": [1.543,2.311,-8.2337],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L36U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L36",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L36D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L36",
+            "centerPoint": [1.543,2.311,-8.7537],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L37U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L37",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L37D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L37",
+            "centerPoint": [1.543,2.311,-9.2737],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L38U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L38",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L38D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L38",
+            "centerPoint": [1.543,2.311,-9.7937],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L39U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L39",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_L39D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_L39",
+            "centerPoint": [1.543,2.311,-10.3137],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R18U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R18",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R18D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R18",
+            "centerPoint": [-1.543,2.311,0.6063],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R19U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R19",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R19D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R19",
+            "centerPoint": [-1.543,2.311,0.0862999999999999],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R20U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R20",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R20D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R20",
+            "centerPoint": [-1.543,2.311,-0.4337],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R21U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R21",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R21D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R21",
+            "centerPoint": [-1.543,2.311,-0.9537],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R22U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R22",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R22D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R22",
+            "centerPoint": [-1.543,2.311,-1.4737],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R23U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R23",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R23D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R23",
+            "centerPoint": [-1.543,2.311,-1.9937],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R24U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R24",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R24D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R24",
+            "centerPoint": [-1.543,2.311,-2.5137],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R25U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R25",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R25D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R25",
+            "centerPoint": [-1.543,2.311,-3.0337],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R26U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R26",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R26D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R26",
+            "centerPoint": [-1.543,2.311,-3.5537],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R27U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R27",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R27D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R27",
+            "centerPoint": [-1.543,2.311,-4.0737],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R28U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R28",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R28D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R28",
+            "centerPoint": [-1.543,2.311,-4.5937],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R29U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R29",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R29D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R29",
+            "centerPoint": [-1.543,2.311,-5.1137],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R30U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R30",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R30D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R30",
+            "centerPoint": [-1.543,2.311,-5.6337],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R31U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R31",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R31D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R31",
+            "centerPoint": [-1.543,2.311,-6.1537],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R32U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R32",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R32D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R32",
+            "centerPoint": [-1.543,2.311,-6.6737],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R33U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R33",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R33D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R33",
+            "centerPoint": [-1.543,2.311,-7.1937],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R34U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R34",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R34D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R34",
+            "centerPoint": [-1.543,2.311,-7.7137],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R35U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R35",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R35D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R35",
+            "centerPoint": [-1.543,2.311,-8.2337],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R36U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R36",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R36D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R36",
+            "centerPoint": [-1.543,2.311,-8.7537],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R37U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R37",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R37D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R37",
+            "centerPoint": [-1.543,2.311,-9.2737],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R38U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R38",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R38D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R38",
+            "centerPoint": [-1.543,2.311,-9.7937],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R39U",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R39",
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shade_R39D",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "shade_R39",
+            "centerPoint": [-1.543,2.311,-10.3137],
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "duration": 1,
+            "forwardsStartSound": "ivairlinerpack:shade_open",
+            "reverseStartSound": "ivairlinerpack:shade_close"
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "&lightsNORM",
+        "emissive": true,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "navigation_light",
+            "axis": [0.0,1.0,0.0]
+          }
+        ],
+        "blendableComponents": []
+      },
+      {
+        "objectName": "&lights2",
+        "brightnessAnimations": []
+      },
+      {
+        "objectName": "&lights",
+        "color": "FFFFFF",
+        "brightnessAnimations": []
+      },
+      {
+        "objectName": "&greenlightnav",
+        "emissive": true,
+        "color": "4CFF00",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "navigation_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-17.32,2.27,-4.295],
+            "axis": [0.0,0.0,0.0],
+            "flareHeight": 1.2,
+            "flareWidth": 1.2
+          },
+          {
+            "pos": [-17.36,2.27,-4.329],
+            "axis": [-1.0,0.0,2.0],
+            "flareHeight": 1.2,
+            "flareWidth": 1.2
+          }
+        ]
+      },
+      {
+        "objectName": "&redlightnav",
+        "emissive": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "navigation_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [17.32,2.27,-4.295],
+            "axis": [0.0,0.0,0.0],
+            "flareHeight": 1.2,
+            "flareWidth": 1.2
+          },
+          {
+            "pos": [17.36,2.27,-4.329],
+            "axis": [1.0,0.0,2.0],
+            "flareHeight": 1.2,
+            "flareWidth": 1.2
+          }
+        ]
+      },
+      {
+        "objectName": "&navrear",
+        "emissive": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "navigation_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,2.346,-19.52],
+            "axis": [0.0,0.0,-0.9819999933242798],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "&strobe",
+        "emissive": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "strobe_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "2_3_20_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [17.53,2.3,-4.419],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 2.5,
+            "flareWidth": 2.5
+          },
+          {
+            "pos": [17.43,2.3,-4.345],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 2.5,
+            "flareWidth": 2.5
+          },
+          {
+            "pos": [-17.53,2.3,-4.419],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 2.5,
+            "flareWidth": 2.5
+          },
+          {
+            "pos": [-17.43,2.3,-4.345],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 2.5,
+            "flareWidth": 2.5
+          },
+          {
+            "pos": [0.0,2.787,-19.52],
+            "axis": [0.0,0.0,-0.9819999933242798],
+            "flareHeight": 1.5,
+            "flareWidth": 1.5
+          }
+        ]
+      },
+      {
+        "objectName": "&taxilight",
+        "emissive": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "gear_setpoint",
+            "axis": [0.0,-2.0,0.0],
+            "duration": 5,
+            "forwardsDelay": 50,
+            "reverseDelay": 140
+          },
+          {
+            "animationType": "translation",
+            "variable": "taxi_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 5
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-0.2338,-0.7677,13.59],
+            "axis": [0.0,0.0,0.0],
+            "flareHeight": 1.2,
+            "flareWidth": 1.2,
+            "beamDiameter": 8.0,
+            "beamLength": 20.0
+          },
+          {
+            "pos": [0.2338,-0.7677,13.59],
+            "axis": [0.0,0.0,0.0],
+            "flareHeight": 1.2,
+            "flareWidth": 1.2,
+            "beamDiameter": 8.0,
+            "beamLength": 20.0
+          }
+        ]
+      },
+      {
+        "objectName": "&landinglight",
+        "emissive": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "landing_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 5
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-1.434,-0.06686,6.11],
+            "axis": [-1.0,0.0,2.0],
+            "flareHeight": 1.2,
+            "flareWidth": 1.2,
+            "beamDiameter": 8.0,
+            "beamLength": 20.0
+          },
+          {
+            "pos": [1.434,-0.06686,6.11],
+            "axis": [1.0,0.0,2.0],
+            "flareHeight": 1.2,
+            "flareWidth": 1.2,
+            "beamDiameter": 8.0,
+            "beamLength": 20.0
+          }
+        ]
+      },
+      {
+        "objectName": "&strobered",
+        "emissive": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "strobe_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "20_3_2_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.08171,3.349,2.01],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          },
+          {
+            "pos": [-0.08171,3.349,2.01],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          },
+          {
+            "pos": [0.0,3.349,2.091],
+            "axis": [0.0,0.0,0.0],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          },
+          {
+            "pos": [0.0,3.349,1.928],
+            "axis": [0.0,0.0,-0.9],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          },
+          {
+            "pos": [0.0,3.431,2.01],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          },
+          {
+            "pos": [0.08171,-0.4835,4.172],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          },
+          {
+            "pos": [-0.08171,-0.4835,4.172],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          },
+          {
+            "pos": [0.0,-0.4835,4.253],
+            "axis": [0.0,0.0,0.0],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          },
+          {
+            "pos": [0.0,-0.4835,4.09],
+            "axis": [0.0,0.0,-0.9],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          },
+          {
+            "pos": [0.0,-0.4835,4.172],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0
+          }
+        ]
+      }
+    ],
+    "sounds": [
+      {
+        "name": "ivairlinerpack:flap_start",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "flaps_moving",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,2.0,0.0],
+            "offset": 10.5,
+            "clampMax": 5.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:flap_going",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "flaps_moving",
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "forwardsDelay": 18,
+            "reverseDelay": 5
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,2.0,0.0],
+            "offset": 0.8,
+            "clampMax": 5.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:flap_stop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "flaps_moving",
+            "offset": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,2.0,0.0],
+            "offset": 0.8,
+            "clampMax": 5.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:pullup",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gear_setpoint",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "ground_distance",
+            "clampMax": 60.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,0.0,0.0],
+            "offset": 10.5
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:terrain",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gear_setpoint",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "ground_distance",
+            "clampMax": 60.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,0.0,0.0],
+            "offset": 10.5
+          }
+        ],
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:airbus_stall",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_onground_3"
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMax": 35.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,0.0,0.0],
+            "offset": 5.5
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:engine_alarm_modern",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gear_setpoint",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running_1"
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,0.0,0.0],
+            "offset": 5.5
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "ivairlinerpack:engine_alarm_modern",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gear_setpoint",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running_2"
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,0.0,0.0],
+            "offset": 5.5
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "description": "Smol plane look like bebe 787 ",
+    "health": 100,
+    "materialLists": [
+      [
+        "oredict:ingotIron:40",
+        "minecraft:iron_bars:0:4",
+        "minecraft:glass_pane:0:22"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

@@ -1,0 +1,943 @@
+{
+  "motorized": {
+    "hasAutopilot": true,
+    "hasHeadlights": true,
+    "hasTurnSignals": true,
+    "emptyMass": 20000,
+    "fuelCapacity": 15000,
+    "downForce": 0.52,
+    "overSteer": 1.5,
+    "underSteer": 1.0,
+    "axleRatio": 3.3,
+    "brakingFactor": 9.0,
+    "dragCoefficient": 0.3,
+    "litVariable": "headlight",
+    "panel": "mts:default_car"
+  },
+  "parts": [
+    {
+      "pos": [0.81483,-0.019048,-0.953076],
+      "rot": [0.0,0.0,0.0],
+      "minValue": 0.4,
+      "maxValue": 2.25,
+      "partScale": [0.685,0.685,0.685],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel"
+      ]
+    },
+    {
+      "pos": [-0.81483,-0.019048,-0.953076],
+      "rot": [0.0,180.0,0.0],
+      "isMirrored": true,
+      "minValue": 0.4,
+      "maxValue": 2.25,
+      "partScale": [0.685,0.685,0.685],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel"
+      ]
+    },
+    {
+      "pos": [0.81483,-0.019048,1.10742],
+      "turnsWithSteer": true,
+      "minValue": 0.4,
+      "maxValue": 2.25,
+      "partScale": [0.685,0.685,0.685],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel"
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.81483,-0.019048,1.10742],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [-0.81483,-0.019048,1.10742],
+      "rot": [0.0,180.0,0.0],
+      "turnsWithSteer": true,
+      "isMirrored": true,
+      "minValue": 0.4,
+      "maxValue": 2.25,
+      "partScale": [0.685,0.685,0.685],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel"
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [-0.81483,-0.019048,1.10742],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [0.161306,0.434488,1.46495],
+      "isController": true,
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ],
+      "interactableVariables": []
+    },
+    {
+      "pos": [0.0,0.5,0.0],
+      "maxValue": 15.0,
+      "partScale": [1.0E-5,1.0E-5,1.0E-5],
+      "defaultPart": "ivairlinerpack:i4",
+      "types": [
+        "engine_car"
+      ],
+      "linkedParts": [1,2,3,4]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-0.40568,2.4266,0.16667],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,2.4266,0.16667],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,2.4266,0.16667],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,2.4266,0.16667],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,2.17532,-0.0733],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,2.17532,-0.0733],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,2.17532,-0.0733],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,2.17532,-0.0733],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,1.9282,-0.31268],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,1.9282,-0.31268],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,1.9282,-0.31268],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,1.9282,-0.31268],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,1.68227,-0.5589],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,1.68227,-0.5589],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,1.68227,-0.5589],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,1.68227,-0.5589],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,1.42771,-0.7959],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,1.42771,-0.7959],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,1.42771,-0.7959],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,1.42771,-0.7959],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,1.18506,-1.0439],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,1.18506,-1.0439],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,1.18506,-1.0439],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,1.18506,-1.0439],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,0.93557,-1.28388],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,0.93557,-1.28388],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,0.93557,-1.28388],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,0.93557,-1.28388],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,0.68011,-1.52563],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,0.68011,-1.52563],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,0.68011,-1.52563],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,0.68011,-1.52563],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,0.433,-1.7787],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,0.433,-1.7787],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,0.433,-1.7787],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,0.433,-1.7787],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,0.18975,-1.99873],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,0.18975,-1.99873],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,0.18975,-1.99873],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,0.18975,-1.99873],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,-0.06153,-2.25358],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.13869,-0.06153,-2.25358],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.1283,-0.06153,-2.25358],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [0.39528,-0.06153,-2.25358],
+          "width": 0.25509,
+          "height": 0.25509
+        },
+        {
+          "pos": [-0.40568,-0.16941,-2.51261],
+          "width": 0.25509,
+          "height": 0.04835
+        },
+        {
+          "pos": [-0.13869,-0.16941,-2.51261],
+          "width": 0.25509,
+          "height": 0.04835
+        },
+        {
+          "pos": [0.1283,-0.16941,-2.51261],
+          "width": 0.25509,
+          "height": 0.04835
+        },
+        {
+          "pos": [0.39528,-0.16941,-2.51261],
+          "width": 0.25509,
+          "height": 0.04835
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "Cube.025",
+      "collisions": [
+        {
+          "pos": [-0.72433,2.51291,2.82863],
+          "width": 0.49489,
+          "height": 0.09226
+        },
+        {
+          "pos": [-0.21091,2.51291,2.82863],
+          "width": 0.49489,
+          "height": 0.09226
+        },
+        {
+          "pos": [0.30251,2.51291,2.82863],
+          "width": 0.49489,
+          "height": 0.09226
+        },
+        {
+          "pos": [0.79581,2.51291,2.82863],
+          "width": 0.49489,
+          "height": 0.09226
+        },
+        {
+          "pos": [0.43681,-0.06026,-2.00062],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,-0.06026,-2.00062],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,-0.06026,-2.00062],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,-0.06026,-2.00062],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.43681,0.1751,-1.75426],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,0.1751,-1.75426],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,0.1751,-1.75426],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,0.1751,-1.75426],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.43681,0.42358,-1.51097],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,0.42358,-1.51097],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,0.42358,-1.51097],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,0.42358,-1.51097],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.43681,0.6736,-1.26889],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,0.6736,-1.26889],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,0.6736,-1.26889],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,0.6736,-1.26889],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.43681,0.91949,-1.02834],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,0.91949,-1.02834],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,0.91949,-1.02834],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,0.91949,-1.02834],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.43681,1.16783,-0.78367],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,1.16783,-0.78367],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,1.16783,-0.78367],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,1.16783,-0.78367],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.43681,1.41799,-0.5425],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,1.41799,-0.5425],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,1.41799,-0.5425],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,1.41799,-0.5425],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.43681,1.66419,-0.30104],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,1.66419,-0.30104],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,1.66419,-0.30104],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,1.66419,-0.30104],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.43681,1.9139,-0.06049],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,1.9139,-0.06049],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,1.9139,-0.06049],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,1.9139,-0.06049],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.43681,2.16071,0.18312],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,2.16071,0.18312],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,2.16071,0.18312],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,2.16071,0.18312],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.43681,2.41057,0.43268],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.15795,2.41057,0.43268],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.12091,2.41057,0.43268],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.39978,2.41057,0.43268],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.0,2.52434,1.71624],
+          "width": 1.78732,
+          "height": 0.17097
+        },
+        {
+          "pos": [0.02156,2.4545,0.68918],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.30407,2.4545,0.68918],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [0.58659,2.4545,0.68918],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.27017,2.4545,0.68918],
+          "width": 0.26334,
+          "height": 0.28182
+        },
+        {
+          "pos": [-0.56237,2.4545,0.68918],
+          "width": 0.26334,
+          "height": 0.28182
+        }
+      ],
+      "animations": []
+    },
+    {
+      "collisions": [
+        {
+          "pos": [-0.213095,0.6673,2.08072],
+          "width": 0.09,
+          "height": 0.09,
+          "variableName": "up",
+          "variableType": "increment",
+          "variableValue": -1.0,
+          "clampMax": 5.0
+        }
+      ],
+      "animations": []
+    },
+    {
+      "collisions": [
+        {
+          "pos": [-0.213095,0.773187,2.08072],
+          "width": 0.09,
+          "height": 0.09,
+          "variableName": "up",
+          "variableType": "increment",
+          "variableValue": 1.0,
+          "clampMax": 5.0
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "raill",
+      "collisions": [
+        {
+          "pos": [0.942219,2.9721,2.24764],
+          "width": 0.25,
+          "height": 1.13,
+          "variableName": "raill",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "railr",
+      "collisions": [
+        {
+          "pos": [-0.942219,2.9721,2.24764],
+          "width": 0.25,
+          "height": 1.13,
+          "variableName": "railr",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "collisions": [
+        {
+          "pos": [2.9E-4,0.38039,-0.06462],
+          "width": 1.34481,
+          "height": 0.61425
+        }
+      ],
+      "animations": []
+    }
+  ],
+  "connectionGroups": [
+    {
+      "groupName": "Trailer",
+      "canInitiateConnections": true,
+      "isHitch": true,
+      "connections": [
+        {
+          "type": "trailer_ring",
+          "pos": [0.0,0.36014,-2.87465],
+          "distance": 3.0
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "pos": [0.009079,0.615412,2.07063],
+      "rot": [26.7556,0.0,0.0],
+      "scale": 0.013625,
+      "hudX": 168,
+      "hudY": 40,
+      "hudScale": 0.5
+    },
+    {
+      "pos": [0.291631,0.615412,2.07063],
+      "rot": [26.7556,0.0,0.0],
+      "scale": 0.013625,
+      "hudX": 232,
+      "hudY": 40,
+      "hudScale": 0.5
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Telescopic Airstairs",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "initialVariables": [
+    "door_fr",
+    "door_fl"
+  ],
+  "variableModifiers": [
+    {
+      "variable": "dragCoefficient",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "inliquid",
+          "axis": [0.0,50.0,0.0]
+        }
+      ]
+    },
+    {
+      "variable": "throttle",
+      "maxValue": 1.0,
+      "animations": [
+        {
+          "animationType": "inhibitor",
+          "variable": "engine_isautomatic_1",
+          "clampMin": 1.0,
+          "clampMax": 1.0
+        },
+        {
+          "animationType": "inhibitor",
+          "variable": "speed",
+          "clampMax": 2.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "engine_clutch_upshift_1",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-2.8,0.0],
+          "duration": 5
+        },
+        {
+          "animationType": "translation",
+          "variable": "engine_clutch_downshift_1",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.5,0.0],
+          "duration": 2
+        }
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "raill",
+        "applyAfter": "Cube.025",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "raill",
+            "axis": [0.0,0.0,0.968019],
+            "duration": 15
+          }
+        ]
+      },
+      {
+        "objectName": "railr",
+        "applyAfter": "Cube.025",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "railr",
+            "axis": [0.0,0.0,0.968019],
+            "duration": 15
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.025",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "up",
+            "axis": [0.0,0.496484,0.483834]
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.017",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "throttle",
+            "centerPoint": [0.148454,0.493187,2.24632],
+            "axis": [-21.1103,0.0,0.0],
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.016",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [0.148454,0.493187,2.24632],
+            "axis": [-21.1103,0.0,0.0],
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "objectName": "Cylinder.002",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.148454,0.666037,1.98258],
+            "axis": [0.0,-2.18145,3.9359],
+            "clampMin": -195.0,
+            "clampMax": 195.0
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.094",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "throttle",
+            "centerPoint": [-0.875,1.27945,8.43326],
+            "axis": [-17.17,0.0,0.0],
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.096",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [-0.875,1.27945,8.43326],
+            "axis": [-17.17,0.0,0.0],
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "objectName": "Cube.091",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "right_turn_signal",
+            "centerPoint": [0.840236,1.49322,8.08439],
+            "axis": [-6.34868,-34.718,21.13],
+            "duration": 1
+          },
+          {
+            "animationType": "rotation",
+            "variable": "left_turn_signal",
+            "centerPoint": [0.840236,1.49322,8.08439],
+            "axis": [6.34868,34.718,-21.13],
+            "duration": 1
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "Cube.002",
+        "emissive": true,
+        "color": "FFEFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "headlight",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ]
+      }
+    ],
+    "sounds": [
+      {
+        "name": "mts:air_brake_activating",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "p_brake",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "description": "Telescopic airstairs. Click the buttons in the cab to raise and lower incrementally, and click the rails on either side of the platform to extend them.",
+    "health": 100,
+    "materialLists": [
+      []
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

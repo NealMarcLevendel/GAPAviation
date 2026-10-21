@@ -1,0 +1,84 @@
+GAP AVIATION - COMMANDS, KEYS AND CONTROLS
+==========================================
+
+LAUNCHING (Terminal, in the GAPAviation folder)
+-----------------------------------------------
+./run.sh                    Start Minecraft with all three mods (+ Immersive Vehicles)
+./run.sh --dh               ...also with Distant Horizons
+./run.sh build              Build release jars of all three mods into dist/
+./run.sh <gradle args>      Extra Gradle options, e.g.:
+    -PdhVersion=<version>       Use a different Distant Horizons version (with --dh)
+    -PdhDefaults                Don't apply the Mac-safe Distant Horizons settings (with --dh)
+
+
+IV AUTOPILOT
+============
+
+Chat commands
+-------------
+/autopilot fly <runway>                       Fly to a runway: takes off first if you're lined up on a
+                                              runway, then route, circuit, approach, landing, rollout.
+                                              Use quotes for names with spaces: /autopilot fly "KJFK 09"
+                                              (Tab completes runway names.)
+/autopilot fly <runway> <altitude>            ...at this cruise altitude (Y level)
+/autopilot fly <runway> <altitude> <km/h>     ...and this cruise speed
+/autopilot off                                Disengage the autopilot (works from anywhere aboard)
+/autopilot runways                            List runways: heading, length and marker coordinates
+                                              (click a coordinate to copy it)
+
+Keys (rebindable: Options > Controls > IV Autopilot)
+----------------------------------------------------
+G               Cycle mode: Off -> Pitch hold -> Altitude hold -> Off
+Up / Down       Pitch hold: target pitch +/- 1 degree.  Altitude hold: target altitude +/- 5 blocks
+O               Auto-trim on/off (when flying by hand, trim slowly takes over the elevator you hold)
+(The keys work from the pilot seat, or anywhere aboard while the autopilot is engaged.)
+
+Taking over
+-----------
+Touching the flight controls during automatic takeoff, flare or rollout hands the plane to you.
+
+Blocks (creative tab "IV Autopilot")
+------------------------------------
+Runway Marker   Rename in an anvil (e.g. "KJFK 09"); place one at each end of the runway centerline.
+                Shows a floating label: name, heading, length, coordinates.
+                Right-click: show/refresh the runway's status.
+Airport Marker  Optional no-bank zone around it (wings level, rudder-only turns).
+                Rename in an anvil to name the airport.
+                Right-click: radius +50.   Sneak + right-click: radius -50.
+
+Settings
+--------
+instance/saves/<world>/serverconfig/ivautopilot-server.toml
+(pitch, altitude, bank, throttle, takeoff, landing, circuit, cruise, stall protection, no-bank zones)
+Flight recorder: one [FDR] line per second in instance/logs/latest.log while the autopilot is on.
+
+
+GAP CABIN WALK
+==============
+
+Controls
+--------
+Shift (while seated)   Stand up and walk around inside the aircraft (on the ground or in flight)
+Right-click a seat     Sit back down (normal Immersive Vehicles seat)
+N                      Head inertia on/off (rebindable: Options > Controls > GAP Cabin Walk)
+
+Chat commands (client-side: work in singleplayer and on any server, no permissions needed)
+-----------------------------------------------------------------------------------------------
+/headinertia                        Show the current head-inertia settings
+/headinertia <0-5>                  Set turning + acceleration intensity together (1 = default)
+/headinertia turning <0-5>          Head lag when the vehicle rolls / pitches / yaws
+/headinertia acceleration <0-5>     Head nod from braking, speeding up and bumps
+/headinertia roll <0-10>            Extra lag when rolling into / out of a bank (default 2)
+/headinertia tilt on|off            Bank your view with the cabin while walking around
+/headinertia on|off                 Same as the N key
+
+Settings
+--------
+instance/config/gapcabinwalk-client.toml   (head inertia: strength, roll, acceleration, neck stiffness,
+                                            damping, max angle, tilt when standing)
+
+
+GOLDEN AEROTRANSPORT (1.20.1 port)
+==================================
+No commands of its own: the aircraft appear in the Immersive Vehicles creative tabs and are flown
+with the normal Immersive Vehicles controls.

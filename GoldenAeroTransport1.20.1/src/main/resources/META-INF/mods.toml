@@ -1,0 +1,40 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+logoFile="img.png"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/golden-airport-pack-immersive-vehicles-content"
+authors="${mod_authors}"
+description='''
+Want planes in minecraft? After tolerating with Flans mod and mcheli for almost a decade here's your new best choice!
+Golden Airport Pack aims to add 1:1, realistic airport-related vehicles into minecraft. Airliners, fuel trucks, baggage trucks and more. Made by real plane geeks!
+
+Credits : CC as founder of IV-Airliner Pack , Ooferine as Owner and Modeler, Hashim and QWE9000 as Modeler and liveries maker, Nax as Modeler Json scripting and Sound Engineer
+Special Thanks : Senpai Kevin_Warren MiszkoPro Spicy_Sausesaig TurboDefender as Livery maker
+other Special Thanks to Benoit Plamondon from HJG for good quality JT3D Engine sounds
+'''
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="mts"
+    mandatory=true
+    versionRange="[22.6.0,)"
+    ordering="NONE"
+    side="BOTH"

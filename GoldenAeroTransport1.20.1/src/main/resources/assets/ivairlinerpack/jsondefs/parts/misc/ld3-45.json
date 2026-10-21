@@ -1,0 +1,397 @@
+{
+  "generic": {
+    "type": "generic_loaddevice_gap",
+    "forwardsDamageMultiplier": 0.0,
+    "canBePlacedOnGround": true,
+    "width": 0.5,
+    "height": 0.8
+  },
+  "parts": [
+    {
+      "pos": [0.8785,0.8324,0.2402],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8785,0.8324,-0.4127],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8785,0.8324,0.2402],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8785,0.8324,-0.4127],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.3465,0.131,0.2432],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.6983,0.6983,0.6983],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.3465,0.131,-0.41],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.6983,0.6983,0.6983],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ]
+    },
+    {
+      "pos": [0.3465,0.131,0.2432],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.6983,0.6983,0.6983],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ]
+    },
+    {
+      "pos": [0.3465,0.131,-0.41],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.6983,0.6983,0.6983],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5064,0.8324,-0.4127],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "!part_present_6",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-0.6878,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [-0.1737,0.8324,-0.4127],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "!part_present_6",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-0.6878,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [0.5064,0.8324,-0.4127],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "!part_present_8",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-0.6878,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [0.1737,0.8324,-0.4127],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "!part_present_8",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-0.6878,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [-0.5064,0.8324,0.2577],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "!part_present_5",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-0.6878,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [-0.1737,0.8324,0.2577],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "!part_present_5",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-0.6878,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [0.5064,0.8324,0.2577],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "!part_present_7",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-0.6878,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [0.1737,0.8324,0.2577],
+      "rot": [0.0,0.0,0.0],
+      "allowParentRemoval": true,
+      "maxValue": 5.0,
+      "partScale": [0.9051,0.9051,0.9051],
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "tarpulin"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "!part_present_7",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-0.6878,0.0]
+        }
+      ]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.3531,0.2235,0.4574],
+          "width": 0.45,
+          "height": 0.45,
+          "variableName": "tarpulin",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.3531,0.2235,0.4574],
+          "width": 0.45,
+          "height": 0.45,
+          "variableName": "tarpulin",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "tarpulin",
+          "axis": [0.0,1.22,0.0]
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "LD3-45 Container",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "constantValues": {
+    "scaledPart": 1.0
+  },
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "tarpaulin",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "tarpulin"
+          }
+        ]
+      },
+      {
+        "objectName": "tarpaulin_fold",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "!tarpulin"
+          },
+          {
+            "animationType": "translation",
+            "variable": "tarpulin",
+            "axis": [0.0,1.22,0.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "description": "A Unit Load Device or Container for aircraft \n Type: LD3-45 \n Used on A319 A320 and A321",
+    "health": 100,
+    "materialLists": [
+      [
+        "minecraft:leather:0:8",
+        "minecraft:iron_ingot:0:15"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

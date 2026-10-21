@@ -1,0 +1,7824 @@
+{
+  "motorized": {
+    "isAircraft": true,
+    "hasNavLights": true,
+    "hasStrobeLights": true,
+    "hasTaxiLights": true,
+    "hasLandingLights": true,
+    "emptyMass": 68991,
+    "fuelCapacity": 8000,
+    "gearSequenceDuration": 200,
+    "downForce": 0.7,
+    "axleRatio": 3.55,
+    "brakingFactor": 9.0,
+    "flapSpeed": 0.2,
+    "dragCoefficient": 0.01,
+    "tailDistance": 13.0,
+    "wingSpan": 43.4,
+    "wingArea": 120.0,
+    "aileronArea": 3.6,
+    "elevatorArea": 4.0,
+    "rudderArea": 1.5,
+    "litVariable": "navigation_light",
+    "panel": "mts:default_plane",
+    "flapNotches": [0.0,5.0,10.0,15.0,20.0,25.0,30.0,45.0]
+  },
+  "parts": [
+    {
+      "pos": [0.21,-1.917,24.19],
+      "turnsWithSteer": true,
+      "minValue": 0.35,
+      "maxValue": 0.8,
+      "partScale": [1.2,1.27,1.27],
+      "defaultPart": "ivairlinerpack:a220nosewheel",
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ],
+      "applyAfter": "nose",
+      "animations": [
+        {
+          "animationType": "inhibitor",
+          "variable": "ground_onground_1"
+        },
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.0,-2.014,24.19],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [-0.21,-1.917,24.19],
+      "rot": [0.0,180.0,0.0],
+      "turnsWithSteer": true,
+      "isMirrored": true,
+      "minValue": 0.35,
+      "maxValue": 0.8,
+      "partScale": [1.2,1.27,1.27],
+      "defaultPart": "ivairlinerpack:a220nosewheel",
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ],
+      "applyAfter": "nose",
+      "animations": [
+        {
+          "animationType": "inhibitor",
+          "variable": "ground_onground_1"
+        },
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.0,-2.014,24.19],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [3.318,-1.951,-0.442],
+      "rot": [0.0,0.0,0.0],
+      "minValue": 0.35,
+      "maxValue": 1.5,
+      "partScale": [1.28,1.22,1.22],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ],
+      "applyAfter": "gearL"
+    },
+    {
+      "pos": [3.318,-1.951,-1.74],
+      "rot": [0.0,0.0,0.0],
+      "minValue": 0.35,
+      "maxValue": 1.5,
+      "partScale": [1.28,1.22,1.22],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ],
+      "applyAfter": "bogieL"
+    },
+    {
+      "pos": [2.626,-1.951,-0.442],
+      "rot": [0.0,180.0,0.0],
+      "isMirrored": true,
+      "minValue": 0.35,
+      "maxValue": 1.5,
+      "partScale": [1.28,1.22,1.22],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ],
+      "applyAfter": "gearL"
+    },
+    {
+      "pos": [2.626,-1.951,-1.74],
+      "rot": [0.0,180.0,0.0],
+      "isMirrored": true,
+      "minValue": 0.35,
+      "maxValue": 1.5,
+      "partScale": [1.28,1.22,1.22],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ],
+      "applyAfter": "bogieL"
+    },
+    {
+      "pos": [-3.318,-1.951,-0.442],
+      "rot": [0.0,180.0,0.0],
+      "isMirrored": true,
+      "minValue": 0.35,
+      "maxValue": 1.5,
+      "partScale": [1.28,1.22,1.22],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ],
+      "applyAfter": "gearR"
+    },
+    {
+      "pos": [-3.318,-1.951,-1.74],
+      "rot": [0.0,180.0,0.0],
+      "isMirrored": true,
+      "minValue": 0.35,
+      "maxValue": 1.5,
+      "partScale": [1.28,1.22,1.22],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ],
+      "applyAfter": "bogieR"
+    },
+    {
+      "pos": [-2.626,-1.951,-0.442],
+      "rot": [0.0,0.0,0.0],
+      "minValue": 0.35,
+      "maxValue": 1.5,
+      "partScale": [1.28,1.22,1.22],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ],
+      "applyAfter": "gearR"
+    },
+    {
+      "pos": [-2.626,-1.951,-1.74],
+      "rot": [0.0,0.0,0.0],
+      "minValue": 0.35,
+      "maxValue": 1.5,
+      "partScale": [1.28,1.22,1.22],
+      "defaultPart": "ivairlinerpack:a220gearwheel",
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ],
+      "applyAfter": "bogieR"
+    },
+    {
+      "pos": [-0.6757,1.476,25.2],
+      "dismountPos": [-0.6757,1.476,25.2],
+      "isController": true,
+      "isPermanent": true,
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_pilot"
+      ]
+    },
+    {
+      "pos": [0.6757,1.476,25.2],
+      "dismountPos": [0.6757,1.476,25.2],
+      "isController": true,
+      "isPermanent": true,
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat",
+        "seat_pilot"
+      ]
+    },
+    {
+      "pos": [13.84,-0.285,0.8591],
+      "maxValue": 9.0,
+      "defaultPart": "ivairlinerpack:jt3d-3b",
+      "types": [
+        "engine_jet"
+      ],
+      "customTypes": [
+        "jt3d3b"
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [7.965,-0.8074,4.543],
+      "maxValue": 9.0,
+      "defaultPart": "ivairlinerpack:jt3d-3b",
+      "types": [
+        "engine_jet"
+      ],
+      "customTypes": [
+        "jt3d3b"
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [-7.965,-0.8074,4.543],
+      "maxValue": 9.0,
+      "defaultPart": "ivairlinerpack:jt3d-3b",
+      "types": [
+        "engine_jet"
+      ],
+      "customTypes": [
+        "jt3d3b"
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [-13.84,-0.285,0.8591],
+      "maxValue": 9.0,
+      "defaultPart": "ivairlinerpack:jt3d-3b",
+      "types": [
+        "engine_jet"
+      ],
+      "customTypes": [
+        "jt3d3b"
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [0.8995,2.691,17.17],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_1A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,16.42],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_1A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,15.66],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_1A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,14.830000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_2A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,14.080000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_2A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,13.32],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_2A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,12.490000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_3A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,11.740000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_3A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,10.98],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_3A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,10.150000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_4A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,9.400000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_4A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,8.64],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_4A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,7.810000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_5A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,7.060000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_5A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,6.300000000000001],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_5A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,5.470000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_6A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,4.720000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_6A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,3.960000000000001],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_6A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,3.1300000000000026],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_7A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,2.3800000000000026],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_7A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,1.620000000000001],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_7A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,0.7900000000000027],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_8A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,0.0400000000000027],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_8A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-0.7199999999999989],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_8A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-1.5499999999999972],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_9A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-2.299999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_9A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-3.0599999999999987],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_9A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-3.889999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_10A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-4.639999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_10A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-5.399999999999999],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_10A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-6.229999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_11A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-6.979999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_11A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-7.739999999999998],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_11A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-8.569999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_12A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-9.319999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_12A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-10.079999999999998],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_12A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-13.62],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_13A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-14.54],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_13A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-15.66],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_14A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-16.59],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_14A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-17.74],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_15A"
+        ]
+      ]
+    },
+    {
+      "pos": [0.8995,2.691,-18.62],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_15A"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,17.17],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_1D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,16.42],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_1D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,15.66],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_1D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,14.830000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_2D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,14.080000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_2D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,13.32],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_2D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,12.490000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_3D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,11.740000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_3D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,10.98],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_3D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,10.150000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_4D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,9.400000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_4D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,8.64],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_4D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,7.810000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_5D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,7.060000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_5D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,6.300000000000001],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_5D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,5.470000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_6D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,4.720000000000002],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_6D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,3.960000000000001],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_6D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,3.1300000000000026],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_7D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,2.3800000000000026],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_7D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,1.620000000000001],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_7D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,0.7900000000000027],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_8D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,0.0400000000000027],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_8D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-0.7199999999999989],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_8D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-1.5499999999999972],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_9D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-2.299999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_9D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-3.0599999999999987],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_9D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-3.889999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_10D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-4.639999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_10D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-5.399999999999999],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_10D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-6.229999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_11D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-6.979999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_11D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-7.739999999999998],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_11D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-8.569999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_12D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-9.319999999999997],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_12D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-10.079999999999998],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_12D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-13.62],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_13D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-14.54],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_13D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-15.66],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_14D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-16.59],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_14D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-17.74],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_15D"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.8995,2.691,-18.62],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_luggage"
+      ],
+      "interactableVariables": [
+        [
+          "bin_15D"
+        ]
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,16.98163],
+      "dismountPos": [1.37,1.27056,16.98163],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,16.98163],
+      "dismountPos": [0.75289,1.27056,16.98163],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,15.91944],
+      "dismountPos": [1.37,1.27056,15.91944],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,15.91944],
+      "dismountPos": [0.75289,1.27056,15.91944],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,14.8639],
+      "dismountPos": [1.37,1.27056,14.8639],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,14.8639],
+      "dismountPos": [0.75289,1.27056,14.8639],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,13.8017],
+      "dismountPos": [1.37,1.27056,13.8017],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,13.8017],
+      "dismountPos": [0.75289,1.27056,13.8017],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,12.73952],
+      "dismountPos": [1.37,1.27056,12.73952],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,12.73952],
+      "dismountPos": [0.75289,1.27056,12.73952],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,11.67733],
+      "dismountPos": [1.37,1.27056,11.67733],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,11.67733],
+      "dismountPos": [0.75289,1.27056,11.67733],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,10.62709],
+      "dismountPos": [1.37,1.27056,10.62709],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,10.62709],
+      "dismountPos": [0.75289,1.27056,10.62709],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,9.5649],
+      "dismountPos": [1.37,1.27056,9.5649],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,9.5649],
+      "dismountPos": [0.75289,1.27056,9.5649],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,8.50936],
+      "dismountPos": [1.37,1.27056,8.50936],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,8.50936],
+      "dismountPos": [0.75289,1.27056,8.50936],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,7.44717],
+      "dismountPos": [1.37,1.27056,7.44717],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,7.44717],
+      "dismountPos": [0.75289,1.27056,7.44717],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,6.38499],
+      "dismountPos": [1.37,1.27056,6.38499],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,6.38499],
+      "dismountPos": [0.75289,1.27056,6.38499],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,5.32279],
+      "dismountPos": [1.37,1.27056,5.32279],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,5.32279],
+      "dismountPos": [0.75289,1.27056,5.32279],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,4.30708],
+      "dismountPos": [1.37,1.27056,4.30708],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,4.30708],
+      "dismountPos": [0.75289,1.27056,4.30708],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,3.24489],
+      "dismountPos": [1.37,1.27056,3.24489],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,3.24489],
+      "dismountPos": [0.75289,1.27056,3.24489],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,2.18935],
+      "dismountPos": [1.37,1.27056,2.18935],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,2.18935],
+      "dismountPos": [0.75289,1.27056,2.18935],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,1.12715],
+      "dismountPos": [1.37,1.27056,1.12715],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,1.12715],
+      "dismountPos": [0.75289,1.27056,1.12715],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,0.06497],
+      "dismountPos": [1.37,1.27056,0.06497],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,0.06497],
+      "dismountPos": [0.75289,1.27056,0.06497],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,-0.99722],
+      "dismountPos": [1.37,1.27056,-0.99722],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,-0.99722],
+      "dismountPos": [0.75289,1.27056,-0.99722],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,-2.06573],
+      "dismountPos": [1.37,1.27056,-2.06573],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,-2.06573],
+      "dismountPos": [0.75289,1.27056,-2.06573],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,-3.12792],
+      "dismountPos": [1.37,1.27056,-3.12792],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,-3.12792],
+      "dismountPos": [0.75289,1.27056,-3.12792],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,-4.18346],
+      "dismountPos": [1.37,1.27056,-4.18346],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,-4.18346],
+      "dismountPos": [0.75289,1.27056,-4.18346],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,-5.24565],
+      "dismountPos": [1.37,1.27056,-5.24565],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,-5.24565],
+      "dismountPos": [0.75289,1.27056,-5.24565],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,-6.30783],
+      "dismountPos": [1.37,1.27056,-6.30783],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,-6.30783],
+      "dismountPos": [0.75289,1.27056,-6.30783],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,-7.34658],
+      "dismountPos": [1.37,1.27056,-7.34658],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,-7.34658],
+      "dismountPos": [0.75289,1.27056,-7.34658],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,-8.3955],
+      "dismountPos": [1.37,1.27056,-8.3955],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,-8.3955],
+      "dismountPos": [0.75289,1.27056,-8.3955],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,-9.41826],
+      "dismountPos": [1.37,1.27056,-9.41826],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,-9.41826],
+      "dismountPos": [0.75289,1.27056,-9.41826],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.37,1.27056,-10.44062],
+      "dismountPos": [1.37,1.27056,-10.44062],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.75289,1.27056,-10.44062],
+      "dismountPos": [0.75289,1.27056,-10.44062],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.36,1.27056,-13.67191],
+      "dismountPos": [1.36,1.27056,-13.67191],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.70674,1.27056,-13.67191],
+      "dismountPos": [0.70674,1.27056,-13.67191],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.36,1.27056,-14.69467],
+      "dismountPos": [1.36,1.27056,-14.69467],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.70674,1.27056,-14.69467],
+      "dismountPos": [0.70674,1.27056,-14.69467],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.36,1.27056,-15.71704],
+      "dismountPos": [1.36,1.27056,-15.71704],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.70674,1.27056,-15.71704],
+      "dismountPos": [0.70674,1.27056,-15.71704],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.36,1.27056,-16.74163],
+      "dismountPos": [1.36,1.27056,-16.74163],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.70674,1.27056,-16.74163],
+      "dismountPos": [0.70674,1.27056,-16.74163],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.36,1.27056,-17.7644],
+      "dismountPos": [1.36,1.27056,-17.7644],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.70674,1.27056,-17.7644],
+      "dismountPos": [0.70674,1.27056,-17.7644],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [1.36,1.27056,-18.78676],
+      "dismountPos": [1.36,1.27056,-18.78676],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.70674,1.27056,-18.78676],
+      "dismountPos": [0.70674,1.27056,-18.78676],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,16.98163],
+      "dismountPos": [-1.37,1.27056,16.98163],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,16.98163],
+      "dismountPos": [-0.75289,1.27056,16.98163],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,15.91944],
+      "dismountPos": [-1.37,1.27056,15.91944],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,15.91944],
+      "dismountPos": [-0.75289,1.27056,15.91944],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,14.8639],
+      "dismountPos": [-1.37,1.27056,14.8639],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,14.8639],
+      "dismountPos": [-0.75289,1.27056,14.8639],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,13.8017],
+      "dismountPos": [-1.37,1.27056,13.8017],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,13.8017],
+      "dismountPos": [-0.75289,1.27056,13.8017],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,12.73952],
+      "dismountPos": [-1.37,1.27056,12.73952],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,12.73952],
+      "dismountPos": [-0.75289,1.27056,12.73952],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,11.67733],
+      "dismountPos": [-1.37,1.27056,11.67733],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,11.67733],
+      "dismountPos": [-0.75289,1.27056,11.67733],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,10.62709],
+      "dismountPos": [-1.37,1.27056,10.62709],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,10.62709],
+      "dismountPos": [-0.75289,1.27056,10.62709],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,9.5649],
+      "dismountPos": [-1.37,1.27056,9.5649],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,9.5649],
+      "dismountPos": [-0.75289,1.27056,9.5649],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,8.50936],
+      "dismountPos": [-1.37,1.27056,8.50936],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,8.50936],
+      "dismountPos": [-0.75289,1.27056,8.50936],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,7.44717],
+      "dismountPos": [-1.37,1.27056,7.44717],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,7.44717],
+      "dismountPos": [-0.75289,1.27056,7.44717],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,6.38499],
+      "dismountPos": [-1.37,1.27056,6.38499],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,6.38499],
+      "dismountPos": [-0.75289,1.27056,6.38499],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,5.32279],
+      "dismountPos": [-1.37,1.27056,5.32279],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,5.32279],
+      "dismountPos": [-0.75289,1.27056,5.32279],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,4.30708],
+      "dismountPos": [-1.37,1.27056,4.30708],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,4.30708],
+      "dismountPos": [-0.75289,1.27056,4.30708],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,3.24489],
+      "dismountPos": [-1.37,1.27056,3.24489],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,3.24489],
+      "dismountPos": [-0.75289,1.27056,3.24489],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,2.18935],
+      "dismountPos": [-1.37,1.27056,2.18935],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,2.18935],
+      "dismountPos": [-0.75289,1.27056,2.18935],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,1.12715],
+      "dismountPos": [-1.37,1.27056,1.12715],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,1.12715],
+      "dismountPos": [-0.75289,1.27056,1.12715],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,0.06497],
+      "dismountPos": [-1.37,1.27056,0.06497],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,0.06497],
+      "dismountPos": [-0.75289,1.27056,0.06497],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,-0.99722],
+      "dismountPos": [-1.37,1.27056,-0.99722],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,-0.99722],
+      "dismountPos": [-0.75289,1.27056,-0.99722],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,-2.06573],
+      "dismountPos": [-1.37,1.27056,-2.06573],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,-2.06573],
+      "dismountPos": [-0.75289,1.27056,-2.06573],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,-3.12792],
+      "dismountPos": [-1.37,1.27056,-3.12792],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,-3.12792],
+      "dismountPos": [-0.75289,1.27056,-3.12792],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,-4.18346],
+      "dismountPos": [-1.37,1.27056,-4.18346],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,-4.18346],
+      "dismountPos": [-0.75289,1.27056,-4.18346],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,-5.24565],
+      "dismountPos": [-1.37,1.27056,-5.24565],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,-5.24565],
+      "dismountPos": [-0.75289,1.27056,-5.24565],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,-6.30783],
+      "dismountPos": [-1.37,1.27056,-6.30783],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,-6.30783],
+      "dismountPos": [-0.75289,1.27056,-6.30783],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,-7.34658],
+      "dismountPos": [-1.37,1.27056,-7.34658],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,-7.34658],
+      "dismountPos": [-0.75289,1.27056,-7.34658],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,-8.3955],
+      "dismountPos": [-1.37,1.27056,-8.3955],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,-8.3955],
+      "dismountPos": [-0.75289,1.27056,-8.3955],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,-9.41826],
+      "dismountPos": [-1.37,1.27056,-9.41826],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,-9.41826],
+      "dismountPos": [-0.75289,1.27056,-9.41826],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.37,1.27056,-10.44062],
+      "dismountPos": [-1.37,1.27056,-10.44062],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.75289,1.27056,-10.44062],
+      "dismountPos": [-0.75289,1.27056,-10.44062],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.36,1.27056,-13.67191],
+      "dismountPos": [-1.36,1.27056,-13.67191],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.70674,1.27056,-13.67191],
+      "dismountPos": [-0.70674,1.27056,-13.67191],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.36,1.27056,-14.69467],
+      "dismountPos": [-1.36,1.27056,-14.69467],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.70674,1.27056,-14.69467],
+      "dismountPos": [-0.70674,1.27056,-14.69467],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.36,1.27056,-15.71704],
+      "dismountPos": [-1.36,1.27056,-15.71704],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.70674,1.27056,-15.71704],
+      "dismountPos": [-0.70674,1.27056,-15.71704],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.36,1.27056,-16.74163],
+      "dismountPos": [-1.36,1.27056,-16.74163],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.70674,1.27056,-16.74163],
+      "dismountPos": [-0.70674,1.27056,-16.74163],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.36,1.27056,-17.7644],
+      "dismountPos": [-1.36,1.27056,-17.7644],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.70674,1.27056,-17.7644],
+      "dismountPos": [-0.70674,1.27056,-17.7644],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-1.36,1.27056,-18.78676],
+      "dismountPos": [-1.36,1.27056,-18.78676],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.70674,1.27056,-18.78676],
+      "dismountPos": [-0.70674,1.27056,-18.78676],
+      "isPermanent": true,
+      "partScale": [0.93,0.93,0.93],
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [-0.48,1.5,24.2],
+      "rot": [0.0,-90.0,0.0],
+      "dismountPos": [-0.48,1.5,24.2],
+      "isPermanent": true,
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.511,1.5,24.2],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [0.511,1.5,24.2],
+      "isPermanent": true,
+      "defaultPart": "mts:invisible_seat",
+      "types": [
+        "seat"
+      ]
+    },
+    {
+      "pos": [0.5255,-0.2122,17.31],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo1"
+        ]
+      ]
+    },
+    {
+      "pos": [0.5255,-0.2122,16.33],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo1"
+        ]
+      ]
+    },
+    {
+      "pos": [0.5255,-0.2122,15.38],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo1"
+        ]
+      ]
+    },
+    {
+      "pos": [0.5255,-0.2122,14.4],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo1"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5255,-0.2122,17.31],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo1"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5255,-0.2122,16.33],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo1"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5255,-0.2122,15.38],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo1"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5255,-0.2122,14.4],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo1"
+        ]
+      ]
+    },
+    {
+      "pos": [0.5255,-0.2122,12.78],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [0.5255,-0.2122,11.83],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [0.5255,-0.2122,10.86],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [0.5255,-0.2122,9.881],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [0.5255,-0.2122,8.913],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [0.5255,-0.2122,7.962],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5255,-0.2122,12.78],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5255,-0.2122,11.83],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5255,-0.2122,10.86],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5255,-0.2122,9.881],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5255,-0.2122,8.913],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.5255,-0.2122,7.962],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.9705,0.9705,0.9705],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo2"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-4.791],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-5.688],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-6.601],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-7.487],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-8.402],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-9.298],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-10.2],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-11.1],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-4.791],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-5.688],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-6.601],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-7.487],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-8.402],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-9.298],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-10.2],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-11.1],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo3"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-12.02],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-12.92],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-13.8],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-14.67],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-15.59],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [0.4267,-0.169,-16.49],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-12.02],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-12.92],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-13.8],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-14.67],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-15.59],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.4267,-0.169,-16.49],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 5.0,
+      "partScale": [0.8784,0.8784,0.8784],
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "cargo4"
+        ]
+      ]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,0.93723,27.01154],
+          "width": 1.26239,
+          "height": 1.76314
+        },
+        {
+          "pos": [-0.0,0.7831,28.05693],
+          "width": 0.75467,
+          "height": 0.9926
+        },
+        {
+          "pos": [-0.0,0.70805,25.03937],
+          "width": 2.72087,
+          "height": 0.11994
+        },
+        {
+          "pos": [0.0,0.70805,21.87738],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,18.32146],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,14.76554],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,11.20962],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,7.6537],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,4.09779],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,0.54187],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,-3.01405],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,-6.56997],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,-10.12589],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,-13.68181],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,-17.23772],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [0.0,0.70805,-20.79364],
+          "width": 3.51723,
+          "height": 0.12396
+        },
+        {
+          "pos": [-0.0,2.10422,-22.57344],
+          "width": 3.07363,
+          "height": 2.63913
+        },
+        {
+          "pos": [-0.0,2.30432,-25.4415],
+          "width": 2.55997,
+          "height": 2.19809
+        },
+        {
+          "pos": [-0.0,2.50942,-27.91015],
+          "width": 2.04462,
+          "height": 1.75559
+        },
+        {
+          "pos": [0.0,2.78955,-29.8711],
+          "width": 1.46889,
+          "height": 1.26125
+        },
+        {
+          "pos": [0.0,2.92367,-31.1378],
+          "width": 0.74341,
+          "height": 0.98612
+        },
+        {
+          "pos": [0.0,3.43262,-19.76995],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,-17.16683],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,-14.51701],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,-11.86719],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,-9.21736],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,-6.56754],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,-3.91772],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,-1.2679],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,1.38193],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,4.03175],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,6.68157],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,9.33139],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,11.98121],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,14.63104],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,17.28086],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.43262,19.93068],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [0.0,3.37241,22.61756],
+          "width": 2.56029,
+          "height": 0.25894
+        },
+        {
+          "pos": [-0.0,3.10222,24.61506],
+          "width": 1.38212,
+          "height": 0.13978
+        },
+        {
+          "pos": [1.0875,2.08859,20.76562],
+          "width": 0.91189,
+          "height": 2.54056
+        },
+        {
+          "pos": [1.0875,2.08859,19.51324],
+          "width": 0.91189,
+          "height": 2.54056
+        },
+        {
+          "pos": [1.0875,2.08859,18.37216],
+          "width": 0.91189,
+          "height": 2.54056
+        },
+        {
+          "pos": [-1.07625,1.99355,20.26155],
+          "width": 0.91189,
+          "height": 2.60943
+        },
+        {
+          "pos": [-1.07625,1.99355,21.41405],
+          "width": 0.91189,
+          "height": 2.60943
+        },
+        {
+          "pos": [-0.89087,1.99355,22.99],
+          "width": 0.91189,
+          "height": 2.60943
+        },
+        {
+          "pos": [0.5129,1.96869,23.58288],
+          "width": 0.10635,
+          "height": 2.36837
+        },
+        {
+          "pos": [0.72669,1.96869,23.58288],
+          "width": 0.10635,
+          "height": 2.36837
+        },
+        {
+          "pos": [0.94048,1.90674,23.58288],
+          "width": 0.10635,
+          "height": 2.27468
+        },
+        {
+          "pos": [1.15428,1.84221,23.58288],
+          "width": 0.10635,
+          "height": 2.15949
+        },
+        {
+          "pos": [1.36807,1.81249,23.58288],
+          "width": 0.10635,
+          "height": 2.02171
+        },
+        {
+          "pos": [1.58187,1.73869,23.58288],
+          "width": 0.10635,
+          "height": 1.45771
+        },
+        {
+          "pos": [1.58187,1.85316,-11.24882],
+          "width": 0.58238,
+          "height": 2.17201
+        },
+        {
+          "pos": [0.93971,1.89455,-11.24882],
+          "width": 0.58238,
+          "height": 2.4353
+        },
+        {
+          "pos": [-0.92412,1.89455,-11.24882],
+          "width": 0.58238,
+          "height": 2.4353
+        },
+        {
+          "pos": [-1.55729,1.86132,-11.24882],
+          "width": 0.58238,
+          "height": 2.21928
+        },
+        {
+          "pos": [0.5085,2.04705,-13.01903],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [0.70669,2.04705,-13.01903],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [0.90487,2.00543,-13.01903],
+          "width": 0.0921,
+          "height": 2.40409
+        },
+        {
+          "pos": [1.10306,1.93963,-13.01903],
+          "width": 0.0921,
+          "height": 2.2788
+        },
+        {
+          "pos": [1.30125,1.91737,-13.01903],
+          "width": 0.0921,
+          "height": 2.15983
+        },
+        {
+          "pos": [1.49943,1.80029,-13.01903],
+          "width": 0.0921,
+          "height": 2.00491
+        },
+        {
+          "pos": [1.69762,1.8181,-13.01903],
+          "width": 0.0921,
+          "height": 1.86457
+        },
+        {
+          "pos": [-0.51519,2.04705,-13.01903],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [-0.66041,2.04705,-13.01903],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [-0.80563,2.04705,-13.01903],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [-0.95085,2.04705,-13.01903],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [-1.09606,2.0011,-13.01903],
+          "width": 0.0921,
+          "height": 2.51008
+        },
+        {
+          "pos": [-1.24128,2.03195,-13.01903],
+          "width": 0.0921,
+          "height": 2.2145
+        },
+        {
+          "pos": [-1.3865,1.89469,-13.01903],
+          "width": 0.0921,
+          "height": 2.20013
+        },
+        {
+          "pos": [-1.53172,1.833,-13.01903],
+          "width": 0.0921,
+          "height": 1.90907
+        },
+        {
+          "pos": [-1.67694,1.84246,-13.01903],
+          "width": 0.0921,
+          "height": 1.77434
+        },
+        {
+          "pos": [0.5085,2.04705,-10.9992],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [-0.51859,2.04705,-10.9992],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [0.5085,2.04705,-19.36265],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [0.70669,2.04705,-19.36265],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [0.90487,2.00543,-19.36265],
+          "width": 0.0921,
+          "height": 2.40409
+        },
+        {
+          "pos": [1.10306,1.93963,-19.36265],
+          "width": 0.0921,
+          "height": 2.2788
+        },
+        {
+          "pos": [1.30125,1.91737,-19.36265],
+          "width": 0.0921,
+          "height": 2.15983
+        },
+        {
+          "pos": [1.49943,1.80029,-19.36265],
+          "width": 0.0921,
+          "height": 2.00491
+        },
+        {
+          "pos": [1.69762,1.8181,-19.36265],
+          "width": 0.0921,
+          "height": 1.86457
+        },
+        {
+          "pos": [-0.51519,2.04705,-19.36265],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [-0.66041,2.04705,-19.36265],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [-0.80563,2.04705,-19.36265],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [-0.95085,2.04705,-19.36265],
+          "width": 0.0921,
+          "height": 2.61963
+        },
+        {
+          "pos": [-1.09606,2.0011,-19.36265],
+          "width": 0.0921,
+          "height": 2.51008
+        },
+        {
+          "pos": [-1.24128,2.03195,-19.36265],
+          "width": 0.0921,
+          "height": 2.2145
+        },
+        {
+          "pos": [-1.3865,1.89469,-19.36265],
+          "width": 0.0921,
+          "height": 2.20013
+        },
+        {
+          "pos": [-1.53172,1.833,-19.36265],
+          "width": 0.0921,
+          "height": 1.90907
+        },
+        {
+          "pos": [-1.67694,1.84246,-19.36265],
+          "width": 0.0921,
+          "height": 1.77434
+        },
+        {
+          "pos": [-0.0,3.60896,-22.2066],
+          "width": 0.47311,
+          "height": 0.64313
+        },
+        {
+          "pos": [-0.0,3.75903,-22.97364],
+          "width": 0.47311,
+          "height": 0.76347
+        },
+        {
+          "pos": [-0.0,3.97247,-23.89575],
+          "width": 0.47311,
+          "height": 1.4613
+        },
+        {
+          "pos": [-0.0,4.42269,-24.69614],
+          "width": 0.47311,
+          "height": 2.34617
+        },
+        {
+          "pos": [-0.0,4.85623,-25.47986],
+          "width": 0.47311,
+          "height": 3.45256
+        },
+        {
+          "pos": [-0.0,5.32312,-26.21355],
+          "width": 0.47311,
+          "height": 4.40436
+        },
+        {
+          "pos": [-0.0,5.73999,-26.96392],
+          "width": 0.47311,
+          "height": 4.96624
+        },
+        {
+          "pos": [-0.0,6.29026,-27.84768],
+          "width": 0.47311,
+          "height": 5.7289
+        },
+        {
+          "pos": [-0.0,6.77383,-28.6314],
+          "width": 0.47311,
+          "height": 7.14133
+        },
+        {
+          "pos": [-0.0,7.5242,-29.35842],
+          "width": 0.47311,
+          "height": 6.26841
+        },
+        {
+          "pos": [-0.0,8.80649,-30.04375],
+          "width": 0.47311,
+          "height": 3.69719
+        },
+        {
+          "pos": [-0.0,10.15715,-30.69407],
+          "width": 0.47311,
+          "height": 0.66275
+        },
+        {
+          "pos": [2.86435,2.99669,-27.54983],
+          "width": 4.16411,
+          "height": 0.43639
+        },
+        {
+          "pos": [2.86435,2.99669,-27.54983],
+          "width": 4.16411,
+          "height": 0.43639
+        },
+        {
+          "pos": [6.49492,3.40218,-29.86648],
+          "width": 3.10815,
+          "height": 0.32573
+        },
+        {
+          "pos": [6.49492,3.40218,-29.86648],
+          "width": 3.10815,
+          "height": 0.32573
+        },
+        {
+          "pos": [4.73578,0.37607,-1.35322],
+          "width": 5.72507,
+          "height": 0.59997
+        },
+        {
+          "pos": [4.73578,0.37607,-1.35322],
+          "width": 5.72507,
+          "height": 0.59997
+        },
+        {
+          "pos": [3.73997,0.55049,3.47232],
+          "width": 3.6644,
+          "height": 0.38402
+        },
+        {
+          "pos": [3.73997,0.55049,3.47232],
+          "width": 3.6644,
+          "height": 0.38402
+        },
+        {
+          "pos": [10.44511,1.06622,-3.07515],
+          "width": 5.49331,
+          "height": 0.57569
+        },
+        {
+          "pos": [10.44511,1.06622,-3.07515],
+          "width": 5.49331,
+          "height": 0.57569
+        },
+        {
+          "pos": [8.89745,0.88106,0.73799],
+          "width": 1.70411,
+          "height": 0.5317
+        },
+        {
+          "pos": [8.89745,0.88106,0.73799],
+          "width": 1.70411,
+          "height": 0.5317
+        },
+        {
+          "pos": [15.49057,1.49262,-5.42776],
+          "width": 4.26895,
+          "height": 0.44738
+        },
+        {
+          "pos": [15.49057,1.49262,-5.42776],
+          "width": 4.26895,
+          "height": 0.44738
+        },
+        {
+          "pos": [19.72693,2.18043,-7.80527],
+          "width": 3.58229,
+          "height": 0.37542
+        },
+        {
+          "pos": [19.72693,2.18043,-7.80527],
+          "width": 3.58229,
+          "height": 0.37542
+        },
+        {
+          "pos": [7.97218,-0.19356,3.10603],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [7.97218,-0.19356,3.10603],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [7.97218,-0.19356,5.98054],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [7.97218,-0.19356,5.98054],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [7.97218,-1.59907,3.10603],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [7.97218,-1.59907,3.10603],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [7.97218,-1.59907,5.98054],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [7.97218,-1.59907,5.98054],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [13.86225,0.41796,-0.17397],
+          "width": 1.51517,
+          "height": 0.15879
+        },
+        {
+          "pos": [13.86225,0.41796,2.70054],
+          "width": 1.51517,
+          "height": 0.15879
+        },
+        {
+          "pos": [13.86225,-0.98755,-0.17397],
+          "width": 1.51517,
+          "height": 0.15879
+        },
+        {
+          "pos": [13.86225,-0.98755,2.70054],
+          "width": 1.51517,
+          "height": 0.15879
+        },
+        {
+          "pos": [-2.86435,2.99669,-27.54983],
+          "width": 4.16411,
+          "height": 0.43639
+        },
+        {
+          "pos": [-2.86435,2.99669,-27.54983],
+          "width": 4.16411,
+          "height": 0.43639
+        },
+        {
+          "pos": [-6.49492,3.40218,-29.86648],
+          "width": 3.10815,
+          "height": 0.32573
+        },
+        {
+          "pos": [-6.49492,3.40218,-29.86648],
+          "width": 3.10815,
+          "height": 0.32573
+        },
+        {
+          "pos": [-4.73578,0.37607,-1.35322],
+          "width": 5.72507,
+          "height": 0.59997
+        },
+        {
+          "pos": [-4.73578,0.37607,-1.35322],
+          "width": 5.72507,
+          "height": 0.59997
+        },
+        {
+          "pos": [-3.73997,0.55049,3.47232],
+          "width": 3.6644,
+          "height": 0.38402
+        },
+        {
+          "pos": [-3.73997,0.55049,3.47232],
+          "width": 3.6644,
+          "height": 0.38402
+        },
+        {
+          "pos": [-10.44511,1.06622,-3.07515],
+          "width": 5.49331,
+          "height": 0.57569
+        },
+        {
+          "pos": [-10.44511,1.06622,-3.07515],
+          "width": 5.49331,
+          "height": 0.57569
+        },
+        {
+          "pos": [-8.89745,0.88106,0.73799],
+          "width": 1.70411,
+          "height": 0.5317
+        },
+        {
+          "pos": [-8.89745,0.88106,0.73799],
+          "width": 1.70411,
+          "height": 0.5317
+        },
+        {
+          "pos": [-15.49057,1.49262,-5.42776],
+          "width": 4.26895,
+          "height": 0.44738
+        },
+        {
+          "pos": [-15.49057,1.49262,-5.42776],
+          "width": 4.26895,
+          "height": 0.44738
+        },
+        {
+          "pos": [-19.72693,2.18043,-7.80527],
+          "width": 3.58229,
+          "height": 0.37542
+        },
+        {
+          "pos": [-19.72693,2.18043,-7.80527],
+          "width": 3.58229,
+          "height": 0.37542
+        },
+        {
+          "pos": [-7.97218,-0.19356,3.10603],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [-7.97218,-0.19356,3.10603],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [-7.97218,-0.19356,5.98054],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [-7.97218,-0.19356,5.98054],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [-7.97218,-1.59907,3.10603],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [-7.97218,-1.59907,3.10603],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [-7.97218,-1.59907,5.98054],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [-7.97218,-1.59907,5.98054],
+          "width": 1.51516,
+          "height": 0.15879
+        },
+        {
+          "pos": [-13.86225,0.41796,-0.17397],
+          "width": 1.51517,
+          "height": 0.15879
+        },
+        {
+          "pos": [-13.86225,0.41796,2.70054],
+          "width": 1.51517,
+          "height": 0.15879
+        },
+        {
+          "pos": [-13.86225,-0.98755,-0.17397],
+          "width": 1.51517,
+          "height": 0.15879
+        },
+        {
+          "pos": [-13.86225,-0.98755,2.70054],
+          "width": 1.51517,
+          "height": 0.15879
+        },
+        {
+          "pos": [0.0,-0.32445,16.8964],
+          "width": 1.97778,
+          "height": 0.14655
+        },
+        {
+          "pos": [0.0,-0.32445,14.80738],
+          "width": 1.97778,
+          "height": 0.14655
+        },
+        {
+          "pos": [0.0,-0.32445,12.71836],
+          "width": 1.97778,
+          "height": 0.14655
+        },
+        {
+          "pos": [0.0,-0.32445,10.62934],
+          "width": 1.97778,
+          "height": 0.14655
+        },
+        {
+          "pos": [0.0,-0.32445,8.54032],
+          "width": 1.97778,
+          "height": 0.14655
+        },
+        {
+          "pos": [-0.0,0.10793,5.08174],
+          "width": 3.61717,
+          "height": 1.07134
+        },
+        {
+          "pos": [-0.0,0.10793,1.09505],
+          "width": 3.61717,
+          "height": 1.07134
+        },
+        {
+          "pos": [-0.0,0.10793,-2.5665],
+          "width": 3.61717,
+          "height": 1.07134
+        },
+        {
+          "pos": [-0.0,0.10793,-18.85199],
+          "width": 3.14193,
+          "height": 0.93058
+        },
+        {
+          "pos": [-0.0,-0.01326,19.19035],
+          "width": 2.19007,
+          "height": 1.05139
+        },
+        {
+          "pos": [-0.0,-0.01326,22.05074],
+          "width": 2.19007,
+          "height": 1.05139
+        },
+        {
+          "pos": [0.0,-0.32445,-6.82256],
+          "width": 1.97778,
+          "height": 0.14655
+        },
+        {
+          "pos": [0.0,-0.32445,-8.9082],
+          "width": 1.97778,
+          "height": 0.14655
+        },
+        {
+          "pos": [0.0,-0.32445,-11.15522],
+          "width": 1.97778,
+          "height": 0.14655
+        },
+        {
+          "pos": [0.0,-0.32445,-13.38184],
+          "width": 1.97778,
+          "height": 0.14655
+        },
+        {
+          "pos": [0.0,-0.32445,-15.64884],
+          "width": 1.97778,
+          "height": 0.14655
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "door1",
+      "collisions": [
+        {
+          "pos": [1.802,1.899,22.25],
+          "width": 0.5,
+          "height": 0.3,
+          "variableName": "door1",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "door2",
+      "collisions": [
+        {
+          "pos": [-1.85,1.935,18.89],
+          "width": 0.5,
+          "height": 0.3,
+          "variableName": "door2",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "door3",
+      "collisions": [
+        {
+          "pos": [1.85,1.935,-12.07],
+          "width": 0.5,
+          "height": 0.3,
+          "variableName": "door3",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "door4",
+      "collisions": [
+        {
+          "pos": [-1.85,1.935,-12.07],
+          "width": 0.5,
+          "height": 0.3,
+          "variableName": "door4",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "door5",
+      "collisions": [
+        {
+          "pos": [1.816,1.935,-20.13],
+          "width": 0.5,
+          "height": 0.3,
+          "variableName": "door5",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "door6",
+      "collisions": [
+        {
+          "pos": [-1.816,1.935,-20.13],
+          "width": 0.5,
+          "height": 0.3,
+          "variableName": "door6",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "cockdoor",
+      "collisions": [
+        {
+          "pos": [0.2974,1.837,23.63],
+          "width": 0.08,
+          "height": 1.93,
+          "variableName": "cock",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.152,1.837,23.63],
+          "width": 0.08,
+          "height": 1.93,
+          "variableName": "cock",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.0,1.837,23.63],
+          "width": 0.08,
+          "height": 1.93,
+          "variableName": "cock",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.2974,1.837,23.63],
+          "width": 0.08,
+          "height": 1.93,
+          "variableName": "cock",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.152,1.837,23.63],
+          "width": 0.08,
+          "height": 1.93,
+          "variableName": "cock",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin1A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,16.43],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_1A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin2A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,14.09],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_2A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin3A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,11.75],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_3A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin4A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,9.41],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_4A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin5A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,7.07],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_5A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin6A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,4.73],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_6A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin7A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,2.3900000000000006],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_7A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin8A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,0.05000000000000071],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_8A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin9A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,-2.289999999999999],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_9A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin10A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,-4.629999999999999],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_10A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin11A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,-6.969999999999999],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_11A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin12A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,-9.309999999999999],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_12A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin13A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,-14.15],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_13A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin14A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,-16.19],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_14A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin15A",
+      "collisions": [
+        {
+          "pos": [0.5326,2.877,-18.22],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_15A",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin1D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,16.43],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_1D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin2D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,14.09],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_2D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin3D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,11.75],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_3D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin4D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,9.41],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_4D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin5D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,7.07],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_5D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin6D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,4.73],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_6D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin7D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,2.3900000000000006],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_7D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin8D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,0.05000000000000071],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_8D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin9D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,-2.289999999999999],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_9D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin10D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,-4.629999999999999],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_10D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin11D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,-6.969999999999999],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_11D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin12D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,-9.309999999999999],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_12D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin13D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,-14.15],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_13D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin14D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,-16.19],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_14D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "bin15D",
+      "collisions": [
+        {
+          "pos": [-0.5326,2.877,-18.22],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "bin_15D",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "cargo1",
+      "collisions": [
+        {
+          "pos": [-1.26,-0.03,16.19],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "cargo1",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "cargo2",
+      "collisions": [
+        {
+          "pos": [-1.26,-0.03,8.77],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "cargo2",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "cargo3",
+      "collisions": [
+        {
+          "pos": [-1.26,-0.03,-8.54],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "cargo3",
+          "variableType": "toggle"
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "cargo4",
+      "collisions": [
+        {
+          "pos": [-1.26,-0.03,-15.96],
+          "width": 0.2,
+          "height": 0.2,
+          "variableName": "cargo4",
+          "variableType": "toggle"
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "pos": [1.03,1.596,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 30,
+      "hudY": 73,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [0.9,1.748,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 68,
+      "hudY": 35,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [0.9,1.596,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 68,
+      "hudY": 72,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [0.7389,1.791,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.023,
+      "hudX": 111,
+      "hudY": 32,
+      "hudScale": 0.34
+    },
+    {
+      "pos": [0.7389,1.594,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.023,
+      "hudX": 111,
+      "hudY": 78,
+      "hudScale": 0.34
+    },
+    {
+      "pos": [0.7349,1.43,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 111,
+      "hudY": 119,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [0.5757,1.748,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 153,
+      "hudY": 35,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [0.5757,1.596,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 153,
+      "hudY": 72,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [0.4409,1.748,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 153,
+      "hudY": 110,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [0.2733,1.876,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 193,
+      "hudY": 35,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [-0.4409,1.504,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 246,
+      "hudY": 110,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [-0.5757,1.748,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 246,
+      "hudY": 35,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [-0.5757,1.596,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 246,
+      "hudY": 72,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [-0.7389,1.791,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.023,
+      "hudX": 288,
+      "hudY": 32,
+      "hudScale": 0.34
+    },
+    {
+      "pos": [-0.7389,1.594,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.023,
+      "hudX": 288,
+      "hudY": 78,
+      "hudScale": 0.34
+    },
+    {
+      "pos": [-0.9001,1.748,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 331,
+      "hudY": 35,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [-0.9001,1.596,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 331,
+      "hudY": 72,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [-1.03,1.596,26.039],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015,
+      "hudX": 370,
+      "hudY": 73,
+      "hudScale": 0.29
+    },
+    {
+      "pos": [0.1531,1.906,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 244,
+      "hudY": 27,
+      "hudScale": 0.28,
+      "optionalPartNumber": 1,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [0.1531,1.804,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 244,
+      "hudY": 59,
+      "hudScale": 0.28,
+      "optionalPartNumber": 1,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [0.1531,1.7,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 244,
+      "hudY": 91,
+      "hudScale": 0.28,
+      "optionalPartNumber": 1,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [0.1531,1.597,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 244,
+      "hudY": 123,
+      "hudScale": 0.28,
+      "optionalPartNumber": 1,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [0.05283,1.906,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 277,
+      "hudY": 27,
+      "hudScale": 0.28,
+      "optionalPartNumber": 2,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [0.05283,1.804,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 277,
+      "hudY": 59,
+      "hudScale": 0.28,
+      "optionalPartNumber": 2,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [0.05283,1.7,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 277,
+      "hudY": 91,
+      "hudScale": 0.28,
+      "optionalPartNumber": 2,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [0.05283,1.597,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 277,
+      "hudY": 123,
+      "hudScale": 0.28,
+      "optionalPartNumber": 2,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [-0.0477,1.906,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 310,
+      "hudY": 27,
+      "hudScale": 0.28,
+      "optionalPartNumber": 3,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [-0.0477,1.804,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 310,
+      "hudY": 59,
+      "hudScale": 0.28,
+      "optionalPartNumber": 3,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [-0.0477,1.7,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 310,
+      "hudY": 91,
+      "hudScale": 0.28,
+      "optionalPartNumber": 3,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [-0.0477,1.597,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 310,
+      "hudY": 123,
+      "hudScale": 0.28,
+      "optionalPartNumber": 3,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [-0.1472,1.906,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 342,
+      "hudY": 27,
+      "hudScale": 0.28,
+      "optionalPartNumber": 4,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [-0.1472,1.804,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 342,
+      "hudY": 59,
+      "hudScale": 0.28,
+      "optionalPartNumber": 4,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [-0.1472,1.7,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 342,
+      "hudY": 91,
+      "hudScale": 0.28,
+      "optionalPartNumber": 4,
+      "placeOnPanel": true
+    },
+    {
+      "pos": [-0.1472,1.597,26.018],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.012,
+      "hudX": 342,
+      "hudY": 123,
+      "hudScale": 0.28,
+      "optionalPartNumber": 4,
+      "placeOnPanel": true
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "MCDonnell Douglas DC-8-61",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_aircanada",
+      "name": "MCDonnell Douglas DC-8-61 (Air Canada)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_delta",
+      "name": "MCDonnell Douglas DC-8-61 (Delta Airlines)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_eastern",
+      "name": "MCDonnell Douglas DC-8-61 (Eastern)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_jal",
+      "name": "MCDonnell Douglas DC-8-61 (Japan Airlines)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_national",
+      "name": "MCDonnell Douglas DC-8-61 (National)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_saudia",
+      "name": "MCDonnell Douglas DC-8-61 (Saudia)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_thai",
+      "name": "MCDonnell Douglas DC-8-61 (Thai Airways)",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_united",
+      "name": "MCDonnell Douglas DC-8-61 (United Airlines)",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "variableModifiers": [
+    {
+      "variable": "aileronArea",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "speed",
+          "axis": [0.0,-0.007,0.0]
+        }
+      ]
+    },
+    {
+      "variable": "elevatorArea",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "speed",
+          "axis": [0.0,-0.007,0.0]
+        }
+      ]
+    },
+    {
+      "variable": "dragCoefficient",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "vehicle_inliquid",
+          "axis": [0.0,30.0,0.0]
+        }
+      ]
+    },
+    {
+      "variable": "outreverser",
+      "maxValue": 1.0,
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "tick",
+          "axis": [0.0,-0.4,0.0]
+        },
+        {
+          "animationType": "inhibitor",
+          "variable": "ground_onground_1"
+        },
+        {
+          "animationType": "inhibitor",
+          "variable": "reverser"
+        },
+        {
+          "animationType": "translation",
+          "variable": "tick",
+          "axis": [0.0,0.5,0.0]
+        }
+      ]
+    },
+    {
+      "variable": "spoiler",
+      "maxValue": 1.0,
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "tick",
+          "axis": [0.0,-0.4,0.0]
+        },
+        {
+          "animationType": "inhibitor",
+          "variable": "ground_onground_4"
+        },
+        {
+          "animationType": "inhibitor",
+          "variable": "brake"
+        },
+        {
+          "animationType": "translation",
+          "variable": "tick",
+          "axis": [0.0,0.5,0.0]
+        }
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "cargo1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "cargo1",
+            "centerPoint": [-1.69,0.71,16.67],
+            "axis": [0.0,0.0,-120.0],
+            "duration": 55,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad"
+          }
+        ]
+      },
+      {
+        "objectName": "cargo2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "cargo2",
+            "centerPoint": [-1.69,0.71,9.28],
+            "axis": [0.0,0.0,-120.0],
+            "duration": 55,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad"
+          }
+        ]
+      },
+      {
+        "objectName": "cargo3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "cargo3",
+            "centerPoint": [-1.69,0.71,-8.01],
+            "axis": [0.0,0.0,-120.0],
+            "duration": 55,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad"
+          }
+        ]
+      },
+      {
+        "objectName": "cargo4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "cargo4",
+            "centerPoint": [-1.69,0.71,-15.41],
+            "axis": [0.0,0.0,-120.0],
+            "duration": 55,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad"
+          }
+        ]
+      },
+      {
+        "objectName": "bin1A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_1A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin2A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_2A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin3A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_3A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin4A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_4A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin5A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_5A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin6A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_6A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin7A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_7A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin8A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_8A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin9A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_9A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin10A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_10A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin11A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_11A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin12A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_12A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin13A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_13A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin14A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_14A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin15A",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_15A",
+            "centerPoint": [0.6062,3.258,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin1D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_1D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin2D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_2D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin3D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_3D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin4D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_4D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin5D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_5D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin6D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_6D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin7D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_7D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin8D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_8D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin9D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_9D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin10D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_10D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin11D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_11D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin12D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_12D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin13D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_13D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin14D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_14D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "bin15D",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "bin_15D",
+            "centerPoint": [-0.6062,3.258,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 10,
+            "forwardsStartSound": "ivairlinerpack:bin_open",
+            "reverseEndSound": "ivairlinerpack:bin_click"
+          }
+        ]
+      },
+      {
+        "objectName": "cockdoor",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "cock",
+            "centerPoint": [-0.4192,1.837,23.61],
+            "axis": [0.0,86.0,0.0],
+            "duration": 30,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad"
+          }
+        ]
+      },
+      {
+        "objectName": "door1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1",
+            "centerPoint": [1.755,1.819,22.83],
+            "axis": [0.0,-159.68,0.0],
+            "duration": 55,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad",
+            "forwardsDelay": 30
+          }
+        ]
+      },
+      {
+        "objectName": "door1ho",
+        "applyAfter": "door1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1",
+            "centerPoint": [1.8018,1.89839,22.2511],
+            "axis": [179.57284,9.29296,8.19967],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door1hi",
+        "applyAfter": "door1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door1",
+            "centerPoint": [1.587,1.959,22.25],
+            "axis": [180.0,0.0,8.0],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2",
+            "centerPoint": [-1.838,1.833,19.39],
+            "axis": [0.0,159.68,0.0],
+            "duration": 55,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad",
+            "forwardsDelay": 30
+          }
+        ]
+      },
+      {
+        "objectName": "door2ho",
+        "applyAfter": "door2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2",
+            "centerPoint": [-1.85036,1.93484,18.8928],
+            "axis": [-179.81773,8.09841,0.0],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door2hi",
+        "applyAfter": "door2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door2",
+            "centerPoint": [-1.644,1.957,18.89],
+            "axis": [-180.0,0.0,-8.0],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door3",
+            "centerPoint": [1.838,1.833,-11.56],
+            "axis": [0.0,-159.68,0.0],
+            "duration": 55,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad",
+            "forwardsDelay": 30
+          }
+        ]
+      },
+      {
+        "objectName": "door3ho",
+        "applyAfter": "door3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door3",
+            "centerPoint": [1.85043,1.93487,-12.07],
+            "axis": [-179.81773,-8.09841,0.0],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door3hi",
+        "applyAfter": "door3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door3",
+            "centerPoint": [1.633,1.957,-12.07],
+            "axis": [-180.0,0.0,8.0],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door4",
+            "centerPoint": [-1.838,1.833,-11.56],
+            "axis": [0.0,159.68,0.0],
+            "duration": 55,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad",
+            "forwardsDelay": 30
+          }
+        ]
+      },
+      {
+        "objectName": "door4ho",
+        "applyAfter": "door4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door4",
+            "centerPoint": [-1.85043,1.93487,-12.07],
+            "axis": [-179.81773,8.09841,0.0],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door4hi",
+        "applyAfter": "door4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door4",
+            "centerPoint": [-1.633,1.957,-12.07],
+            "axis": [-180.0,0.0,8.0],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door5",
+            "centerPoint": [1.827,1.833,-19.62],
+            "axis": [0.0,-159.68,0.0],
+            "duration": 55,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad",
+            "forwardsDelay": 30
+          }
+        ]
+      },
+      {
+        "objectName": "door5ho",
+        "applyAfter": "door5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door5",
+            "centerPoint": [1.81652,1.93487,-20.1267],
+            "axis": [-179.62785,-8.0973,8.26255],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door5hi",
+        "applyAfter": "door5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door5",
+            "centerPoint": [1.598,1.957,-20.12],
+            "axis": [-180.0,0.0,8.0],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door6",
+            "centerPoint": [-1.827,1.833,-19.62],
+            "axis": [0.0,159.68,0.0],
+            "duration": 55,
+            "forwardsEasing": "easeoutquad",
+            "reverseEasing": "easeoutquad",
+            "forwardsDelay": 30
+          }
+        ]
+      },
+      {
+        "objectName": "door6ho",
+        "applyAfter": "door6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door6",
+            "centerPoint": [-1.81652,1.93487,-20.1267],
+            "axis": [-179.62785,8.0973,-8.26255],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "door6hi",
+        "applyAfter": "door6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door6",
+            "centerPoint": [-1.598,1.957,-20.12],
+            "axis": [-180.0,0.0,8.0],
+            "duration": 12,
+            "forwardsEasing": "easeinquart",
+            "reverseEasing": "easeinquart",
+            "reverseDelay": 60
+          }
+        ]
+      },
+      {
+        "objectName": "nose",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "gear_setpoint",
+            "axis": [0.0,0.0,-0.4],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.0,0.04701,24.09],
+            "axis": [-90.0,0.0,0.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "nose_strut",
+        "applyAfter": "nose",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "ground_onground_1"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,-2.014,24.19],
+            "axis": [0.0,-1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "&nosetaxi",
+        "applyAfter": "nose",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "ground_onground_1"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,-2.014,24.19],
+            "axis": [0.0,-1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "noseL2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.4555,-0.4265,24.8],
+            "axis": [-1.45175,10.35717,89.39028],
+            "duration": 40,
+            "reverseDelay": 160
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.4555,-0.4265,24.8],
+            "axis": [1.45175,-10.35717,-89.39028],
+            "duration": 40,
+            "forwardsDelay": 160
+          }
+        ]
+      },
+      {
+        "objectName": "noseR2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.4555,-0.4265,24.8],
+            "axis": [1.45175,-10.35717,-89.39028],
+            "duration": 40,
+            "reverseDelay": 160
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.4555,-0.4265,24.8],
+            "axis": [-1.45175,10.35717,89.39028],
+            "duration": 40,
+            "forwardsDelay": 160
+          }
+        ]
+      },
+      {
+        "objectName": "noseL",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "!gear_setpoint",
+            "centerPoint": [0.3198,-0.5231,24.05],
+            "axis": [-0.50278,6.24879,89.7814],
+            "duration": 40,
+            "reverseDelay": 120
+          }
+        ]
+      },
+      {
+        "objectName": "noseR",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "!gear_setpoint",
+            "centerPoint": [-0.3198,-0.5231,24.05],
+            "axis": [0.50278,-6.24879,-89.7814],
+            "duration": 40,
+            "reverseDelay": 120
+          }
+        ]
+      },
+      {
+        "objectName": "gd2L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "!gear_setpoint",
+            "centerPoint": [3.581,-0.2368,-1.084],
+            "axis": [0.0,0.0,90.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "gd3L",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "!gear_setpoint",
+            "axis": [-0.028,0.009,0.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gear_setpoint",
+            "centerPoint": [2.917,-0.0818,-1.054],
+            "axis": [0.0,0.0,90.8],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "gearL",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "gear_setpoint",
+            "axis": [-0.12,0.009,0.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [2.917,-0.0818,-1.054],
+            "axis": [0.0,0.0,-92.8],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "bogieL",
+        "applyAfter": "gearL",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "ground_onground_4"
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "speed",
+            "clampMin": 13.8889,
+            "clampMax": 1.0E10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "turn_indicator",
+            "centerPoint": [2.98,-1.893,-1.262],
+            "axis": [0.0,-0.5,0.0],
+            "clampMin": -5.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "speed",
+            "clampMin": 11.1111,
+            "clampMax": 1.0E10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "turn_indicator",
+            "centerPoint": [2.98,-1.893,-1.262],
+            "axis": [0.0,-0.5,0.0],
+            "clampMin": -5.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "speed",
+            "clampMin": 8.33333,
+            "clampMax": 1.0E10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "turn_indicator",
+            "centerPoint": [2.98,-1.893,-1.262],
+            "axis": [0.0,-0.5,0.0],
+            "clampMin": -5.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "speed",
+            "clampMin": 5.55556,
+            "clampMax": 1.0E10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "turn_indicator",
+            "centerPoint": [2.98,-1.893,-1.262],
+            "axis": [0.0,-0.8,0.0],
+            "clampMin": -20.0,
+            "clampMax": 20.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "speed",
+            "clampMin": 2.77778,
+            "clampMax": 1.0E10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "turn_indicator",
+            "centerPoint": [2.98,-1.893,-1.262],
+            "axis": [0.0,-0.8,0.0],
+            "clampMin": -20.0,
+            "clampMax": 20.0
+          }
+        ]
+      },
+      {
+        "objectName": "gearLstrut1",
+        "applyAfter": "gearL",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [2.835,-1.41,-1.116],
+            "axis": [0.0,0.0,-60.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "gearLstrut2",
+        "applyAfter": "gearLstrut1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [2.341,-0.9032,-1.106],
+            "axis": [0.0,0.0,200.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "gd2R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "!gear_setpoint",
+            "centerPoint": [-3.581,-0.2368,-1.084],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "gd3R",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "!gear_setpoint",
+            "axis": [0.028,0.009,0.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gear_setpoint",
+            "centerPoint": [-2.917,-0.0818,-1.054],
+            "axis": [0.0,0.0,-90.8],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "gearR",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "gear_setpoint",
+            "axis": [0.12,0.009,0.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-2.917,-0.0818,-1.054],
+            "axis": [0.0,0.0,92.8],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "bogieR",
+        "applyAfter": "gearR",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "ground_onground_8"
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "speed",
+            "clampMin": 13.8889,
+            "clampMax": 1.0E10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "turn_indicator",
+            "centerPoint": [-2.98,-1.893,-1.262],
+            "axis": [0.0,-0.5,0.0],
+            "clampMin": -5.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "speed",
+            "clampMin": 11.1111,
+            "clampMax": 1.0E10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "turn_indicator",
+            "centerPoint": [-2.98,-1.893,-1.262],
+            "axis": [0.0,-0.5,0.0],
+            "clampMin": -5.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "speed",
+            "clampMin": 8.33333,
+            "clampMax": 1.0E10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "turn_indicator",
+            "centerPoint": [-2.98,-1.893,-1.262],
+            "axis": [0.0,-0.5,0.0],
+            "clampMin": -5.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "speed",
+            "clampMin": 5.55556,
+            "clampMax": 1.0E10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "turn_indicator",
+            "centerPoint": [-2.98,-1.893,-1.262],
+            "axis": [0.0,-0.8,0.0],
+            "clampMin": -20.0,
+            "clampMax": 20.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "speed",
+            "clampMin": 2.77778,
+            "clampMax": 1.0E10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "turn_indicator",
+            "centerPoint": [-2.98,-1.893,-1.262],
+            "axis": [0.0,-0.8,0.0],
+            "clampMin": -20.0,
+            "clampMax": 20.0
+          }
+        ]
+      },
+      {
+        "objectName": "gearRstrut1",
+        "applyAfter": "gearR",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-2.835,-1.41,-1.116],
+            "axis": [0.0,0.0,60.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "gearRstrut2",
+        "applyAfter": "gearRstrut1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-2.341,-0.9032,-1.106],
+            "axis": [0.0,0.0,-200.0],
+            "duration": 120,
+            "forwardsDelay": 40,
+            "reverseDelay": 40
+          }
+        ]
+      },
+      {
+        "objectName": "gdL",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.4723,-0.6552,-1.109],
+            "axis": [0.0,0.0,-89.39028],
+            "duration": 40,
+            "reverseDelay": 160
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.4723,-0.6552,-1.109],
+            "axis": [0.0,0.0,89.39028],
+            "duration": 40,
+            "forwardsDelay": 160
+          }
+        ]
+      },
+      {
+        "objectName": "gdR",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.4723,-0.6552,-1.109],
+            "axis": [0.0,0.0,89.39028],
+            "duration": 40,
+            "reverseDelay": 160
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.4723,-0.6552,-1.109],
+            "axis": [0.0,0.0,-89.39028],
+            "duration": 40,
+            "forwardsDelay": 160
+          }
+        ]
+      },
+      {
+        "objectName": "flap1fL",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,3.0E-4,-0.1],
+            "clampMax": 0.55
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [1.713,-0.3787,-2.282],
+            "axis": [-0.59404,-0.08436,0.00155]
+          }
+        ]
+      },
+      {
+        "objectName": "flap1mL",
+        "applyAfter": "flap1fL",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,2.0E-4,-0.0028]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [1.71,-0.3616,-2.393],
+            "axis": [-0.49503,-0.0703,0.00129]
+          }
+        ]
+      },
+      {
+        "objectName": "flap1fR",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,3.0E-4,-0.09],
+            "clampMax": 0.55
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-1.713,-0.3787,-2.282],
+            "axis": [-0.59404,0.08436,-0.00155]
+          }
+        ]
+      },
+      {
+        "objectName": "flap1mR",
+        "applyAfter": "flap1fR",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,2.0E-4,-0.0028]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-1.71,-0.3616,-2.393],
+            "axis": [-0.49503,0.0703,-0.00129]
+          }
+        ]
+      },
+      {
+        "objectName": "flap2fL",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [-0.02,3.0E-4,-0.09],
+            "clampMax": 0.55
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [5.543,0.1681,-2.287],
+            "axis": [-0.55811,-0.07049,0.20869]
+          }
+        ]
+      },
+      {
+        "objectName": "flap2mL",
+        "applyAfter": "flap2fL",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,2.0E-4,-0.0028]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [5.542,0.1865,-2.407],
+            "axis": [-0.46509,-0.05874,0.1739]
+          }
+        ]
+      },
+      {
+        "objectName": "flap2rL",
+        "applyAfter": "flap2mL",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [7.41,0.3843,-4.059],
+            "axis": [0.92744,0.11554,-0.35568]
+          }
+        ]
+      },
+      {
+        "objectName": "flap2fR",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.02,3.0E-4,-0.09],
+            "clampMax": 0.55
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-5.543,0.1681,-2.287],
+            "axis": [-0.55811,0.07049,-0.20869]
+          }
+        ]
+      },
+      {
+        "objectName": "flap2mR",
+        "applyAfter": "flap2fR",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,2.0E-4,-0.0028]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-5.542,0.1865,-2.407],
+            "axis": [-0.46509,0.05874,-0.1739]
+          }
+        ]
+      },
+      {
+        "objectName": "flap2rR",
+        "applyAfter": "flap2mR",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-7.41,0.3843,-4.059],
+            "axis": [0.92744,-0.11554,0.35568]
+          }
+        ]
+      },
+      {
+        "objectName": "slot1L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [6.565,0.9529,2.288],
+            "axis": [37.0345,3.25057,-25.35507],
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "objectName": "slot1LU",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,0.0,-0.08],
+            "duration": 20
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [7.775,0.3602,1.471],
+            "axis": [-24.90084,-3.03231,16.45458],
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "objectName": "slot2L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [11.36,1.376,-0.9834],
+            "axis": [37.81593,3.54837,-24.13223],
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "objectName": "slot2LU",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,0.01,-0.25],
+            "duration": 20
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [11.36,0.8239,-0.9745],
+            "axis": [-8.37413,-1.04068,5.36572],
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "objectName": "slot1R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-6.565,0.9529,2.288],
+            "axis": [37.0345,-3.25057,25.35507],
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "objectName": "slot1RU",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,0.0,-0.08],
+            "duration": 20
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-7.775,0.3602,1.471],
+            "axis": [-24.90084,3.03231,-16.45458],
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "objectName": "slot2R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-11.36,1.376,-0.9834],
+            "axis": [37.81593,-3.54837,24.13223],
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "objectName": "slot2RU",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "flaps_actual",
+            "axis": [0.0,0.01,-0.25],
+            "duration": 20
+          },
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-11.36,0.8239,-0.9745],
+            "axis": [-8.37413,1.04068,-5.36572],
+            "duration": 20
+          }
+        ]
+      },
+      {
+        "objectName": "aileronL",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [12.13,1.021,-4.856],
+            "axis": [-0.91558,-0.10972,0.38687]
+          }
+        ]
+      },
+      {
+        "objectName": "aileronR",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [-12.13,1.021,-4.856],
+            "axis": [0.91558,-0.10972,0.38687]
+          }
+        ]
+      },
+      {
+        "objectName": "elevatorL",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [0.9848,2.706,-27.97],
+            "axis": [0.91935,0.11411,-0.37652]
+          }
+        ]
+      },
+      {
+        "objectName": "elevatorR",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [-0.9848,2.706,-27.97],
+            "axis": [0.91935,-0.11411,0.37652]
+          }
+        ]
+      },
+      {
+        "objectName": "rud",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,3.616,-27.6],
+            "axis": [0.0,0.92993,-0.36774]
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.435,-0.138,4.023],
+            "axis": [0.0,0.0,40.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.589,-0.3452,4.023],
+            "axis": [0.0,0.0,40.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.737,-0.5314,4.023],
+            "axis": [0.0,0.0,70.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.737,-0.7875,4.023],
+            "axis": [0.0,0.0,70.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.743,-1.024,4.023],
+            "axis": [0.0,0.0,100.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.588,-1.281,4.023],
+            "axis": [0.0,0.0,100.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIR1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [7.495,-0.138,4.023],
+            "axis": [0.0,0.0,-40.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIR2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [7.341,-0.3452,4.023],
+            "axis": [0.0,0.0,-40.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIR3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [7.193,-0.5314,4.023],
+            "axis": [0.0,0.0,-70.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIR4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [7.193,-0.7875,4.023],
+            "axis": [0.0,0.0,-70.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIR5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [7.193,-1.024,4.023],
+            "axis": [0.0,0.0,-100.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIR6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [7.342,-1.281,4.023],
+            "axis": [0.0,0.0,-100.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIR1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-8.435,-0.138,4.023],
+            "axis": [0.0,0.0,-40.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIR2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-8.589,-0.3452,4.023],
+            "axis": [0.0,0.0,-40.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIR3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-8.737,-0.5314,4.023],
+            "axis": [0.0,0.0,-70.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIR4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-8.737,-0.7875,4.023],
+            "axis": [0.0,0.0,-70.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIR5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-8.743,-1.024,4.023],
+            "axis": [0.0,0.0,-100.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIR6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-8.588,-1.281,4.023],
+            "axis": [0.0,0.0,-100.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIL1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-7.495,-0.138,4.023],
+            "axis": [0.0,0.0,40.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIL2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-7.341,-0.3452,4.023],
+            "axis": [0.0,0.0,40.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIL3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-7.193,-0.5314,4.023],
+            "axis": [0.0,0.0,70.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIL4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-7.193,-0.7875,4.023],
+            "axis": [0.0,0.0,70.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIL5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-7.193,-1.024,4.023],
+            "axis": [0.0,0.0,100.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revRIL6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [-7.342,-1.281,4.023],
+            "axis": [0.0,0.0,100.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.435,-0.138,4.023],
+            "axis": [0.0,0.0,40.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.589,-0.3452,4.023],
+            "axis": [0.0,0.0,40.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.737,-0.5314,4.023],
+            "axis": [0.0,0.0,70.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.737,-0.7875,4.023],
+            "axis": [0.0,0.0,70.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.743,-1.024,4.023],
+            "axis": [0.0,0.0,100.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLIL6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [8.588,-1.281,4.023],
+            "axis": [0.0,0.0,100.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "revLOL1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [14.34,0.3998,0.3341],
+            "axis": [0.0,0.0,40.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOL2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [14.49,0.1926,0.3341],
+            "axis": [0.0,0.0,40.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOL3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [14.65,-0.01459,0.3341],
+            "axis": [0.0,0.0,70.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOL4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [14.65,-0.2707,0.3341],
+            "axis": [0.0,0.0,70.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOL5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [14.65,-0.5268,0.3341],
+            "axis": [0.0,0.0,100.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOL6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [14.49,-0.7835,0.3341],
+            "axis": [0.0,0.0,100.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOR1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [13.34,0.3998,0.3341],
+            "axis": [0.0,0.0,-40.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOR2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [13.19,0.1926,0.3341],
+            "axis": [0.0,0.0,-40.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOR3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [13.03,-0.01459,0.3341],
+            "axis": [0.0,0.0,-70.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOR4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [13.03,-0.2707,0.3341],
+            "axis": [0.0,0.0,-70.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOR5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [13.03,-0.5268,0.3341],
+            "axis": [0.0,0.0,-100.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revLOR6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [13.19,-0.7835,0.3341],
+            "axis": [0.0,0.0,-100.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROR1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-14.34,0.3998,0.3341],
+            "axis": [0.0,0.0,-40.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROR2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-14.49,0.1926,0.3341],
+            "axis": [0.0,0.0,-40.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROR3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-14.65,-0.01459,0.3341],
+            "axis": [0.0,0.0,-70.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROR4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-14.65,-0.2707,0.3341],
+            "axis": [0.0,0.0,-70.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROR5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-14.65,-0.5268,0.3341],
+            "axis": [0.0,0.0,-100.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROR6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-14.49,-0.7835,0.3341],
+            "axis": [0.0,0.0,-100.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROL1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-13.34,0.3998,0.3341],
+            "axis": [0.0,0.0,40.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROL2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-13.19,0.1926,0.3341],
+            "axis": [0.0,0.0,40.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROL3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-13.03,-0.01459,0.3341],
+            "axis": [0.0,0.0,70.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROL4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-13.03,-0.2707,0.3341],
+            "axis": [0.0,0.0,70.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROL5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-13.03,-0.5268,0.3341],
+            "axis": [0.0,0.0,100.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "revROL6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "outreverser",
+            "centerPoint": [-13.19,-0.7835,0.3341],
+            "axis": [0.0,0.0,100.0],
+            "duration": 10,
+            "forwardsDelay": 5
+          }
+        ]
+      },
+      {
+        "objectName": "brake1L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "spoiler",
+            "centerPoint": [2.269,-0.1231,-2.407],
+            "axis": [79.26528,10.81738,0.0],
+            "duration": 13,
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "brake2L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "spoiler",
+            "centerPoint": [5.551,0.3332,-2.423],
+            "axis": [74.50508,9.01413,-27.70809],
+            "duration": 13,
+            "forwardsDelay": 3
+          }
+        ]
+      },
+      {
+        "objectName": "brake1R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "spoiler",
+            "centerPoint": [-2.269,-0.1231,-2.407],
+            "axis": [79.26528,-10.81738,0.0],
+            "duration": 13,
+            "forwardsDelay": 1
+          }
+        ]
+      },
+      {
+        "objectName": "brake2R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "spoiler",
+            "centerPoint": [-5.551,0.3332,-2.423],
+            "axis": [74.50508,-9.01413,27.70809],
+            "duration": 13,
+            "forwardsDelay": 3
+          }
+        ]
+      },
+      {
+        "objectName": "gearlev",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.0,1.793,26.05],
+            "axis": [90.0,0.0,0.0],
+            "duration": 3
+          }
+        ]
+      },
+      {
+        "objectName": "flap_lev",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_setpoint",
+            "centerPoint": [0.0,1.272,25.51],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "rev",
+        "applyAfter": "throttle",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [0.0,1.469,25.4],
+            "axis": [-70.0,0.0,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "throttle",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "throttle",
+            "centerPoint": [0.0,1.109,25.51],
+            "axis": [50.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "rudL",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "rudder",
+            "axis": [0.0,0.0,-0.0015]
+          }
+        ]
+      },
+      {
+        "objectName": "rudR",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "rudder",
+            "axis": [0.0,0.0,0.0015]
+          }
+        ]
+      },
+      {
+        "objectName": "yoke",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [0.0,0.9496,25.63],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "yokel",
+        "applyAfter": "yoke",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [0.6754,1.803,25.53],
+            "axis": [0.0,0.0,2.8]
+          }
+        ]
+      },
+      {
+        "objectName": "yoker",
+        "applyAfter": "yoke",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [-0.6754,1.803,25.53],
+            "axis": [0.0,0.0,2.8]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "Cube.001",
+        "emissive": true,
+        "color": "FFFFE4",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "navigation_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ],
+        "blendableComponents": []
+      },
+      {
+        "objectName": "&nosetaxi",
+        "emissive": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "taxi_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "objectName": "&turnoff",
+        "emissive": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "taxi_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "objectName": "&landing",
+        "emissive": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "landing_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "objectName": "&anticollidewhite",
+        "emissive": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!strobe_light"
+          },
+          {
+            "animationType": "translation",
+            "variable": "24_4_4_cycle",
+            "axis": [0.0,1.0,0.0],
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "objectName": "&anticollide",
+        "emissive": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!strobe_light"
+          },
+          {
+            "animationType": "translation",
+            "variable": "00_4_28_cycle",
+            "axis": [0.0,1.0,0.0],
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "objectName": "&navgreen",
+        "emissive": true,
+        "color": "00FF00",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "navigation_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "objectName": "&navwhite",
+        "emissive": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "navigation_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "objectName": "&navred",
+        "emissive": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "navigation_light",
+            "axis": [0.0,1.0,0.0],
+            "duration": 2
+          }
+        ]
+      }
+    ],
+    "sounds": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "description": "MCDonnell Douglas DC-8-61\nLongrange Narrowbody Airliner\nDouglas Stretch the base fuselage longer for more capacity and equip it with more efficient engine but with its lenght and capacity increase its range decrease a little bit",
+    "health": 100,
+    "materialLists": [
+      ["oredict:ingotIron:40",
+        "minecraft:iron_bars:0:4",
+        "minecraft:glass_pane:0:22"]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

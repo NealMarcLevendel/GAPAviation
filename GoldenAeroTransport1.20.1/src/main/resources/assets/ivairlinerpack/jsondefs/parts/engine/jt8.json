@@ -1,0 +1,494 @@
+{
+  "generic": {
+    "type": "engine_jet",
+    "customType": "jt8e",
+    "forwardsDamageMultiplier": 1.0
+  },
+  "engine": {
+    "type": "normal",
+    "isAutomatic": true,
+    "starterPower": 15,
+    "shiftSpeed": 20,
+    "revResistance": 10,
+    "maxRPM": 10975,
+    "maxSafeRPM": 7800,
+    "idleRPM": 1000,
+    "startRPM": 950,
+    "revlimitRPM": -1,
+    "revlimitBounce": 8,
+    "stallRPM": 500,
+    "engineWinddownRate": 5,
+    "heatingCoefficient": 1.0,
+    "coolingCoefficient": 0.8,
+    "engineWearFactor": 0.4,
+    "fuelConsumption": 2.5,
+    "jetPowerFactor": 4.0,
+    "bypassRatio": 8.8,
+    "gearRatios": [-1.0,0.0,1.0],
+    "fuelType": "avgas",
+    "superchargerFuelConsumption": -2.45,
+    "superchargerEfficiency": -0.12
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Pratt Whitney JT8",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "blades",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rotation",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,0.0,-0.5]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "ivairlinerpack:jt8_starting",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.45,
+        "maxDistance": 130.0,
+        "maxDistanceVolume": 0.15
+      },
+      {
+        "name": "ivairlinerpack:jt8_stopping",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.45,
+        "maxDistance": 130.0,
+        "maxDistanceVolume": 0.15
+      },
+      {
+        "name": "ivairlinerpack:nk-86_cranking",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running"
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,10.0,0.0],
+            "clampMax": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,20.0,0.0],
+            "offset": 0.2,
+            "clampMax": 3.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.45,
+        "maxDistance": 130.0,
+        "maxDistanceVolume": 0.15
+      },
+      {
+        "name": "ivairlinerpack:jt3d_jet3",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,1.9,0.0],
+            "offset": -0.3,
+            "clampMax": 0.6
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,1.2,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.45,
+        "maxDistance": 130.0,
+        "maxDistanceVolume": 0.15
+      },
+      {
+        "name": "ivairlinerpack:jt3d_jet5",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,5.5,0.0],
+            "offset": -0.5,
+            "clampMax": 0.6
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,1.9,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.45,
+        "maxDistance": 130.0,
+        "maxDistanceVolume": 0.15
+      },
+      {
+        "name": "ivairlinerpack:jt8_idle",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,-2.0,0.0],
+            "offset": 1.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,2.0,0.0],
+            "offset": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.45,
+        "maxDistance": 130.0,
+        "maxDistanceVolume": 0.15
+      },
+      {
+        "name": "ivairlinerpack:jt8_jet",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,1.5,0.0],
+            "offset": 0.1
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,2.0,0.0],
+            "offset": 0.5
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.45,
+        "maxDistance": 130.0,
+        "maxDistanceVolume": 0.15
+      },
+      {
+        "name": "ivairlinerpack:jt8_rumble",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,1.5,0.0],
+            "offset": 0.1
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,1.0,0.0],
+            "offset": 0.5
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.45,
+        "maxDistance": 130.0,
+        "maxDistanceVolume": 0.15
+      },
+      {
+        "name": "ivairlinerpack:jt8_throttle",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,1.0,0.0],
+            "offset": -0.1
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,2.0,0.0],
+            "offset": 0.5
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.45,
+        "maxDistance": 130.0,
+        "maxDistanceVolume": 0.15
+      },
+      {
+        "name": "ivairlinerpack:jt8_roar",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,0.5,0.0],
+            "offset": -0.2
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent",
+            "axis": [0.0,1.8,0.0]
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.45,
+        "maxDistance": 130.0,
+        "maxDistanceVolume": 0.15
+      }
+    ],
+    "particles": [
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 100,
+        "transparency": 0.02,
+        "scale": 1.6,
+        "toScale": 12.0,
+        "hitboxSize": 0.2,
+        "color": "000000",
+        "pos": [0.0,0.0,-2.5],
+        "initialVelocity": [0.0,0.0,-10.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "reverser"
+          },
+          {
+            "animationType": "visibility",
+            "variable": "throttle",
+            "clampMin": 0.2,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 100,
+        "transparency": 0.02,
+        "scale": 1.6,
+        "toScale": 12.0,
+        "hitboxSize": 0.2,
+        "color": "000000",
+        "pos": [0.0,0.0,-2.5],
+        "initialVelocity": [0.0,0.0,2.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!reverser"
+          },
+          {
+            "animationType": "visibility",
+            "variable": "throttle",
+            "clampMin": 0.2,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "hitboxSize": 0.2,
+        "color": "000000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 115.556,
+            "clampMax": 999.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "scale": 0.5,
+        "hitboxSize": 0.2,
+        "color": "000000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 121.111,
+            "clampMax": 999.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Pratt Whitney jt8",
+    "health": 100,
+    "materialLists": [
+      [
+        "minecraft:piston:0:4",
+        "minecraft:obsidian:0:4",
+        "minecraft:iron_ingot:0:8"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

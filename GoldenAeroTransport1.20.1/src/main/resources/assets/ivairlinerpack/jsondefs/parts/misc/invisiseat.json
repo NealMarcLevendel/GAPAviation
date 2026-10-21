@@ -1,0 +1,35 @@
+{
+  "generic": {
+    "type": "seat",
+    "forwardsDamageMultiplier": 0.0
+  },
+  "seat": {
+    "playerScale": [0.8999999761581421,0.8999999761581421,0.8999999761581421]
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Passenger seat",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Passenger seat",
+    "description": "Generic passenger seats used for crafting.",
+    "materialLists": [
+      [
+        "oredict:ingotIron:2",
+        "minecraft:wool:0:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

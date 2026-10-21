@@ -1,0 +1,16 @@
+{
+  "item": {
+    "type": "none"
+  },
+  "general": {
+    "name": "Engine Housing ?7(Turbofan)",
+    "description": "Generic housing for turbofan engines.",
+    "materialLists": [
+      [
+        "mts:ivairlinerpack.iron_plate:0:6"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

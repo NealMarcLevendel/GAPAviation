@@ -1,0 +1,191 @@
+{
+  "generic": {
+    "type": "ground_wheel",
+    "useVehicleTexture": true,
+    "forwardsDamageMultiplier": 0.0,
+    "movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "ground_rotation",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [1.0,0.0,0.0]
+      }
+    ]
+  },
+  "ground": {
+    "isWheel": true,
+    "width": 0.26,
+    "height": 0.954453,
+    "climbHeight": 1.5,
+    "motiveFriction": 1.0,
+    "lateralFriction": 1.0,
+    "frictionModifiers": {
+      "snow": -0.1,
+      "ice": -0.2,
+      "sand_wet": -0.1
+    }
+  },
+  "wheel": {
+    "diameter": 1.3,
+    "motiveFriction": 2.0,
+    "lateralFriction": 1.75
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Generic Truck Wheel",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "mts:wheel_blowout",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_isflat",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mts:wheel_striking",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_contacted",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mts:wheel_skidding",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+      {
+        "type": "smoke",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 4,
+        "hitboxSize": 0.2,
+        "color": "FFFFFF",
+        "initialVelocity": [0.0,0.15,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_contacted",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 4,
+        "hitboxSize": 0.2,
+        "color": "FFFFFF",
+        "pos": [0.0,-0.6499999761581421,0.0],
+        "initialVelocity": [0.0,0.15,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "break",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 4,
+        "scale": 0.030000001,
+        "hitboxSize": 0.1,
+        "color": "999999",
+        "pos": [0.0,-0.6499999761581421,0.0],
+        "initialVelocity": [0.0,1.5,-1.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_skidding",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "break",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 4,
+        "scale": 0.030000001,
+        "hitboxSize": 0.1,
+        "color": "999999",
+        "pos": [0.0,-0.6499999761581421,0.0],
+        "initialVelocity": [0.0,1.5,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Generic Truck Wheel",
+    "health": 100,
+    "materialLists": [
+      [
+        "immersiveengineering:metal:38:2",
+        "immersiveengineering:material:5:5"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

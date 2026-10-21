@@ -1,0 +1,119 @@
+{
+  "generic": {
+    "type": "propeller",
+    "forwardsDamageMultiplier": 0.0,
+    "movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "propeller_rotation",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,0.0,1.0]
+      }
+    ]
+  },
+  "propeller": {
+    "isDynamicPitch": true,
+    "pitch": 800,
+    "diameter": 162
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Dowty R408 Propeller ?7(Dynamic Pitch)",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "$blade_1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,100.0,0.0],
+            "duration": 90
+          }
+        ]
+      },
+      {
+        "objectName": "$blade_2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [0.0,0.0,-0.0625],
+            "axis": [-86.6,50.0,0.0],
+            "duration": 90
+          }
+        ]
+      },
+      {
+        "objectName": "$blade_3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [0.0,0.0,-0.0625],
+            "axis": [-86.6,-50.0,0.0],
+            "duration": 90
+          }
+        ]
+      },
+      {
+        "objectName": "$blade_4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-100.0,0.0],
+            "duration": 90
+          }
+        ]
+      },
+      {
+        "objectName": "$blade_5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [0.0,0.0,-0.0625],
+            "axis": [86.6,-50.0,0.0],
+            "duration": 90
+          }
+        ]
+      },
+      {
+        "objectName": "$blade_6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "reverser",
+            "centerPoint": [0.0,0.0,-0.0625],
+            "axis": [86.6,50.0,0.0],
+            "duration": 90
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Dowty R408 Propeller ?7(Dynamic Pitch)",
+    "health": 100,
+    "materialLists": [
+      [
+        "minecraft:dark_oak_fence:0:6",
+        "minecraft:obsidian:0:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

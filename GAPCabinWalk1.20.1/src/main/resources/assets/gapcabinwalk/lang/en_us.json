@@ -1,0 +1,10 @@
+{
+  "msg.gapcabinwalk.no_room": "There's no room to stand up here.",
+  "key.categories.gapcabinwalk": "GAP Cabin Walk",
+  "key.gapcabinwalk.head_inertia": "Toggle head inertia",
+  "msg.gapcabinwalk.head_inertia_on": "Head inertia: on",
+  "msg.gapcabinwalk.head_inertia_off": "Head inertia: off",
+  "msg.gapcabinwalk.head_inertia_status": "Head inertia %s: turning %s, acceleration %s, roll %s, cabin tilt when standing %s. /headinertia <value> sets turning + acceleration.",
+  "msg.gapcabinwalk.on": "on",
+  "msg.gapcabinwalk.off": "off"
+}
