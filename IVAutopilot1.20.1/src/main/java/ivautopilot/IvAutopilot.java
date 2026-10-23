@@ -32,6 +32,7 @@ public class IvAutopilot {
         ApRegistry.BLOCK_ENTITIES.register(modBus);
         ApRegistry.TABS.register(modBus);
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ApConfig.SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ivautopilot.track.TrackerClientConfig.SPEC);
         ApNetwork.init();
         ChunkKeeper.init();
     }

@@ -46,10 +46,23 @@ Airport Marker  Optional no-bank zone around it (wings level, rudder-only turns)
                 Rename in an anvil to name the airport.
                 Right-click: radius +50.   Sneak + right-click: radius -50.
 
+Plane tracker (needs JourneyMap, included in the test instance)
+---------------------------------------------------------------
+J               Open JourneyMap's full-screen map: every aircraft in the world is shown (also on the
+                minimap), with its planned autopilot path and destination runway. Hover for details.
+                Green = autopilot to a runway, yellow = pitch/altitude hold, white = hand-flown,
+                grey = parked / last seen (not loaded). Turn off: tracker.enabled in the server config.
+/planetracker                 Show the tracker's map settings (client-side, works anywhere)
+/planetracker size <8-128>    Plane icon size on the map, pixels (default 36)
+/planetracker text <0.5-4>    Label text size (default 1.75)
+/planetracker labels on|off   Labels under the planes (hovering still shows details)
+                              Saved in instance/config/ivautopilot-client.toml
+
 Settings
 --------
 instance/saves/<world>/serverconfig/ivautopilot-server.toml
-(pitch, altitude, bank, throttle, takeoff, landing, circuit, cruise, stall protection, no-bank zones)
+(pitch, altitude, bank, throttle, takeoff, landing, circuit, cruise, stall protection, no-bank zones,
+ chunk loading ahead of aircraft)
 Flight recorder: one [FDR] line per second in instance/logs/latest.log while the autopilot is on.
 
 

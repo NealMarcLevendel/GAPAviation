@@ -132,10 +132,15 @@ repositories {
         url "https://cursemaven.com"
         content { includeGroup "curse.maven" }
     }
-    // Modrinth (Distant Horizons)
+    // Modrinth (Distant Horizons, JourneyMap)
     maven {
         url "https://api.modrinth.com/maven"
         content { includeGroup "maven.modrinth" }
+    }
+    // JourneyMap API (plane tracker on the map)
+    maven {
+        url "https://maven.blamejared.com"
+        content { includeGroup "info.journeymap" }
     }
 }
 
@@ -150,6 +155,11 @@ dependencies {
     // Immersive Vehicles (MTS) 23.0.0 for Forge 1.20.1 - required to load this content pack.
     // implementation: the autopilot compiles against MTS classes. Not bundled into the built jar.
     implementation fg.deobf("curse.maven:minecraft-transport-simulator-286703:7423733")
+
+    // JourneyMap: the plane tracker draws aircraft and autopilot paths on its map. Optional at runtime
+    // (only the plugin class touches it); included in the test instance.
+    compileOnly fg.deobf("info.journeymap:journeymap-api-forge:1.20.1-2.0.0")
+    runtimeOnly fg.deobf("maven.modrinth:journeymap:1.20.1-6.0.7+forge")
 
     // Distant Horizons (level-of-detail terrain far beyond render distance) - test runs only, not bundled.
     // Opt-in: ./gradlew runClient -PwithDH  (optional -PdhVersion=<modrinth version>, -PdhDefaults to skip the Mac-safe settings below)

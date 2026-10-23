@@ -68,6 +68,7 @@ public final class ApServer {
         // No-bank zones: wings level, heading held with rudder trim (lockHeading NaN = follow the nav).
         boolean bankLocked;
         String lockReason = "";
+        int missingTicks;
         // Stall protection: filtered angle of attack, whether protection is active, and the speed command ramp.
         double aoa = Double.NaN;
         boolean stallProtect;
@@ -224,6 +225,105 @@ public final class ApServer {
         }
     }
 
+    /** Plane tracker entry for this aircraft: where it is, what the autopilot is doing, and its planned path. */
+    public static ivautopilot.track.TrackedAircraft trackInfo(ServerLevel level, EntityVehicleF_Physics aircraft) {
+        State state = STATES.get(aircraft.uniqueUUID);
+        FlightPlan plan = state == null || state.mode != ApMode.NAV ? null : state.plan;
+        double speed = aircraft.indicatedSpeed;
+        String status;
+        if (state == null || state.mode == ApMode.OFF) {
+            status = Math.abs(speed) > 2 || !isOnGround(aircraft) ? "MANUAL" : "PARKED";
+        } else {
+            status = switch (state.mode) {
+                case NAV -> "AUTOPILOT";
+                case PITCH -> "AP PITCH";
+                case ALTITUDE -> "AP ALT";
+                default -> "MANUAL";
+            };
+        }
+        String name = aircraft.definition.general != null && aircraft.definition.general.name != null
+                ? aircraft.definition.general.name : aircraft.definition.systemName;
+        float bearing = (float) (((headingOf(aircraft) + 180) % 360 + 360) % 360);
+        float[] path = new float[0], runway = new float[0];
+        String phase = "", destination = "";
+        float eta = -1;
+        if (plan != null) {
+            path = plannedPath(aircraft, plan);
+            runway = new float[]{(float) plan.threshold.x, (float) plan.threshold.z, (float) plan.farEnd.x, (float) plan.farEnd.z};
+            phase = plan.phase.name();
+            destination = plan.runway.name();
+            double s = secondsToLanding(aircraft, state);
+            eta = Double.isNaN(s) ? -1 : (float) s;
+        }
+        return new ivautopilot.track.TrackedAircraft(aircraft.uniqueUUID, name, level.dimension().location().toString(),
+                (float) aircraft.position.x, (float) aircraft.position.y, (float) aircraft.position.z, bearing, (float) (speed * 3.6),
+                status, phase, destination, eta, true, path, runway);
+    }
+
+    /** The path still to fly, as x,z pairs from the aircraft to the runway (downsampled, at most ~80 points). */
+    private static float[] plannedPath(EntityVehicleF_Physics aircraft, FlightPlan plan) {
+        List<double[]> points = new ArrayList<>();
+        points.add(new double[]{aircraft.position.x, aircraft.position.z});
+        switch (plan.phase) {
+            case TAKEOFF_ROLL, ROTATE, CLIMB_OUT -> {
+                if (plan.departureEnd != null) {
+                    points.add(new double[]{plan.departureEnd.x, plan.departureEnd.z});
+                }
+                points.add(new double[]{plan.entry.x, plan.entry.z});
+                points.add(new double[]{plan.threshold.x, plan.threshold.z});
+            }
+            case ENROUTE -> {
+                List<RoutePlanner.Waypoint> route = plan.route;
+                if (route != null) {
+                    int step = Math.max(1, (route.size() - plan.waypointIndex) / 40);
+                    for (int i = Math.min(plan.waypointIndex, route.size() - 1); i < route.size(); i += step) {
+                        points.add(new double[]{route.get(i).x(), route.get(i).z()});
+                    }
+                    RoutePlanner.Waypoint last = route.get(route.size() - 1);
+                    points.add(new double[]{last.x(), last.z()});
+                }
+                points.add(new double[]{plan.entry.x, plan.entry.z});
+                points.add(new double[]{plan.threshold.x, plan.threshold.z});
+            }
+            case PATTERN -> {
+                ivautopilot.nav.Pattern pattern = plan.pattern;
+                if (pattern != null) {
+                    int step = Math.max(1, (pattern.targetIndex - pattern.nearest) / 60);
+                    for (int i = pattern.nearest; i < pattern.targetIndex; i += step) {
+                        points.add(new double[]{pattern.xs[i], pattern.zs[i]});
+                    }
+                }
+                points.add(new double[]{plan.entry.x, plan.entry.z});
+                points.add(new double[]{plan.threshold.x, plan.threshold.z});
+            }
+            case APPROACH, FINAL, FLARE -> points.add(new double[]{plan.threshold.x, plan.threshold.z});
+            case REPOSITION -> {
+                if (plan.repositionPoint != null) {
+                    points.add(new double[]{plan.repositionPoint.x, plan.repositionPoint.z});
+                }
+                points.add(new double[]{plan.entry.x, plan.entry.z});
+                points.add(new double[]{plan.threshold.x, plan.threshold.z});
+            }
+            case GO_AROUND, HOLDING -> {
+                points.add(new double[]{plan.entry.x, plan.entry.z});
+                points.add(new double[]{plan.threshold.x, plan.threshold.z});
+            }
+            case ROLLOUT -> points.add(new double[]{plan.farEnd.x, plan.farEnd.z});
+        }
+        float[] out = new float[points.size() * 2];
+        for (int i = 0; i < points.size(); i++) {
+            out[2 * i] = (float) points.get(i)[0];
+            out[2 * i + 1] = (float) points.get(i)[1];
+        }
+        return out;
+    }
+
+    /** True if this aircraft's autopilot is engaged (any mode). */
+    static boolean isEngaged(UUID aircraft) {
+        State state = STATES.get(aircraft);
+        return state != null && state.mode != ApMode.OFF;
+    }
+
     /** An aircraft with the autopilot engaged that this player is aboard (or right next to), out of the seat. */
     @Nullable
     static EntityVehicleF_Physics engagedAircraftAboard(ServerPlayer player) {
@@ -318,13 +418,14 @@ public final class ApServer {
             ServerLevel level = state.dimension == null ? null : server.getLevel(state.dimension);
             EntityVehicleF_Physics aircraft = level == null ? null : find(level, entry.getKey());
             if (aircraft == null) {
-                // Gone (destroyed, picked up, or unloaded before we could hold it).
-                if (level != null) {
-                    ChunkKeeper.release(level, entry.getKey());
+                // Not found: destroyed or picked up - or just waiting for its chunk to load. Keep the
+                // flight plan for a while in case it's the latter.
+                if (++state.missingTicks > 600) {
+                    STATES.remove(entry.getKey());
                 }
-                STATES.remove(entry.getKey());
                 continue;
             }
+            state.missingTicks = 0;
             fly(level, aircraft, state);
             if (state.mode != ApMode.OFF && aircraft.ticksExisted % 20 == 0) {
                 record(aircraft, state);
@@ -332,11 +433,6 @@ public final class ApServer {
             if (state.dirty || aircraft.ticksExisted % 10 == 0) {
                 state.dirty = false;
                 sendStatus(server, aircraft, state);
-            }
-            if (state.mode != ApMode.OFF) {
-                ChunkKeeper.keep(level, aircraft.uniqueUUID, aircraft.position.x, aircraft.position.z);
-            } else if (ChunkKeeper.holds(aircraft.uniqueUUID)) {
-                ChunkKeeper.release(level, aircraft.uniqueUUID);
             }
             if (state.mode == ApMode.OFF && !state.autoTrim) {
                 STATES.remove(entry.getKey());

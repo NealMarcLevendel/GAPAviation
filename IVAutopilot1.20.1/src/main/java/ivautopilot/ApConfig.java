@@ -17,6 +17,8 @@ public final class ApConfig {
     public static final ForgeConfigSpec.DoubleValue DECISION_HEIGHT, FLARE_HEIGHT, FLARE_SINK_RATE, LONG_LANDING_FRACTION, REVERSE_THROTTLE, ROLLOUT_BRAKE;
     public static final ForgeConfigSpec.IntValue MAX_GO_AROUNDS;
     public static final ForgeConfigSpec.DoubleValue ROLLOUT_MARGIN, ALARM_MARGIN, TOUCHDOWN_BRAKE, TAXI_SPEED;
+    public static final ForgeConfigSpec.DoubleValue CHUNK_LOOKAHEAD_SECONDS, CHUNK_MIN_SPEED;
+    public static final ForgeConfigSpec.BooleanValue LOAD_FOR_PILOTED, TRACKER_ENABLED;
     public static final ForgeConfigSpec.DoubleValue CLOUD_HEIGHT, JET_ABOVE_CLOUDS, TURBOPROP_ABOVE_CLOUDS, PISTON_ABOVE_CLOUDS, TRIP_PER_BLOCK;
     public static final ForgeConfigSpec.DoubleValue AIRPORT_CEILING, NO_BANK_RUDDER_GAIN;
     public static final ForgeConfigSpec.DoubleValue PATTERN_BANK, PATTERN_DISTANCE, PATTERN_SPEED_FACTOR, AOA_LIMIT;
@@ -94,6 +96,16 @@ public final class ApConfig {
         TURBOPROP_ABOVE_CLOUDS = b.comment("Turboprops (jet engines driving propellers) cruise up to this far above the clouds").defineInRange("turbopropAboveClouds", 40.0, -500, 2000);
         PISTON_ABOVE_CLOUDS = b.comment("Piston-engined planes cruise up to this far above the clouds (negative = below)").defineInRange("pistonAboveClouds", -30.0, -500, 2000);
         TRIP_PER_BLOCK = b.comment("Blocks of trip distance per block of cruise height above the higher runway (so short trips stay low)").defineInRange("tripPerBlockOfHeight", 30.0, 5, 500);
+        b.pop();
+        b.comment("Chunk loading: keep aircraft in loaded, ticking chunks (Minecraft freezes and hides entities",
+                "that fly into chunks that aren't loaded yet, e.g. new terrain at speed)").push("chunks");
+        CHUNK_LOOKAHEAD_SECONDS = b.comment("Load (not tick) a corridor this many seconds of flight ahead of the aircraft (capped at 600 blocks). Higher = safer over new terrain, more server load").defineInRange("corridorSeconds", 5.0, 0, 30);
+        LOAD_FOR_PILOTED = b.comment("Also for aircraft flown by hand (anyone aboard), not only with the autopilot engaged").define("loadForPiloted", true);
+        CHUNK_MIN_SPEED = b.comment("Hand-flown aircraft get chunks loaded above this ground speed, blocks/second").defineInRange("minSpeed", 10.0, 0, 200);
+        b.pop();
+        b.comment("Plane tracker: send every player the positions and autopilot paths of all aircraft once a second",
+                "(shown on JourneyMap's map if it's installed)").push("tracker");
+        TRACKER_ENABLED = b.define("enabled", true);
         b.pop();
         b.comment("Navigation").push("nav");
         LOOKAHEAD = b.comment("How far ahead along the route leg to aim, blocks").defineInRange("lookahead", 250.0, 50, 2000);

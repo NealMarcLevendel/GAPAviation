@@ -14,7 +14,7 @@ import java.util.UUID;
 import java.util.function.Supplier;
 
 public final class ApNetwork {
-    private static final String VERSION = "3";
+    private static final String VERSION = "4";
     public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
             new ResourceLocation(IvAutopilot.MODID, "main"), () -> VERSION, VERSION::equals, VERSION::equals);
 
@@ -56,6 +56,30 @@ public final class ApNetwork {
         CHANNEL.messageBuilder(Status.class, 1, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Status::encode).decoder(Status::decode)
                 .consumerMainThread(ApNetwork::handleStatus).add();
+        CHANNEL.messageBuilder(Tracker.class, 2, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(Tracker::encode).decoder(Tracker::decode)
+                .consumerMainThread(ApNetwork::handleTracker).add();
+    }
+
+    /** Server -> client, once a second: every aircraft for the plane tracker (see track.AircraftTracker). */
+    public record Tracker(java.util.List<ivautopilot.track.TrackedAircraft> aircraft) {
+        void encode(FriendlyByteBuf buf) {
+            buf.writeVarInt(aircraft.size());
+            aircraft.forEach(a -> a.encode(buf));
+        }
+
+        static Tracker decode(FriendlyByteBuf buf) {
+            int n = Math.min(buf.readVarInt(), 1000);
+            java.util.List<ivautopilot.track.TrackedAircraft> list = new java.util.ArrayList<>(n);
+            for (int i = 0; i < n; i++) {
+                list.add(ivautopilot.track.TrackedAircraft.decode(buf));
+            }
+            return new Tracker(list);
+        }
+    }
+
+    private static void handleTracker(Tracker msg, Supplier<NetworkEvent.Context> ctx) {
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ivautopilot.track.TrackerClient.update(msg.aircraft()));
     }
 
     private static void handleCommand(Command msg, Supplier<NetworkEvent.Context> ctx) {
