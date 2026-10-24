@@ -72,6 +72,8 @@ public class RunwayMarkerBlock extends BaseEntityBlock {
             String name = marker.getRunwayName();
             RunwayRegistry registry = RunwayRegistry.get(server);
             registry.removeMarker(server.dimension(), name, pos);
+            ivautopilot.taxi.TaxiNetwork.get(server).removeMarker(server.dimension(), pos);
+            ivautopilot.taxi.TaxiSync.broadcast(server);
             super.onRemove(state, level, pos, newState, moving);
             registry.refreshLabels(server, name);
             return;
@@ -82,6 +84,9 @@ public class RunwayMarkerBlock extends BaseEntityBlock {
     @SuppressWarnings("deprecation")
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (player.getItemInHand(hand).getItem() instanceof ivautopilot.taxi.TaxiWandItem) {
+            return InteractionResult.PASS; // let the Taxiway Wand link this marker
+        }
         if (level instanceof ServerLevel server && level.getBlockEntity(pos) instanceof RunwayMarkerBlockEntity marker) {
             String name = marker.getRunwayName();
             if (!name.isEmpty()) {

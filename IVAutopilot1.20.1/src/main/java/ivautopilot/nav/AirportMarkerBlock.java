@@ -1,6 +1,5 @@
 package ivautopilot.nav;
 
-import ivautopilot.ApConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -17,11 +16,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
 /**
- * Defines an airport's no-bank zone: within the radius around this block (and up to the configured
- * ceiling above it) the autopilot keeps the wings level and turns with rudder only. Optionally
- * rename it in an anvil. Right-click: radius +50; sneak + right-click: radius -50.
+ * One corner of an airport: place two at opposite corners. The second one placed takes the name of
+ * the nearest airport still missing a corner (or name both the same in an anvil); a lone unnamed
+ * marker starts "Airport 1", "Airport 2", ... Right-click: show the airport.
  */
 public class AirportMarkerBlock extends BaseEntityBlock {
     public AirportMarkerBlock(Properties properties) {
@@ -42,12 +42,16 @@ public class AirportMarkerBlock extends BaseEntityBlock {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
-        if (level instanceof ServerLevel server && level.getBlockEntity(pos) instanceof AirportMarkerBlockEntity marker) {
+        if (level instanceof ServerLevel server) {
+            AirportRegistry registry = AirportRegistry.get(server);
             String name = stack.hasCustomHoverName() ? stack.getHoverName().getString().trim() : "";
-            marker.set(name, AirportMarkerBlockEntity.DEFAULT_RADIUS);
-            AirportRegistry.get(server).put(server.dimension(), marker.airport());
+            if (name.isEmpty()) {
+                name = registry.nameForNewMarker(server.dimension(), pos);
+            }
+            registry.put(server.dimension(), pos, name);
+            refreshLabels(server, name);
             if (placer instanceof Player player) {
-                describe(player, marker, false);
+                describe(server, player, name, false);
             }
         }
     }
@@ -56,7 +60,11 @@ public class AirportMarkerBlock extends BaseEntityBlock {
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moving) {
         if (!state.is(newState.getBlock()) && level instanceof ServerLevel server) {
+            String name = level.getBlockEntity(pos) instanceof AirportMarkerBlockEntity marker ? marker.getAirportName() : null;
             AirportRegistry.get(server).remove(server.dimension(), pos);
+            if (name != null) {
+                refreshLabels(server, name);
+            }
         }
         super.onRemove(state, level, pos, newState, moving);
     }
@@ -68,16 +76,33 @@ public class AirportMarkerBlock extends BaseEntityBlock {
             return InteractionResult.PASS;
         }
         if (level instanceof ServerLevel server && level.getBlockEntity(pos) instanceof AirportMarkerBlockEntity marker) {
-            int step = player.isShiftKeyDown() ? -AirportMarkerBlockEntity.STEP : AirportMarkerBlockEntity.STEP;
-            marker.set(marker.getAirportName(), marker.getRadius() + step);
-            AirportRegistry.get(server).put(server.dimension(), marker.airport());
-            describe(player, marker, true);
+            describe(server, player, marker.getAirportName(), true);
         }
         return InteractionResult.sidedSuccess(level.isClientSide);
     }
 
-    private static void describe(Player player, AirportMarkerBlockEntity marker, boolean actionBar) {
-        player.displayClientMessage(Component.translatable("msg.ivautopilot.airport_zone", marker.airport().name(),
-                marker.getRadius(), ApConfig.AIRPORT_CEILING.get().intValue()), actionBar);
+    /** Update the floating labels of this airport's (loaded) corners. */
+    private static void refreshLabels(ServerLevel level, String name) {
+        List<BlockPos> corners = AirportRegistry.get(level).corners(level.dimension(), name);
+        String info = status(corners);
+        for (BlockPos c : corners) {
+            if (level.isLoaded(c) && level.getBlockEntity(c) instanceof AirportMarkerBlockEntity marker) {
+                marker.set(name, info);
+            }
+        }
+    }
+
+    private static String status(List<BlockPos> corners) {
+        if (corners.size() == 2) {
+            BlockPos a = corners.get(0), b = corners.get(1);
+            return "airport " + (Math.abs(a.getX() - b.getX()) + 1) + " x " + (Math.abs(a.getZ() - b.getZ()) + 1);
+        }
+        return corners.size() < 2 ? "corner 1 of 2: place the opposite corner" : corners.size() + " corners: remove extras (needs exactly 2)";
+    }
+
+    private static void describe(ServerLevel level, Player player, String name, boolean actionBar) {
+        List<BlockPos> corners = AirportRegistry.get(level).corners(level.dimension(), name);
+        player.displayClientMessage(Component.translatable(corners.size() == 2 ? "msg.ivautopilot.airport_zone" : "msg.ivautopilot.airport_corner",
+                name, status(corners)), actionBar);
     }
 }

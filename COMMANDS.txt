@@ -18,13 +18,43 @@ Chat commands
 -------------
 /autopilot fly <runway>                       Fly to a runway: takes off first if you're lined up on a
                                               runway, then route, circuit, approach, landing, rollout.
+                                              Anywhere on a runway (crooked, off the centerline, facing
+                                              the wrong way) it lines up by itself first.
                                               Use quotes for names with spaces: /autopilot fly "KJFK 09"
                                               (Tab completes runway names.)
 /autopilot fly <runway> <altitude>            ...at this cruise altitude (Y level)
 /autopilot fly <runway> <altitude> <km/h>     ...and this cruise speed
+/autopilot taxi <gate|runway>                 Taxi along the taxiway network to a terminal gate, or onto a
+                                              runway and line up there (Tab lists both). Works from a gate,
+                                              a taxiway or another runway: on a runway it rolls along it to
+                                              the exit that leads there and turns off. /autopilot fly from a
+                                              gate taxis out to the nearest runway by itself, lines up and
+                                              takes off; after landing it taxis to the nearest free gate.
+... delay <seconds>                           Add to fly or taxi: the plane stays parked this long, then
+                                              starts by itself (on the ground only; touching the controls
+                                              cancels). e.g. /autopilot taxi "Gate 2" delay 60
+                                              /autopilot fly R1 3000 600 delay 30
 /autopilot off                                Disengage the autopilot (works from anywhere aboard)
 /autopilot runways                            List runways: heading, length and marker coordinates
                                               (click a coordinate to copy it)
+/genwaypoints <radius> <blocks>               (Op) Lay out the taxi network around you: waypoints along the
+                                              middle of every taxiway/apron made of these blocks within the
+                                              radius (8-2048), linked, with runway entrances where taxiways
+                                              meet a runway, and existing terminal gates hooked on.
+                                              Blocks: comma-separated, e.g.
+                                              /genwaypoints 200 gray_concrete,yellow_concrete
+                                              Stand on the airport's ground level. Runways are left out
+                                              automatically. (/genWayPoints works too.)
+/genwaypoints airport <blocks>                (Op) Same, for the whole airport you're standing in (its
+                                              rectangle, up to 8192 blocks a side).
+                                              Both run in the background (the ground is read a few chunks
+                                              per tick), with a progress bar at the top of the screen.
+/genwaypoints entrances                       (Op) Make every taxiway dead end next to a runway an entrance
+                                              to it (done automatically when generating; use after adding
+                                              runway markers or waypoints by hand).
+/genwaypoints cancel                          (Op) Stop a generation that's running.
+/genwaypoints clear <radius>                  (Op) Remove the plain taxi waypoints in the radius (keeps
+/genwaypoints clear airport                   terminal gates), or in the whole airport, e.g. to regenerate.
 
 Keys (rebindable: Options > Controls > IV Autopilot)
 ----------------------------------------------------
@@ -42,9 +72,43 @@ Blocks (creative tab "IV Autopilot")
 Runway Marker   Rename in an anvil (e.g. "KJFK 09"); place one at each end of the runway centerline.
                 Shows a floating label: name, heading, length, coordinates.
                 Right-click: show/refresh the runway's status.
-Airport Marker  Optional no-bank zone around it (wings level, rudder-only turns).
-                Rename in an anvil to name the airport.
-                Right-click: radius +50.   Sneak + right-click: radius -50.
+Taxi Waypoint   Flat marker for taxiways (planes roll over it). Rename in an anvil (e.g. "Gate A2")
+                to make it a gate/stand. Right-click: show its links.
+Taxiway Wand    Right-click a waypoint, then another waypoint: link (or unlink) them; keep clicking
+                to chain a taxiway. Waypoint then Runway Marker: that waypoint becomes the runway
+                end's entrance/exit. Sneak + right-click in the air: clear the selection.
+                While held, the network shows on the ground (yellow taxiways, cyan runway links).
+                Tip: for big jets, round sharp corners with an extra waypoint or two.
+Terminal Gate   Where planes park (light blue). Gets a name by itself ("Gate 1", "Gate 2", ...) unless
+                the item was renamed in an anvil, and links itself to the nearest taxi waypoint.
+                Placing a plain Taxi Waypoint also links it automatically: to the nearest waypoints
+                within 48 blocks (one per direction, only across flat open ground), splitting a link
+                if you place it on one, and making it a runway entrance if it's next to a runway.
+                The wand still links/unlinks by hand. Turn off: taxi.autoLinkDistance = 0.
+Airport Marker  Place two at opposite corners of the airport: the rectangle between them is the
+                airport (runways, taxiways and gates can all be inside it). The second one joins the
+                nearest airport still missing a corner; or name both the same in an anvil. Unnamed
+                ones are called "Airport 1", "Airport 2", ... Right-click: show the airport.
+                Planes departing from it keep their wings level (rudder turns) until they leave it
+                or climb above its ceiling; arriving/landing planes are never restricted by it.
+                (Airports from before this change have one marker each: add the opposite corners.)
+
+Traffic control (automatic, for autopilot aircraft)
+---------------------------------------------------
+Runways         One aircraft at a time. Departures hold short at the runway entrance waypoint (or wait
+                lined up) until the runway is free; arrivals get priority. Arrivals line up in order of
+                reaching the circuit; if the runway is busy they hold at the approach entry, stacked
+                30 blocks apart. Anything on the runway during final = go around.
+Taxiways        Each plane reserves the waypoints just ahead; others stop short of them and stop behind
+                any vehicle in their path. Blocked 20 s by a reserved waypoint: re-routes if it can.
+                Tip: give busy areas a second way round (or one-way loops), or a head-on meeting on a
+                single taxiway has to wait for you.
+In the air      Two autopilot planes within 300 blocks and 60 high: the one further from landing climbs
+                60 blocks until clear.
+After landing   Leaves the runway at the first waypoint ahead that leads to a free gate (any
+                waypoint linked to the runway's marker or within 40 blocks of the centerline counts),
+                then taxis to the nearest free gate. If it already rolled past every exit, it taxis back to the
+                nearest. Turn off: landing.taxiToGate.
 
 Plane tracker (needs JourneyMap, included in the test instance)
 ---------------------------------------------------------------

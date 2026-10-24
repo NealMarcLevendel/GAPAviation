@@ -69,6 +69,8 @@ public final class ApServer {
         boolean bankLocked;
         String lockReason = "";
         int missingTicks;
+        /** Taxiing (to a gate, or out to the departure runway before a flight). */
+        @Nullable Taxi.Plan taxi;
         // Stall protection: filtered angle of attack, whether protection is active, and the speed command ramp.
         double aoa = Double.NaN;
         boolean stallProtect;
@@ -79,6 +81,11 @@ public final class ApServer {
         double rollGain = 1, lastBankError;
         int rollGainCooldown, bankErrorFlips, flipWindow;
         @Nullable FlightPlan plan;
+        // Traffic: extra altitude to stay clear of another autopilot aircraft nearby, and how much longer to keep it.
+        double separation;
+        int separationTicks;
+        /** Delayed start: ticks left to wait (parked) before the taxi / takeoff begins. */
+        int delayTicks;
         String info = "";
         boolean dirty = true;
     }
@@ -128,10 +135,23 @@ public final class ApServer {
             return "msg.ivautopilot.not_pilot";
         }
         Takeoff.Departure departure = null;
+        ivautopilot.taxi.TaxiPlanner.Route taxiOut = null;
         if (isOnGround(aircraft)) {
             departure = Takeoff.findDeparture(player.serverLevel(), aircraft);
             if (departure == null) {
-                return "msg.ivautopilot.not_lined_up";
+                // Not on a runway: taxi out to the nearest one (by taxi distance) that isn't the destination.
+                Vec3 here = new Vec3(aircraft.position.x, aircraft.position.y, aircraft.position.z);
+                Runway under = runwayUnder(player.serverLevel(), aircraft);
+                if (under != null) {
+                    // On a runway, just not lined up: line up on it right here.
+                    taxiOut = ivautopilot.taxi.TaxiPlanner.lineUpOn(under, here, headingOf(aircraft));
+                } else {
+                    taxiOut = ivautopilot.taxi.TaxiPlanner.toRunway(player.serverLevel(), here, null, runway.name());
+                }
+                if (taxiOut == null) {
+                    return "msg.ivautopilot.not_lined_up";
+                }
+                departure = new Takeoff.Departure(taxiOut.runway(), taxiOut.runwayStart(), taxiOut.runwayEnd());
             }
             if (departure.runway().name().equals(runway.name())) {
                 return "msg.ivautopilot.same_runway";
@@ -174,6 +194,10 @@ public final class ApServer {
             // Hand the flight controls to us: MTS's client only re-centres inputs for the last controller,
             // and it becomes non-null again the moment the pilot touches the controls (= takeover).
             aircraft.lastController = null;
+            if (taxiOut != null) {
+                plan.setPhase(FlightPlan.Phase.TAXI);
+                state.taxi = new Taxi.Plan(taxiOut);
+            }
         }
         state.targetSpeed = speed;
         state.dirty = true;
@@ -199,6 +223,14 @@ public final class ApServer {
     }
 
     private static void setMode(EntityVehicleF_Physics aircraft, State state, ApMode mode) {
+        TrafficControl.releaseAll(aircraft.uniqueUUID);
+        state.delayTicks = 0;
+        state.separation = 0;
+        state.separationTicks = 0;
+        if (state.taxi != null) {
+            Takeoff.releaseInputs(aircraft);
+            state.taxi = null;
+        }
         if (state.plan != null && (isTakeoffPhase(state.plan.phase) || Landing.isHandsOnPhase(state.plan.phase))) {
             Takeoff.releaseInputs(aircraft); // leaving a takeoff/flare: centre the stick and rudder we were holding
         }
@@ -247,7 +279,23 @@ public final class ApServer {
         float[] path = new float[0], runway = new float[0];
         String phase = "", destination = "";
         float eta = -1;
-        if (plan != null) {
+        if (state != null && state.mode == ApMode.NAV && state.taxi != null) {
+            List<Vec3> rest = state.taxi.remaining(new Vec3(aircraft.position.x, aircraft.position.y, aircraft.position.z));
+            float[] taxiPath = new float[rest.size() * 2];
+            for (int i = 0; i < rest.size(); i++) {
+                taxiPath[2 * i] = (float) rest.get(i).x;
+                taxiPath[2 * i + 1] = (float) rest.get(i).z;
+            }
+            if (plan == null) {
+                return new ivautopilot.track.TrackedAircraft(aircraft.uniqueUUID, name, level.dimension().location().toString(),
+                        (float) aircraft.position.x, (float) aircraft.position.y, (float) aircraft.position.z, bearing, (float) (speed * 3.6),
+                        "AUTOPILOT", "TAXI", state.taxi.route.target(), -1, true, taxiPath, new float[0]);
+            }
+            path = taxiPath;
+            runway = new float[]{(float) plan.threshold.x, (float) plan.threshold.z, (float) plan.farEnd.x, (float) plan.farEnd.z};
+            phase = "TAXI";
+            destination = plan.runway.name();
+        } else if (plan != null) {
             path = plannedPath(aircraft, plan);
             runway = new float[]{(float) plan.threshold.x, (float) plan.threshold.z, (float) plan.farEnd.x, (float) plan.farEnd.z};
             phase = plan.phase.name();
@@ -316,6 +364,163 @@ public final class ApServer {
             out[2 * i + 1] = (float) points.get(i)[1];
         }
         return out;
+    }
+
+    /** One taxi tick, and what happens when the taxi ends. */
+    private static void taxiTick(ServerLevel level, EntityVehicleF_Physics aircraft, State state) {
+        Taxi.Plan taxi = state.taxi;
+        String result = Taxi.tick(level, aircraft, state, taxi);
+        if (result == null) {
+            return;
+        }
+        FlightPlan plan = state.plan;
+        if (result.equals("arrived") && taxi.toRunway() && plan != null) {
+            // Lined up: straight into the takeoff roll.
+            state.taxi = null;
+            plan.setPhase(FlightPlan.Phase.TAKEOFF_ROLL);
+            plan.rotateSpeed = 0;
+            state.elevatorIntegral = 0;
+            state.lastHeading = Double.NaN;
+            aircraft.lastController = null;
+            notifyRiders(level.getServer(), aircraft, Component.translatable("msg.ivautopilot.taxi_lined_up_takeoff", taxi.route.target()));
+            return;
+        }
+        state.taxi = null;
+        if (result.equals("arrived")) {
+            Takeoff.setIf(aircraft.parkingBrakeVar, 1);
+            Takeoff.setIf(aircraft.brakeVar, 0);
+            notifyRiders(level.getServer(), aircraft, Component.translatable(taxi.toRunway()
+                    ? "msg.ivautopilot.taxi_lined_up" : "msg.ivautopilot.taxi_parked", taxi.route.target()));
+        } else {
+            notifyRiders(level.getServer(), aircraft, Component.translatable(result));
+        }
+        setMode(aircraft, state, ApMode.OFF);
+        state.dirty = true;
+    }
+
+    /** Gates the aircraft may taxi to after this landing (any free gate), or empty if taxiToGate is off. */
+    private static java.util.Set<net.minecraft.core.BlockPos> landingGoals(ServerLevel level, EntityVehicleF_Physics aircraft, State state) {
+        return ApConfig.TAXI_TO_GATE.get() ? ivautopilot.taxi.TaxiPlanner.gateGoals(level, null, gateOccupied(level, aircraft)) : java.util.Set.of();
+    }
+
+    /** Rollout: where down the runway to turn off for the gate (NaN if there's no exit leading to one). */
+    static double exitAlong(ServerLevel level, EntityVehicleF_Physics aircraft, State state, FlightPlan plan) {
+        Vec3 pos = new Vec3(aircraft.position.x, aircraft.position.y, aircraft.position.z);
+        ivautopilot.taxi.TaxiPlanner.Exit exit = ivautopilot.taxi.TaxiPlanner.exitRoute(level, plan.runway, plan.threshold, plan.farEnd, pos,
+                landingGoals(level, aircraft, state), 15);
+        return exit == null ? Double.NaN : exit.along();
+    }
+
+    /** After landing: vacate the runway, taxiing to the nearest free gate. False if there's no taxi route. */
+    private static boolean taxiToGate(ServerLevel level, EntityVehicleF_Physics aircraft, State state, FlightPlan plan, double minAhead) {
+        Vec3 pos = new Vec3(aircraft.position.x, aircraft.position.y, aircraft.position.z);
+        // Off the runway by the exit that leads to the gate (ahead of us if there is one, else back to it).
+        ivautopilot.taxi.TaxiPlanner.Exit exit = ivautopilot.taxi.TaxiPlanner.exitRoute(level, plan.runway, plan.threshold, plan.farEnd, pos,
+                landingGoals(level, aircraft, state), minAhead);
+        if (exit != null) {
+            startGateTaxi(level, aircraft, state, plan, exit.route());
+            return true;
+        }
+        if (!ApConfig.TAXI_TO_GATE.get()) {
+            return false;
+        }
+        ivautopilot.taxi.TaxiPlanner.Route route = ivautopilot.taxi.TaxiPlanner.toNearestGate(level, pos, gateOccupied(level, aircraft));
+        if (route == null) {
+            return false;
+        }
+        startGateTaxi(level, aircraft, state, plan, route);
+        return true;
+    }
+
+    /** True for gates with another vehicle parked on them. */
+    private static java.util.function.Predicate<net.minecraft.core.BlockPos> gateOccupied(ServerLevel level, EntityVehicleF_Physics aircraft) {
+        List<EntityVehicleF_Physics> others = new ArrayList<>();
+        for (EntityVehicleF_Physics v : WrapperWorld.getWrapperFor(level).getEntitiesOfType(EntityVehicleF_Physics.class)) {
+            if (v != aircraft && v.isValid) {
+                others.add(v);
+            }
+        }
+        return gate -> {
+            for (EntityVehicleF_Physics v : others) {
+                double dx = v.position.x - gate.getX() - 0.5, dz = v.position.z - gate.getZ() - 0.5;
+                double r = Taxi.radius(v) + 5;
+                if (dx * dx + dz * dz < r * r && Math.abs(v.position.y - gate.getY()) < 10) {
+                    return true;
+                }
+            }
+            return false;
+        };
+    }
+
+    private static void startGateTaxi(ServerLevel level, EntityVehicleF_Physics aircraft, State state, FlightPlan plan, ivautopilot.taxi.TaxiPlanner.Route route) {
+        Takeoff.setIf(aircraft.parkingBrakeVar, 0);
+        setMode(aircraft, state, ApMode.NAV); // also gives up the runway
+        state.plan = null;
+        state.taxi = new Taxi.Plan(route);
+        state.lastHeading = Double.NaN;
+        aircraft.lastController = null;
+        state.dirty = true;
+        notifyRiders(level.getServer(), aircraft, Component.translatable("msg.ivautopilot.landed_taxi", plan.runway.name(), route.target()));
+    }
+
+    /**
+     * Wait this long (parked) before the taxi / takeoff just set up for the player's aircraft starts.
+     * Only on the ground. Returns false if there's nothing to delay (airborne).
+     */
+    static boolean setDelay(ServerPlayer player, int seconds) {
+        EntityVehicleF_Physics aircraft = controlledAircraft(player);
+        State state = aircraft == null ? null : STATES.get(aircraft.uniqueUUID);
+        if (state == null || state.mode != ApMode.NAV || !isOnGround(aircraft) || seconds <= 0) {
+            return false;
+        }
+        state.delayTicks = seconds * 20;
+        state.dirty = true;
+        return true;
+    }
+
+    /** The runway the aircraft is on (anywhere on the strip, any heading), or null. */
+    @Nullable
+    static Runway runwayUnder(ServerLevel level, EntityVehicleF_Physics aircraft) {
+        for (Runway r : ivautopilot.nav.RunwayRegistry.get(level).all(level.dimension())) {
+            if (TrafficControl.onStrip(aircraft, r)) {
+                return r;
+            }
+        }
+        return null;
+    }
+
+    /** /autopilot taxi: to a gate (named waypoint) or onto a runway. Returns an error key, or null. */
+    @Nullable
+    static String startTaxi(ServerPlayer player, String target) {
+        EntityVehicleF_Physics aircraft = controlledAircraft(player);
+        if (aircraft == null) {
+            return "msg.ivautopilot.not_pilot";
+        }
+        if (!isOnGround(aircraft)) {
+            return "msg.ivautopilot.taxi_on_ground_only";
+        }
+        Vec3 pos = new Vec3(aircraft.position.x, aircraft.position.y, aircraft.position.z);
+        ServerLevel level = player.serverLevel();
+        ivautopilot.taxi.TaxiPlanner.Route route;
+        if (ivautopilot.taxi.TaxiNetwork.get(level).graph(level.dimension()).gate(target) != null) {
+            route = ivautopilot.taxi.TaxiPlanner.toGate(level, pos, target);
+        } else if (ivautopilot.nav.RunwayRegistry.get(level).find(level.dimension(), target) != null) {
+            // A runway: along the taxiways to its entrance, then onto it and lined up (also from another runway).
+            route = ivautopilot.taxi.TaxiPlanner.toRunway(level, pos, target, null);
+        } else {
+            return "msg.ivautopilot.taxi_no_gate";
+        }
+        if (route == null) {
+            return "msg.ivautopilot.taxi_no_route";
+        }
+        State state = stateFor(aircraft, player);
+        setMode(aircraft, state, ApMode.NAV);
+        state.plan = null;
+        state.taxi = new Taxi.Plan(route);
+        state.lastHeading = Double.NaN;
+        aircraft.lastController = null;
+        state.dirty = true;
+        return null;
     }
 
     /** True if this aircraft's autopilot is engaged (any mode). */
@@ -457,10 +662,49 @@ public final class ApServer {
             return;
         }
 
+        if (state.delayTicks > 0) {
+            // Delayed start: stay parked until it's time (touching the controls cancels).
+            if (aircraft.lastController != null) {
+                setMode(aircraft, state, ApMode.OFF);
+                notifyRiders(level.getServer(), aircraft, "msg.ivautopilot.delay_cancelled");
+                state.dirty = true;
+                return;
+            }
+            Takeoff.setIf(aircraft.throttleVar, 0);
+            Takeoff.setIf(aircraft.parkingBrakeVar, 1);
+            int s = (state.delayTicks + 19) / 20;
+            String what = state.taxi != null && state.plan == null ? "TAXI to " + state.taxi.route.target()
+                    : state.plan != null ? "FLY to " + state.plan.runway.name() : "";
+            state.info = String.format("%s  starts in %d:%02d", what, s / 60, s % 60);
+            if (--state.delayTicks == 0) {
+                Takeoff.setIf(aircraft.parkingBrakeVar, 0);
+                aircraft.lastController = null;
+                state.lastHeading = Double.NaN;
+                notifyRiders(level.getServer(), aircraft, "msg.ivautopilot.delay_over");
+            }
+            return;
+        }
         FlightPlan plan = state.plan;
         keepSystemsOn(aircraft, state, plan);
         updateBankLock(level, aircraft, state, plan);
         updateStallProtection(aircraft, state, plan);
+        if (state.mode == ApMode.NAV && state.taxi != null) {
+            taxiTick(level, aircraft, state);
+            return;
+        }
+        if (state.mode == ApMode.NAV && plan != null && plan.phase == FlightPlan.Phase.TAKEOFF_ROLL && plan.departure != null
+                && aircraft.indicatedSpeed < 8 && aircraft.lastController == null && !TrafficControl.request(level, plan.departure, aircraft.uniqueUUID, false)) {
+            // Lined up but the runway is in use (an aircraft in front of us, landing or about to): wait on
+            // the brakes. Checked until 8 blocks/s, so a slow start can still stop for something ahead.
+            Takeoff.startEngines(aircraft);
+            Takeoff.setIf(aircraft.throttleVar, 0);
+            Takeoff.setIf(aircraft.brakeVar, 1);
+            state.info = "LINED UP, WAITING: " + plan.departure.name() + " in use";
+            return;
+        }
+        if (state.mode == ApMode.NAV && plan != null && !isOnGround(aircraft) && aircraft.ticksExisted % 10 == 0) {
+            updateSeparation(level, aircraft, state, plan);
+        }
         if (state.mode == ApMode.NAV && plan != null && isTakeoffPhase(plan.phase)) {
             String problem = Takeoff.tick(aircraft, state, plan, pitch, pitchRate, verticalSpeed);
             if (problem != null) {
@@ -473,6 +717,16 @@ public final class ApServer {
         }
         if (state.mode == ApMode.NAV && plan != null && Landing.isHandsOnPhase(plan.phase)) {
             String result = Landing.handsOn(level, aircraft, state, plan, pitch, pitchRate, verticalSpeed);
+            if ("exit".equals(result)) {
+                double here = -Landing.distBefore(new Vec3(aircraft.position.x, aircraft.position.y, aircraft.position.z), plan);
+                if (!taxiToGate(level, aircraft, state, plan, plan.exitAlong - here - 1)) {
+                    plan.exitAlong = Double.NaN; // no way off after all: roll on to the end
+                }
+                return;
+            }
+            if ("landed".equals(result) && taxiToGate(level, aircraft, state, plan, 0)) {
+                return;
+            }
             if (result != null) {
                 setMode(aircraft, state, ApMode.OFF);
                 notifyRiders(level.getServer(), aircraft, result.equals("landed")
@@ -561,10 +815,10 @@ public final class ApServer {
     private static void record(EntityVehicleF_Physics aircraft, State state) {
         FlightPlan plan = state.plan;
         IvAutopilot.LOGGER.info(String.format(java.util.Locale.ROOT,
-                "[FDR] %s %s | spd %.1f tgt %.1f stall %.1f | y %.1f tgtY %.1f vs %.1f | pitch %.1f tgtP %.1f aoa %.1f | bank %.1f | "
+                "[FDR] %s %s %s | xz %.0f %.0f | spd %.1f tgt %.1f stall %.1f | y %.1f tgtY %.1f vs %.1f | pitch %.1f tgtP %.1f aoa %.1f | bank %.1f | "
                         + "elevTrim %.1f elevIn %.1f ailTrim %.1f rudTrim %.1f rollGain %.2f | thr %.2f flaps %.0f gear %s | protect %s lock %s | %s",
-                state.mode, plan == null ? "-" : plan.phase,
-                aircraft.indicatedSpeed, state.targetSpeed,
+                aircraft.uniqueUUID.toString().substring(0, 4), state.mode, plan == null ? "-" : plan.phase,
+                aircraft.position.x, aircraft.position.z, aircraft.indicatedSpeed, state.targetSpeed,
                 Takeoff.liftSpeed(aircraft, aircraft.flapActualAngleVar.currentValue, 15, 1, true) * (plan == null ? 1 : plan.stallScale),
                 aircraft.position.y, state.targetAltitude, (aircraft.position.y - aircraft.prevPosition.y) * 20,
                 pitchUp(aircraft), state.commandPitch, state.aoa, bankOf(aircraft),
@@ -614,7 +868,10 @@ public final class ApServer {
 
     /**
      * No banking (1) after a takeoff until past the far end of the departure runway (holding runway
-     * heading), and (2) anywhere inside an Airport Marker's zone.
+     * heading), and (2) while departing an airport, until out of its area (or above its ceiling).
+     * Arriving, circuit, approach, landing and go-around are never restricted by an airport, so an
+     * airport can contain its runways' whole approach without getting in the way. Pitch/altitude
+     * hold (no flight plan) keeps the old rule: wings level anywhere in an airport.
      */
     private static void updateBankLock(ServerLevel level, EntityVehicleF_Physics aircraft, State state, @Nullable FlightPlan plan) {
         state.bankLocked = false;
@@ -623,7 +880,7 @@ public final class ApServer {
         if (plan != null && plan.departure != null && !plan.clearedDeparture) {
             Vec3 dir = Runway.heading(plan.departureStart, plan.departureEnd);
             double along = (pos.x - plan.departureStart.x) * dir.x + (pos.z - plan.departureStart.z) * dir.z;
-            double length = plan.departure.length();
+            double length = FlightPlan.horizontal(plan.departureStart, plan.departureEnd);
             if (along > length || FlightPlan.horizontal(pos, plan.departureStart) > length + 1000) {
                 plan.clearedDeparture = true;
             } else {
@@ -634,7 +891,10 @@ public final class ApServer {
             }
         }
         Airport airport = AirportRegistry.get(level).containing(level.dimension(), pos.x, pos.y, pos.z, ApConfig.AIRPORT_CEILING.get());
-        if (airport != null) {
+        boolean departing = plan == null || plan.departure != null && plan.departureStart != null
+                && (isTakeoffPhase(plan.phase) || plan.phase == FlightPlan.Phase.ENROUTE)
+                && airport != null && airport.containsXZ(plan.departureStart.x, plan.departureStart.z);
+        if (airport != null && departing) {
             state.bankLocked = true;
             state.lockReason = "WINGS LEVEL (" + airport.name() + ")";
         }
@@ -727,7 +987,7 @@ public final class ApServer {
             state.info = "PLANNING ROUTE";
         } else if (plan.phase == FlightPlan.Phase.HOLDING) {
             // Hold: fly a circle around the entry point.
-            Vec3 centre = plan.route == null ? (plan.legStart != null ? plan.legStart : pos) : plan.entry;
+            Vec3 centre = plan.route == null && !plan.waitingForRunway ? (plan.legStart != null ? plan.legStart : pos) : plan.entry;
             if (plan.legStart == null) {
                 plan.legStart = pos;
             }
@@ -738,8 +998,20 @@ public final class ApServer {
             double correction = Mth.clamp((d - radius) / radius, -1, 1) * 60;
             double bearing = yawOf(toCentre) - 90 + correction;
             aim = pos.add(new Vec3(-Math.sin(Math.toRadians(bearing)), 0, Math.cos(Math.toRadians(bearing))).scale(100));
-            targetAltitude = plan.route == null ? Math.max(pos.y, plan.cruiseAltitude) : plan.entry.y;
-            state.info = plan.route == null ? "PLANNING ROUTE" : "HOLDING at " + plan.runway.name() + " approach";
+            targetAltitude = plan.route == null && !plan.waitingForRunway ? Math.max(pos.y, plan.cruiseAltitude) : plan.entry.y;
+            state.info = plan.route == null && !plan.waitingForRunway ? "PLANNING ROUTE" : "HOLDING at " + plan.runway.name() + " approach";
+            if (plan.waitingForRunway) {
+                // Waiting for the runway: stacked by queue place; once it's our turn, fly the circuit in.
+                plan.queuePosition = TrafficControl.arrivalPosition(level, plan.runway, aircraft.uniqueUUID);
+                targetAltitude += 30 * plan.queuePosition;
+                state.info = String.format("HOLDING for %s  number %d to land%s", plan.runway.name(), plan.queuePosition + 1,
+                        plan.queuePosition == 0 ? ", runway in use" : "");
+                if (aircraft.ticksExisted % 20 == 0 && TrafficControl.available(level, plan.runway, aircraft.uniqueUUID, true)) {
+                    plan.waitingForRunway = false;
+                    Landing.startPattern(aircraft, plan);
+                    return new NavCommand(0, targetAltitude);
+                }
+            }
         } else {
             List<RoutePlanner.Waypoint> route = plan.route;
             RoutePlanner.Waypoint wp = route.get(plan.waypointIndex);
@@ -777,6 +1049,10 @@ public final class ApServer {
             }
             state.info = String.format("TO %s  wp %d/%d  %.1f km  dest %.1f km", plan.runway.name(), plan.waypointIndex + 1,
                     route.size(), remaining / 1000, FlightPlan.horizontal(pos, plan.entry) / 1000);
+        }
+        if (state.separation > 0) {
+            targetAltitude += state.separation;
+            state.info += String.format("  TRAFFIC +%.0f", state.separation);
         }
         if (plan.guardTicks > 0) {
             targetAltitude = Math.max(targetAltitude, plan.guardAltitude);
@@ -1069,8 +1345,137 @@ public final class ApServer {
         }
     }
 
+    // ------------------------------------------------------------------------------------------
+    // Traffic (see TrafficControl)
+    // ------------------------------------------------------------------------------------------
+
     @Nullable
-    private static EntityVehicleF_Physics find(ServerLevel level, UUID id) {
+    static State stateOf(UUID id) {
+        return STATES.get(id);
+    }
+
+    /** Whether this aircraft still needs the runway it holds (key = TrafficControl.key). */
+    static boolean stillNeedsRunway(UUID id, String key) {
+        State state = STATES.get(id);
+        if (state == null || state.mode != ApMode.NAV || state.dimension == null) {
+            return false;
+        }
+        if (state.taxi != null) {
+            return state.taxi.route.runway() != null && TrafficControl.key(state.dimension, state.taxi.route.runway()).equals(key);
+        }
+        FlightPlan plan = state.plan;
+        if (plan == null) {
+            return false;
+        }
+        if (plan.departure != null && isTakeoffPhase(plan.phase) && !plan.clearedDeparture
+                && TrafficControl.key(state.dimension, plan.departure).equals(key)) {
+            return true;
+        }
+        return TrafficControl.key(state.dimension, plan.runway).equals(key) && (plan.phase == FlightPlan.Phase.PATTERN
+                || plan.phase == FlightPlan.Phase.APPROACH || plan.phase == FlightPlan.Phase.FINAL || Landing.isHandsOnPhase(plan.phase));
+    }
+
+    /** Whether this aircraft is still on its way in to land on this runway (keeps its arrival queue place). */
+    static boolean isArriving(UUID id, String key) {
+        State state = STATES.get(id);
+        FlightPlan plan = state == null ? null : state.plan;
+        return plan != null && state.mode == ApMode.NAV && state.dimension != null && state.taxi == null
+                && TrafficControl.key(state.dimension, plan.runway).equals(key)
+                && (Landing.isGuidedPhase(plan.phase) || plan.phase == FlightPlan.Phase.HOLDING || plan.phase == FlightPlan.Phase.ENROUTE);
+    }
+
+    /** About to land, or waiting in the hold to: departures give way. */
+    static boolean arrivalImminent(UUID id) {
+        State state = STATES.get(id);
+        FlightPlan plan = state == null ? null : state.plan;
+        if (plan == null || state.mode != ApMode.NAV) {
+            return false;
+        }
+        return switch (plan.phase) {
+            case APPROACH, FINAL -> true;
+            case HOLDING -> plan.waitingForRunway;
+            case PATTERN -> plan.pattern != null && (plan.pattern.targetIndex - plan.pattern.nearest) * ivautopilot.nav.Pattern.STEP < 2500;
+            default -> false;
+        };
+    }
+
+    /** Taxiing out to a runway, or lined up / rolling for takeoff. */
+    static boolean isDeparture(UUID id) {
+        State state = STATES.get(id);
+        if (state == null || state.mode != ApMode.NAV) {
+            return false;
+        }
+        return state.taxi != null ? state.taxi.route.runway() != null
+                : state.plan != null && state.plan.phase == FlightPlan.Phase.TAKEOFF_ROLL;
+    }
+
+    static boolean isTaxiing(UUID id) {
+        State state = STATES.get(id);
+        return state != null && state.mode == ApMode.NAV && state.taxi != null;
+    }
+
+    /**
+     * Air separation: if another autopilot aircraft is close (horizontally and in height) and we're the
+     * one that gives way, climb 60 blocks above our planned altitude, and stay up 20 s after the
+     * conflict clears. Who gives way: the one further from landing (approach and final never give way).
+     */
+    private static void updateSeparation(ServerLevel level, EntityVehicleF_Physics aircraft, State state, FlightPlan plan) {
+        if (plan.phase != FlightPlan.Phase.ENROUTE && plan.phase != FlightPlan.Phase.PATTERN && plan.phase != FlightPlan.Phase.HOLDING) {
+            state.separation = 0;
+            state.separationTicks = 0;
+            return;
+        }
+        boolean conflict = false;
+        for (Map.Entry<UUID, State> entry : STATES.entrySet()) {
+            State other = entry.getValue();
+            if (other == state || other.mode != ApMode.NAV || other.plan == null || other.taxi != null || other.dimension != level.dimension()) {
+                continue;
+            }
+            EntityVehicleF_Physics o = find(level, entry.getKey());
+            if (o == null || isOnGround(o)) {
+                continue;
+            }
+            double dx = o.position.x - aircraft.position.x, dz = o.position.z - aircraft.position.z;
+            double dy = Math.abs(o.position.y - aircraft.position.y);
+            if (dx * dx + dz * dz > 300 * 300 || dy > 60 + state.separation) {
+                continue;
+            }
+            if (givesWay(plan, other.plan, aircraft.uniqueUUID, entry.getKey())) {
+                conflict = true;
+                break;
+            }
+        }
+        if (conflict) {
+            state.separation = 60;
+            state.separationTicks = 400;
+        } else if (state.separationTicks > 0) {
+            state.separationTicks -= 10;
+        } else {
+            state.separation = 0;
+        }
+    }
+
+    private static boolean givesWay(FlightPlan mine, FlightPlan theirs, UUID me, UUID them) {
+        int a = landingRank(mine.phase), b = landingRank(theirs.phase);
+        if (a != b) {
+            return a < b;
+        }
+        return me.compareTo(them) > 0;
+    }
+
+    /** Higher = closer to landing. */
+    private static int landingRank(FlightPlan.Phase phase) {
+        return switch (phase) {
+            case APPROACH, FINAL, FLARE, ROLLOUT -> 4;
+            case PATTERN -> 3;
+            case HOLDING, GO_AROUND, REPOSITION -> 2;
+            case ENROUTE -> 1;
+            default -> 0;
+        };
+    }
+
+    @Nullable
+    static EntityVehicleF_Physics find(ServerLevel level, UUID id) {
         AEntityA_Base entity = WrapperWorld.getWrapperFor(level).getEntity(id);
         return entity instanceof EntityVehicleF_Physics vehicle && vehicle.isValid ? vehicle : null;
     }

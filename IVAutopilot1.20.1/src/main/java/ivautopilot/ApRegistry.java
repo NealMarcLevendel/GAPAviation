@@ -41,12 +41,30 @@ public final class ApRegistry {
     @SuppressWarnings("DataFlowIssue")
     public static final RegistryObject<BlockEntityType<AirportMarkerBlockEntity>> AIRPORT_MARKER_BE = BLOCK_ENTITIES.register("airport_marker",
             () -> BlockEntityType.Builder.of(AirportMarkerBlockEntity::new, AIRPORT_MARKER.get()).build(null));
+    public static final RegistryObject<Block> TAXI_WAYPOINT = BLOCKS.register("taxi_waypoint",
+            () -> new ivautopilot.taxi.TaxiWaypointBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW)
+                    .strength(0.5F).sound(SoundType.METAL).noCollission().noOcclusion().lightLevel(state -> 6)));
+    public static final RegistryObject<Block> TERMINAL = BLOCKS.register("terminal_gate",
+            () -> new ivautopilot.taxi.TerminalBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE)
+                    .strength(0.5F).sound(SoundType.METAL).noCollission().noOcclusion().lightLevel(state -> 6)));
+    public static final RegistryObject<Item> TERMINAL_ITEM = ITEMS.register("terminal_gate",
+            () -> new BlockItem(TERMINAL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TAXI_WAYPOINT_ITEM = ITEMS.register("taxi_waypoint",
+            () -> new BlockItem(TAXI_WAYPOINT.get(), new Item.Properties()));
+    @SuppressWarnings("DataFlowIssue")
+    public static final RegistryObject<BlockEntityType<ivautopilot.taxi.TaxiWaypointBlockEntity>> TAXI_WAYPOINT_BE = BLOCK_ENTITIES.register("taxi_waypoint",
+            () -> BlockEntityType.Builder.of(ivautopilot.taxi.TaxiWaypointBlockEntity::new, TAXI_WAYPOINT.get(), ApRegistry.TERMINAL.get()).build(null));
+    public static final RegistryObject<Item> TAXI_WAND = ITEMS.register("taxiway_wand",
+            () -> new ivautopilot.taxi.TaxiWandItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<CreativeModeTab> TAB = TABS.register("main", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.ivautopilot"))
             .icon(() -> new ItemStack(RUNWAY_MARKER_ITEM.get()))
             .displayItems((params, output) -> {
                 output.accept(RUNWAY_MARKER_ITEM.get());
                 output.accept(AIRPORT_MARKER_ITEM.get());
+                output.accept(TAXI_WAYPOINT_ITEM.get());
+                output.accept(TERMINAL_ITEM.get());
+                output.accept(TAXI_WAND.get());
             })
             .build());
 

@@ -6,11 +6,10 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-/** An airport marker's name and no-bank radius. */
+/** An Airport Marker (one corner of an airport): its airport's name, and a status line for the floating label. */
 public class AirportMarkerBlockEntity extends BlockEntity {
-    public static final int DEFAULT_RADIUS = 300, MIN_RADIUS = 50, MAX_RADIUS = 3000, STEP = 50;
     private String airportName = "";
-    private int radius = DEFAULT_RADIUS;
+    private String info = "";
 
     public AirportMarkerBlockEntity(BlockPos pos, BlockState state) {
         super(ApRegistry.AIRPORT_MARKER_BE.get(), pos, state);
@@ -20,14 +19,17 @@ public class AirportMarkerBlockEntity extends BlockEntity {
         return airportName;
     }
 
-    public int getRadius() {
-        return radius;
+    public String getInfo() {
+        return info;
     }
 
-    public void set(String name, int radius) {
+    public void set(String name, String info) {
         this.airportName = name == null ? "" : name;
-        this.radius = Math.max(MIN_RADIUS, Math.min(MAX_RADIUS, radius));
-        sync();
+        this.info = info == null ? "" : info;
+        setChanged();
+        if (level != null && !level.isClientSide) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        }
     }
 
     // Sent to clients so the floating label can show it.
@@ -41,29 +43,17 @@ public class AirportMarkerBlockEntity extends BlockEntity {
         return net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket.create(this);
     }
 
-    private void sync() {
-        setChanged();
-        if (level != null && !level.isClientSide) {
-            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
-        }
-    }
-
-
-    public Airport airport() {
-        return new Airport(airportName.isEmpty() ? "Airport" : airportName, getBlockPos(), radius);
-    }
-
     @Override
     protected void saveAdditional(CompoundTag tag) {
         super.saveAdditional(tag);
         tag.putString("airport", airportName);
-        tag.putInt("radius", radius);
+        tag.putString("info", info);
     }
 
     @Override
     public void load(CompoundTag tag) {
         super.load(tag);
         airportName = tag.getString("airport");
-        radius = tag.contains("radius") ? tag.getInt("radius") : DEFAULT_RADIUS;
+        info = tag.getString("info");
     }
 }

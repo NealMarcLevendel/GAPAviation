@@ -174,8 +174,21 @@ final class Landing {
             case PATTERN -> {
                 Pattern pattern = plan.pattern;
                 int i = pattern.updateNearest(pos);
+                // Traffic: take our place in the arrival queue; next in line asks for the runway in the
+                // last 1.5 km of the circuit. Not ours at the end of the circuit: hold at the entry.
+                boolean cleared = TrafficControl.holds(level, plan.runway, aircraft.uniqueUUID);
+                if (!cleared) {
+                    plan.queuePosition = TrafficControl.arrivalPosition(level, plan.runway, aircraft.uniqueUUID);
+                    if (plan.queuePosition == 0 && (pattern.targetIndex - i) * Pattern.STEP < 1500) {
+                        cleared = TrafficControl.request(level, plan.runway, aircraft.uniqueUUID, true);
+                    }
+                }
                 if (i >= pattern.targetIndex) {
-                    plan.setPhase(FlightPlan.Phase.APPROACH);
+                    if (cleared) {
+                        plan.setPhase(FlightPlan.Phase.APPROACH);
+                    } else {
+                        hold(level, aircraft, plan);
+                    }
                     return guide(level, aircraft, state, plan, pitch, verticalSpeed);
                 }
                 // Drifted well off the circuit (wind-up, slow roll-in, terrain climb): plan a new one from here.
@@ -201,14 +214,28 @@ final class Landing {
                 double progress = Math.min(1, (double) i / Math.max(1, pattern.targetIndex));
                 double targetY = Math.max(plan.entry.y, plan.entry.y + (pattern.startAltitude - plan.entry.y) * (1 - progress));
                 ApServer.terrainGuard(level, aircraft, plan, pos);
+                if (!cleared) {
+                    targetY += 30 * plan.queuePosition; // stacked behind the aircraft ahead of us
+                }
+                targetY += state.separation;
                 if (plan.guardTicks > 0) {
                     targetY = Math.max(targetY, plan.guardAltitude);
                 }
-                state.info = String.format("CIRCUIT to %s  %.1f km to final  bank %+.0f%s", plan.runway.name(),
-                        (pattern.targetIndex - i) * Pattern.STEP / 1000, bank, plan.guardTicks > 0 ? "  TERRAIN" : "");
+                state.info = String.format("CIRCUIT to %s  %.1f km to final  bank %+.0f%s%s", plan.runway.name(),
+                        (pattern.targetIndex - i) * Pattern.STEP / 1000, bank,
+                        cleared ? "  CLEARED TO LAND" : "  number " + (plan.queuePosition + 1),
+                        plan.guardTicks > 0 ? "  TERRAIN" : state.separation > 0 ? "  TRAFFIC" : "");
                 return new Guidance(bank, ApServer.altitudeToPitch(state, targetY, pos.y, verticalSpeed), targetY, patternSpeed(aircraft, plan), Double.NaN);
             }
             case APPROACH -> {
+                // Arrived here without a clearance (from the route or a reposition): ask now, else hold.
+                if (!TrafficControl.holds(level, plan.runway, aircraft.uniqueUUID)) {
+                    TrafficControl.arrivalPosition(level, plan.runway, aircraft.uniqueUUID);
+                    if (!TrafficControl.request(level, plan.runway, aircraft.uniqueUUID, true)) {
+                        hold(level, aircraft, plan);
+                        return new Guidance(0, ApServer.altitudeToPitch(state, plan.entry.y, pos.y, verticalSpeed), plan.entry.y, patternSpeed(aircraft, plan), Double.NaN);
+                    }
+                }
                 if (hasGear) {
                     setIf(aircraft.retractGearVar, 0);
                 }
@@ -235,6 +262,11 @@ final class Landing {
                 double bank = h < 30 ? Mth.clamp(locBank, -10, 10) : locBank;
                 state.info = String.format("FINAL %s  %.0f km/h (Vapp %.0f)  %+.1f glide  %.0f up", plan.runway.name(),
                         aircraft.indicatedSpeed * 3.6, vapp * 3.6, h - glide, h);
+                // Something on the runway (taxiing onto it, still rolling out, not under our control): go around.
+                if (h < 80 && aircraft.ticksExisted % 5 == 0 && TrafficControl.occupant(level, plan.runway, aircraft.uniqueUUID) != null) {
+                    goAround(level, aircraft, plan, "runway occupied");
+                    return guide(level, aircraft, state, plan, pitch, verticalSpeed);
+                }
                 if (h < ApConfig.DECISION_HEIGHT.get()) {
                     String unstable = Math.abs(cross) > 6 ? "off centerline"
                             : Math.abs(Mth.wrapDegrees(inYaw - heading)) > 10 ? "heading"
@@ -335,10 +367,21 @@ final class Landing {
         plan.setPhase(FlightPlan.Phase.REPOSITION);
     }
 
+    /** Runway not ours yet: circle at the approach entry (stacked by queue place) until it is. */
+    private static void hold(ServerLevel level, EntityVehicleF_Physics aircraft, FlightPlan plan) {
+        plan.waitingForRunway = true;
+        plan.legStart = null;
+        plan.setPhase(FlightPlan.Phase.HOLDING);
+        ApServer.notifyRiders(level.getServer(), aircraft, Component.translatable("msg.ivautopilot.holding_traffic", plan.runway.name()));
+    }
+
     private static void goAround(ServerLevel level, EntityVehicleF_Physics aircraft, FlightPlan plan, String reason) {
+        TrafficControl.releaseRunway(aircraft.uniqueUUID); // let others use it while we fly round again
         Takeoff.releaseInputs(aircraft);
         setIf(aircraft.reverseThrustVar, 0);
-        plan.goArounds++;
+        if (!reason.equals("runway occupied")) {
+            plan.goArounds++; // traffic go-arounds don't count toward giving up
+        }
         if (plan.goArounds >= ApConfig.MAX_GO_AROUNDS.get()) {
             ApServer.notifyRiders(level.getServer(), aircraft, Component.translatable("msg.ivautopilot.landing_gave_up", plan.goArounds));
         } else {
@@ -392,6 +435,16 @@ final class Landing {
         double taxiSpeed = ApConfig.TAXI_SPEED.get();
         if (!plan.rolloutTaxiing && speed < taxiSpeed + 1) {
             plan.rolloutTaxiing = true;
+        }
+        if (plan.rolloutTaxiing) {
+            // Leave the runway by the exit that leads to our gate, once we reach it.
+            if (!plan.exitChecked) {
+                plan.exitChecked = true;
+                plan.exitAlong = ApServer.exitAlong(level, aircraft, state, plan);
+            }
+            if (!Double.isNaN(plan.exitAlong) && plan.exitAlong + distBefore < 40) {
+                return "exit";
+            }
         }
         boolean runningShort = remaining < speed * 2.5; // under ~2.5 s of runway left at this speed
         boolean reversing = false;

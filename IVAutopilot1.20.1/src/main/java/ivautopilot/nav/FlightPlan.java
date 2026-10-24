@@ -14,6 +14,8 @@ import java.util.concurrent.CompletableFuture;
  */
 public final class FlightPlan {
     public enum Phase {
+        /** Taxiing out to the departure runway (see Taxi). */
+        TAXI,
         TAKEOFF_ROLL, ROTATE, CLIMB_OUT, ENROUTE,
         /** Turn-straight-turn circuit to the approach entry, arriving lined up with the runway. */
         PATTERN,
@@ -44,6 +46,9 @@ public final class FlightPlan {
     public double rolloutDecel;
     /** Rollout: slowed to taxi speed, now taxiing to the end of the runway. */
     public boolean rolloutTaxiing;
+    /** Rollout: how far down the runway (from the threshold) the exit to the gate is; NaN = none / not looked yet. */
+    public double exitAlong = Double.NaN;
+    public boolean exitChecked;
     /** Takeoff: past the far end of the departure runway (banking allowed from then on). */
     public boolean clearedDeparture;
     /** Landing: approach attempts that ended in a go-around. */
@@ -53,6 +58,10 @@ public final class FlightPlan {
     /** Landing: the circuit being flown to the approach entry, and how long we've been off it. */
     public Pattern pattern;
     public int patternOffTicks;
+    /** Traffic: holding at the approach entry until the runway is free (vs. holding after giving up). */
+    public boolean waitingForRunway;
+    /** Traffic: place in this runway's arrival queue (0 = next to land); stacks the hold 30 blocks per place. */
+    public int queuePosition;
 
     public final Runway runway;
     /** Runway end we'll land at, the other end, and the approach entry point beyond the threshold. */

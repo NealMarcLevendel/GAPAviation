@@ -12,13 +12,14 @@ public final class ApConfig {
     public static final ForgeConfigSpec.DoubleValue THROTTLE_KP, THROTTLE_KI, DEFAULT_CRUISE_SPEED;
     public static final ForgeConfigSpec.DoubleValue LOOKAHEAD, CAPTURE_RADIUS, HOLD_RADIUS, TERRAIN_CLEARANCE, GUARD_CLEARANCE;
     public static final ForgeConfigSpec.DoubleValue ROTATE_PITCH, CLIMB_PITCH, ROTATE_MARGIN, GEAR_UP_HEIGHT, FLAPS_UP_HEIGHT, CLIMB_OUT_HEIGHT;
-    public static final ForgeConfigSpec.DoubleValue STEER_GAIN, CENTERLINE_GAIN, ABORT_FRACTION;
+    public static final ForgeConfigSpec.DoubleValue STEER_GAIN, CENTERLINE_GAIN, ABORT_FRACTION, MIN_RUNWAY_FRACTION;
     public static final ForgeConfigSpec.DoubleValue GLIDE_SLOPE, APPROACH_SPEED_FACTOR, LOCALIZER_GAIN, GLIDE_GAIN, VS_KP, VS_KI;
     public static final ForgeConfigSpec.DoubleValue DECISION_HEIGHT, FLARE_HEIGHT, FLARE_SINK_RATE, LONG_LANDING_FRACTION, REVERSE_THROTTLE, ROLLOUT_BRAKE;
     public static final ForgeConfigSpec.IntValue MAX_GO_AROUNDS;
     public static final ForgeConfigSpec.DoubleValue ROLLOUT_MARGIN, ALARM_MARGIN, TOUCHDOWN_BRAKE, TAXI_SPEED;
     public static final ForgeConfigSpec.DoubleValue CHUNK_LOOKAHEAD_SECONDS, CHUNK_MIN_SPEED;
-    public static final ForgeConfigSpec.BooleanValue LOAD_FOR_PILOTED, TRACKER_ENABLED;
+    public static final ForgeConfigSpec.DoubleValue AUTO_LINK_DISTANCE;
+    public static final ForgeConfigSpec.BooleanValue LOAD_FOR_PILOTED, TRACKER_ENABLED, TAXI_TO_GATE;
     public static final ForgeConfigSpec.DoubleValue CLOUD_HEIGHT, JET_ABOVE_CLOUDS, TURBOPROP_ABOVE_CLOUDS, PISTON_ABOVE_CLOUDS, TRIP_PER_BLOCK;
     public static final ForgeConfigSpec.DoubleValue AIRPORT_CEILING, NO_BANK_RUDDER_GAIN;
     public static final ForgeConfigSpec.DoubleValue PATTERN_BANK, PATTERN_DISTANCE, PATTERN_SPEED_FACTOR, AOA_LIMIT;
@@ -61,6 +62,8 @@ public final class ApConfig {
         CLIMB_OUT_HEIGHT = b.comment("Start following the route this many blocks above the runway").defineInRange("climbOutHeight", 60.0, 10, 500);
         STEER_GAIN = b.comment("Degrees of rudder (nose-wheel steering) per degree of heading error on the runway").defineInRange("steerGain", 3.0, 0.1, 30);
         CENTERLINE_GAIN = b.comment("Degrees of heading correction per block off the runway centerline").defineInRange("centerlineGain", 2.0, 0, 20);
+        MIN_RUNWAY_FRACTION = b.comment("Take off from where the taxiway joins the runway if at least this fraction of the runway is left ahead;",
+                "otherwise backtrack to the runway end and turn around first").defineInRange("minRunwayFraction", 0.6, 0.2, 1.0);
         ABORT_FRACTION = b.comment("Abort the takeoff if not at rotation speed after this fraction of the runway").defineInRange("abortFraction", 0.75, 0.3, 1.0);
         b.pop();
         b.comment("Automatic approach and landing. Heights are of the wheels above the runway.").push("landing");
@@ -79,6 +82,7 @@ public final class ApConfig {
         ROLLOUT_MARGIN = b.comment("After slowing to taxi speed, taxi on and stop this far before the far end of the runway, blocks").defineInRange("rolloutMargin", 30.0, 0, 500);
         TOUCHDOWN_BRAKE = b.comment("Brake (0..1) from touchdown down to taxi speed. GAP raises the spoilers with the brake, so this is also how far they come up").defineInRange("touchdownBrake", 0.85, 0, 1);
         TAXI_SPEED = b.comment("Taxi speed after the landing roll, blocks/second (1 block/s = 3.6 km/h)").defineInRange("taxiSpeed", 8.0, 2, 30);
+        TAXI_TO_GATE = b.comment("After landing, clear the runway by taxiing to the nearest free gate (named taxi waypoint), if the taxi network reaches one").define("taxiToGate", true);
         ALARM_MARGIN = b.comment("Stay this many blocks/second above the speed at which the plane's own stall alarm sounds (if its pack defines one)").defineInRange("alarmMargin", 3.0, 0, 30);
         MAX_GO_AROUNDS = b.comment("After this many go-arounds, give up and hold").defineInRange("maxGoArounds", 3, 1, 10);
         b.pop();
@@ -106,6 +110,9 @@ public final class ApConfig {
         b.comment("Plane tracker: send every player the positions and autopilot paths of all aircraft once a second",
                 "(shown on JourneyMap's map if it's installed)").push("tracker");
         TRACKER_ENABLED = b.define("enabled", true);
+        b.pop();
+        b.comment("Taxiway network").push("taxi");
+        AUTO_LINK_DISTANCE = b.comment("A placed taxi waypoint links itself to waypoints up to this far away (one per direction, clear path only); 0 = off, link with the wand").defineInRange("autoLinkDistance", 48.0, 0, 200);
         b.pop();
         b.comment("Navigation").push("nav");
         LOOKAHEAD = b.comment("How far ahead along the route leg to aim, blocks").defineInRange("lookahead", 250.0, 50, 2000);

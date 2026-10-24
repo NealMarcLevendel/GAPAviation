@@ -14,7 +14,7 @@ import java.util.UUID;
 import java.util.function.Supplier;
 
 public final class ApNetwork {
-    private static final String VERSION = "4";
+    private static final String VERSION = "5";
     public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
             new ResourceLocation(IvAutopilot.MODID, "main"), () -> VERSION, VERSION::equals, VERSION::equals);
 
@@ -59,6 +59,10 @@ public final class ApNetwork {
         CHANNEL.messageBuilder(Tracker.class, 2, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Tracker::encode).decoder(Tracker::decode)
                 .consumerMainThread(ApNetwork::handleTracker).add();
+        CHANNEL.messageBuilder(ivautopilot.taxi.TaxiSync.Packet.class, 3, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(ivautopilot.taxi.TaxiSync.Packet::encode).decoder(ivautopilot.taxi.TaxiSync.Packet::decode)
+                .consumerMainThread((msg, ctx) -> DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ivautopilot.taxi.TaxiClient.onNetwork(msg)))
+                .add();
     }
 
     /** Server -> client, once a second: every aircraft for the plane tracker (see track.AircraftTracker). */

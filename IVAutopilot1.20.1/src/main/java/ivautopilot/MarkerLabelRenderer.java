@@ -65,9 +65,24 @@ public final class MarkerLabelRenderer<T extends BlockEntity> implements BlockEn
                 lines.add(Component.literal(runway.getInfo()));
             }
             lines.add(coords);
+        } else if (entity instanceof ivautopilot.taxi.TaxiWaypointBlockEntity waypoint) {
+            // Gates (named waypoints) always; plain waypoints only while holding the wand.
+            boolean wand = net.minecraft.client.Minecraft.getInstance().player != null
+                    && (net.minecraft.client.Minecraft.getInstance().player.getMainHandItem().getItem() instanceof ivautopilot.taxi.TaxiWandItem
+                    || net.minecraft.client.Minecraft.getInstance().player.getOffhandItem().getItem() instanceof ivautopilot.taxi.TaxiWandItem);
+            if (!waypoint.getWaypointName().isEmpty()) {
+                lines.add(Component.literal(waypoint.getWaypointName()).withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
+                if (wand) {
+                    lines.add(coords);
+                }
+            } else if (wand) {
+                lines.add(Component.literal("Taxi waypoint").withStyle(ChatFormatting.YELLOW));
+            }
         } else if (entity instanceof AirportMarkerBlockEntity airport) {
-            lines.add(Component.literal(airport.airport().name()).withStyle(ChatFormatting.AQUA, ChatFormatting.BOLD));
-            lines.add(Component.literal("no-bank zone, radius " + airport.getRadius()));
+            lines.add(Component.literal(airport.getAirportName().isEmpty() ? "Airport" : airport.getAirportName()).withStyle(ChatFormatting.AQUA, ChatFormatting.BOLD));
+            if (!airport.getInfo().isEmpty()) {
+                lines.add(Component.literal(airport.getInfo()));
+            }
             lines.add(coords);
         }
         return lines;

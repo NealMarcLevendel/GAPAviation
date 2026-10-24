@@ -104,6 +104,17 @@ public class RunwayRegistry extends SavedData {
         }
     }
 
+    /** The complete runway that has a marker at this position, if any. */
+    @Nullable
+    public Runway runwayWithMarker(ResourceKey<Level> dim, BlockPos pos) {
+        for (String name : names(dim)) {
+            if (markers(dim, name).contains(pos)) {
+                return find(dim, name);
+            }
+        }
+        return null;
+    }
+
     /** Names of every runway (complete or not) in this dimension, with how many markers each has. */
     public Map<String, Integer> list(ResourceKey<Level> dim) {
         Map<String, Integer> out = new TreeMap<>();

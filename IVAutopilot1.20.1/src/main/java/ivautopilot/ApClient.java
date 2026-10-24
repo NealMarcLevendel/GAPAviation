@@ -68,6 +68,7 @@ public final class ApClient {
         public static void onRenderers(net.minecraftforge.client.event.EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer(ApRegistry.RUNWAY_MARKER_BE.get(), context -> new MarkerLabelRenderer<>());
             event.registerBlockEntityRenderer(ApRegistry.AIRPORT_MARKER_BE.get(), context -> new MarkerLabelRenderer<>());
+            event.registerBlockEntityRenderer(ApRegistry.TAXI_WAYPOINT_BE.get(), context -> new MarkerLabelRenderer<>());
         }
 
         @SubscribeEvent

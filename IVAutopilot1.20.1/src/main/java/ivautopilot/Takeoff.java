@@ -52,8 +52,11 @@ final class Takeoff {
                 double along = (pos.x - start.x) * dir.x + (pos.z - start.z) * dir.z;
                 double cross = Math.abs(crossTrack(pos, start, dir));
                 double aligned = Math.abs(Mth.wrapDegrees(ApServer.yawOf(dir) - heading));
-                if (cross < 15 && along > -30 && along < runway.length() * 0.5 && aligned < 30 && cross < bestCross) {
-                    best = new Departure(runway, start, end);
+                double remaining = runway.length() - Math.max(0, along);
+                if (cross < 15 && along > -30 && remaining >= runway.length() * ApConfig.MIN_RUNWAY_FRACTION.get() && aligned < 30 && cross < bestCross) {
+                    // The takeoff starts where we are on the centerline (an intersection departure), or at the end.
+                    Vec3 from = along > 0 ? new Vec3(start.x + dir.x * along, start.y, start.z + dir.z * along) : start;
+                    best = new Departure(runway, from, end);
                     bestCross = cross;
                 }
             }
@@ -122,7 +125,7 @@ final class Takeoff {
         Vec3 dir = Runway.heading(plan.departureStart, plan.departureEnd);
         double runwayYaw = ApServer.yawOf(dir);
         double height = pos.y - plan.departureStart.y;
-        double length = plan.departure.length();
+        double length = FlightPlan.horizontal(plan.departureStart, plan.departureEnd); // from where the roll starts
         double along = (pos.x - plan.departureStart.x) * dir.x + (pos.z - plan.departureStart.z) * dir.z;
 
         // The pilot touched the flight controls: they have control.
@@ -230,6 +233,11 @@ final class Takeoff {
         double runwayYaw = ApServer.yawOf(dir);
         double cross = crossTrack(pos, start, dir); // + = left of centerline
         double desired = runwayYaw + Mth.clamp(ApConfig.CENTERLINE_GAIN.get() * cross, -15, 15); // left of line -> turn right
+        steerHeading(aircraft, state, desired);
+    }
+
+    /** Nose-wheel steering (rudder input) toward a heading; learns which way the rudder turns this aircraft. */
+    static void steerHeading(EntityVehicleF_Physics aircraft, ApServer.State state, double desired) {
         double heading = ApServer.headingOf(aircraft);
         double error = Mth.wrapDegrees(desired - heading);
         // Learn which way the rudder turns us (positive rudder should turn right = increase yaw).
@@ -258,7 +266,7 @@ final class Takeoff {
     }
 
     /** Magnetos on and starters engaged until every engine runs. Returns true when all are running. */
-    private static boolean startEngines(EntityVehicleF_Physics aircraft) {
+    static boolean startEngines(EntityVehicleF_Physics aircraft) {
         boolean allRunning = true;
         for (PartEngine engine : new ArrayList<>(aircraft.engines)) {
             setIf(engine.magnetoVar, 1);
